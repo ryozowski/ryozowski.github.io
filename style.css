@@ -1,0 +1,341 @@
+/* ---- 変数 ---- */
+
+:root {
+  /* 背景 */
+  --bg-top: #0b1220;
+  --bg-bottom: #101b2e;
+
+  /* 背景の光 */
+  --glow-a: #2e5f9e;
+  --glow-b: #2fa8c4;
+  --glow-c: #1c3a6b;
+  --glow-alpha: 0.45;
+
+  /* 面 */
+  --panel: #162136;
+  --float: rgba(255, 255, 255, 0.07);
+  --float-strong: rgba(255, 255, 255, 0.12);
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.22);
+
+  /* 文字 */
+  --text: #f2f6fa;
+  --text-sub: #93a2b8;
+
+  /* 強調色 */
+  --brand: #4a90d9;
+  --link: #6aa9e6;
+  --brand-wash: rgba(74, 144, 217, 0.12);
+  --brand-rail: rgba(74, 144, 217, 0.45);
+
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+
+  /* 角丸 */
+  --r-pill: 999px;
+  --r-24: 24px;
+  --r-22: 22px;
+  --r-18: 18px;
+  --r-16: 16px;
+  --r-14: 14px;
+  --r-12: 12px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-top: #e9eff7;
+    --bg-bottom: #f6f9fd;
+
+    --glow-alpha: 0.28;
+
+    --panel: #f2f6fb;
+    --float: rgba(255, 255, 255, 0.6);
+    --float-strong: rgba(255, 255, 255, 0.8);
+    --line: rgba(22, 35, 58, 0.1);
+    --line-strong: rgba(22, 35, 58, 0.18);
+
+    --text: #16233a;
+    --text-sub: #47535f;
+
+    /* ライトでは --brand は本文リンクにコントラストが足りないため下げる */
+    --link: #2a649f;
+
+    --shadow: 0 14px 30px rgba(22, 35, 58, 0.16);
+  }
+}
+
+/* ---- 基本 ---- */
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 16px;
+  background: linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP",
+    "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+/* 背景の光 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25% -25% auto -25%;
+  height: 150vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--glow-alpha);
+  background:
+    radial-gradient(42vw 42vw at 12% -8%, var(--glow-a) 0%, transparent 62%),
+    radial-gradient(38vw 38vw at 92% 6%, var(--glow-b) 0%, transparent 60%),
+    radial-gradient(52vw 52vw at 50% 86%, var(--glow-c) 0%, transparent 64%);
+}
+
+/* ---- 上部バー ---- */
+
+.bar {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  max-width: 760px;
+  margin: 12px auto 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--float);
+  border: 1px solid var(--line);
+  border-radius: var(--r-14);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.bar a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.bar .here {
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* ---- 本文 ---- */
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-block: 24px 80px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-24);
+  box-shadow: var(--shadow);
+  padding: 40px 36px 44px;
+}
+
+h1 {
+  font-size: clamp(26px, 5.2vw, 34px);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  margin: 0 0 6px;
+}
+
+/* 見出し */
+h2 {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 44px 0 16px;
+  padding: 0 16px;
+  background: var(--brand-wash);
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--r-14) var(--r-14) 0;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+p { margin: 0 0 18px; }
+
+.subject {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-sub);
+  margin: 0 0 20px;
+}
+
+.meta {
+  color: var(--text-sub);
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 28px;
+}
+
+.lang {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+a { color: var(--link); }
+
+a:hover { color: var(--text); }
+
+ul {
+  padding-left: 1.3em;
+  margin: 0 0 18px;
+}
+
+li { margin-bottom: 8px; }
+
+strong { font-weight: 800; }
+
+code {
+  background: var(--float);
+  border: 1px solid var(--line);
+  border-radius: var(--r-12);
+  padding: 1px 6px;
+  font-size: 0.86em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ---- 表 ---- */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-16);
+  margin: 0 0 18px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+tr:last-child th, tr:last-child td { border-bottom: none; }
+
+th {
+  font-weight: 800;
+  background: var(--float);
+}
+
+thead th { white-space: nowrap; }
+
+/* ---- カード ---- */
+
+.card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-18);
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+  margin-bottom: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 160ms ease-out, color 160ms ease-out;
+}
+
+.card:hover {
+  border-color: var(--brand);
+  color: inherit;
+}
+
+.card h3 { color: var(--link); }
+
+.card p {
+  margin: 0;
+  color: var(--text-sub);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ---- 問い合わせ先 ---- */
+
+.contact {
+  background: var(--float);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-16);
+  padding: 20px 22px;
+  margin: 0 0 18px;
+}
+
+.contact p:last-child { margin-bottom: 0; }
+
+.contact .addr {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 16px;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+/* ---- 質問と回答 ---- */
+
+.qa { margin: 0 0 22px; }
+
+.qa .q {
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.qa .a {
+  margin: 0;
+  color: var(--text-sub);
+  font-weight: 400;
+}
+
+/* ---- 脚部 ---- */
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 4px 48px;
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---- 小さい画面 ---- */
+
+@media (max-width: 560px) {
+  .panel { padding: 28px 20px 32px; }
+  h2 { padding: 0 12px; margin: 36px 0 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
