@@ -16,18 +16,13 @@
 │   └── privacy/
 │       ├── index.html    プライバシーポリシー（日本語）
 │       └── en.html       英語
-├── nisedenwa/            偽電話（Fake Call）
-│   ├── index.html        サポートページ
-│   ├── privacy/
-│   │   ├── index.html    プライバシーポリシー（日本語）
-│   │   └── en.html       英語
-│   └── terms/
-│       ├── index.html    利用規約（日本語）
-│       └── en.html       英語
-└── watch-the-stone/      石を見守る（Watch the Stone）
+└── nisedenwa/            偽電話（Fake Call）
     ├── index.html        サポートページ
-    └── privacy/
-        ├── index.html    プライバシーポリシー（日本語）
+    ├── privacy/
+    │   ├── index.html    プライバシーポリシー（日本語）
+    │   └── en.html       英語
+    └── terms/
+        ├── index.html    利用規約（日本語）
         └── en.html       英語
 ```
 
@@ -47,13 +42,6 @@
 | サポート URL（App Store 必須） | https://ryozowski.github.io/nisedenwa/ |
 | プライバシーポリシー（両ストア必須） | https://ryozowski.github.io/nisedenwa/privacy/ |
 | 利用規約 | https://ryozowski.github.io/nisedenwa/terms/ |
-
-### 石を見守る（Watch the Stone）
-
-| 用途 | URL |
-| --- | --- |
-| サポート URL（App Store 必須） | https://ryozowski.github.io/watch-the-stone/ |
-| プライバシーポリシー（両ストア必須） | https://ryozowski.github.io/watch-the-stone/privacy/ |
 
 **これらの URL はストアの掲載情報から参照されている。パスを変えたりファイルを消したりしない。**
 変更が必要な場合は、先にストア側の登録内容を更新すること。
@@ -88,15 +76,6 @@
 
 アプリが端末内に保存する情報・要求する権限・通信先を変えたときは、プライバシーポリシーの
 該当箇所（「端末内に保存する情報」「端末の権限の利用」「基本方針」の通信先）も更新すること。
-
-### 石を見守る
-
-プライバシーポリシーの本文は 2 箇所にある。**必ず同時に更新する**。
-
-1. このリポジトリの `watch-the-stone/privacy/index.html` と `en.html`
-2. アプリ本体の `docs/legal/privacy-policy.md` と `docs/legal/privacy-policy.en.md`（正本）
-
-アプリは本文を持たず、図鑑画面からこのページを外部ブラウザで開く。
 
 ## アプリを追加するとき
 
