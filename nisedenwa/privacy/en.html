@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Fake Call</title>
-<meta name="description" content="Privacy Policy for Fake Call. The app collects no personal information or usage data.">
+<meta name="description" content="Privacy Policy for Fake Call. The developer collects no personal information or usage data. The free plan shows non-personalized ads from Google AdMob.">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -20,22 +20,27 @@
 
 <h1>Privacy Policy</h1>
 <p class="subject">FAKE CALL</p>
-<p class="meta">Last updated: September 28, 2026</p>
+<p class="meta">Last updated: October 6, 2026</p>
 <p class="lang"><a href="index.html">日本語版</a></p>
 
 <h2>Our position</h2>
 <p>
-Fake Call (the &quot;App&quot;) <strong>does not collect any personal information or usage data</strong>.
+The developer of Fake Call (the &quot;App&quot;) <strong>does not collect any personal information or usage data</strong>.
 The developer of the App operates no servers and has no means of receiving users' data.
 </p>
 <p>
 All data, including fake contacts, schedules, images, and audio files, is stored on the
 user's device, and <strong>the App never transmits it to any server or third party</strong>.
 </p>
-<p>The App connects to a network in only two situations:</p>
+<p>
+However, the free plan shows Google ads on the home screen. To serve these ads, Google obtains
+some information directly from the device (see &quot;Advertising&quot; below).
+</p>
+<p>The App connects to a network in only three situations:</p>
 <ul>
   <li>When purchasing Premium or restoring a purchase (communication with the App Store or Google Play; see below)</li>
   <li>When displaying this Privacy Policy or the Terms of Service inside the App (loading this page; see below)</li>
+  <li>When showing an ad on the home screen in the free plan (communication with Google AdMob; see below)</li>
 </ul>
 <p>
 If the user has device backup enabled (such as iCloud Backup or Google's backup), the App's
@@ -43,17 +48,21 @@ data is included in that backup like any other app's data (see below). That is a
 the operating system, not a transmission by the App.
 </p>
 
-<h2>Information we do not collect</h2>
-<p>The App neither obtains nor transmits any of the following.</p>
+<h2>Information the developer does not collect</h2>
+<p>The developer of the App neither obtains nor receives any of the following.</p>
 <ul>
   <li>Information that identifies the user, such as name, email address, or phone number</li>
   <li>Device identifiers (IDFA, advertising ID, IMEI, and the like)</li>
   <li>Location data</li>
   <li>Data belonging to other apps on the device, such as contacts, calendar, or call history</li>
-  <li>Camera images or microphone audio</li>
+  <li>Camera images or microphone audio (the App never records audio)</li>
   <li>Usage statistics, crash logs, or analytics of any kind</li>
 </ul>
-<p>The App contains <strong>no analytics SDK and no advertising SDK</strong>, and displays no ads.</p>
+<p>
+The App contains <strong>no analytics SDK</strong>. The only third-party SDK it contains is the
+Google Mobile Ads SDK, which shows ads. Information obtained by this SDK is received by Google,
+and no information about individual users is passed to the developer (see &quot;Advertising&quot; below).
+</p>
 <p>
 The caller names and phone numbers registered as fake contacts are fictitious information
 that the user enters freely for display on the incoming call screen, and they are stored only
@@ -69,7 +78,7 @@ on the device.
   </thead>
   <tbody>
     <tr><td>Fake contacts (caller name, phone number, icon image, ringtone, call screen style, call duration, background image, time last used)</td><td>To reproduce the incoming call screen</td></tr>
-    <tr><td>Fake call schedules (scheduled time, repeat, and random delay settings)</td><td>To ring at the scheduled time</td></tr>
+    <tr><td>Fake call schedules (scheduled time and repeat settings)</td><td>To ring at the scheduled time</td></tr>
     <tr><td>Custom ringtones and custom voice files (Premium)</td><td>To play the audio the user has chosen</td></tr>
     <tr><td>Settings (language, default call screen, default ringtone, ringer behavior, onboarding completion, notification permission status)</td><td>To carry settings over to the next launch</td></tr>
     <tr><td>Premium purchase status</td><td>To enable the features the user has purchased</td></tr>
@@ -115,7 +124,8 @@ that people around you may be able to see them.
     <tr><td>Vibration</td><td>Android</td><td>To vibrate when a call comes in</td></tr>
     <tr><td>Boot completed</td><td>Android</td><td>To register scheduled calls again after the device restarts</td></tr>
     <tr><td>Photo library</td><td>iOS</td><td>To let the user choose a caller icon or background image</td></tr>
-    <tr><td>Internet access</td><td>Android</td><td>To display the Privacy Policy and Terms of Service inside the App (see below)</td></tr>
+    <tr><td>Microphone</td><td>iOS</td><td>To play the in-call audio through the earpiece, as in a real call (nothing is recorded or sent)</td></tr>
+    <tr><td>Internet access</td><td>Android</td><td>To display the Privacy Policy and Terms of Service inside the App, and to show ads in the free plan (see below)</td></tr>
   </tbody>
 </table>
 </div>
@@ -133,7 +143,41 @@ system file picker.
 On Android, the App reads the device's ringer mode to decide whether to play the ringtone.
 This check is made on the device, and the result is never transmitted.
 </p>
+<p>
+On iOS, the App asks for microphone permission because the system requires it to route audio to the
+earpiece. The App never records, stores, or transmits microphone audio. If permission is denied, the
+in-call audio plays through the speaker.
+</p>
 <p>Declining any permission disables only the related feature; everything else remains usable.</p>
+
+<h2>Advertising</h2>
+<p>
+In the free plan, the App shows a banner ad from Google AdMob, an advertising service provided by
+Google LLC, at the bottom of the home screen. No ads appear on the incoming call screen, the in-call
+screen, or the settings screen. Purchasing Premium removes the ad.
+</p>
+<p>
+The App requests <strong>non-personalized ads only</strong> (ads not based on the user's interests),
+limited to content suitable for all ages. The App does not ask for permission to track the user across
+other companies' apps and websites (the iOS &quot;Allow Apps to Request to Track&quot; permission).
+</p>
+<p>To serve ads, prevent fraud, and measure ad performance, Google may obtain the following information from the device.</p>
+<ul>
+  <li>IP address (which may be used to estimate the approximate location)</li>
+  <li>Device identifiers (identifiers scoped to the app or developer; because the App does not ask for tracking permission, the iOS advertising identifier, IDFA, is not obtained)</li>
+  <li>Information about interactions with ads, such as the ads shown and tapped</li>
+  <li>Performance information, such as app launch time, and diagnostic information, such as crashes</li>
+</ul>
+<p>
+The App never passes the content the user registers in the App, such as fake contacts, schedules,
+images, or audio files, to the ad SDK.
+</p>
+<p>For how Google handles this information, see:</p>
+<ul>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a></li>
+  <li><a href="https://policies.google.com/technologies/ads">Google's advertising policies</a></li>
+  <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+</ul>
 
 <h2>Premium purchases</h2>
 <p>
@@ -158,7 +202,10 @@ For details, see the
 </p>
 
 <h2>Disclosure to third parties</h2>
-<p>Because the App collects no information about users, there is nothing to disclose to third parties.</p>
+<p>
+Because the developer collects no information about users, there is nothing to disclose to third parties.
+To serve ads in the free plan, however, Google obtains information directly from the device (see &quot;Advertising&quot; above).
+</p>
 
 <h2>Deleting data</h2>
 <p>Users can delete their data in the following ways.</p>
@@ -169,7 +216,10 @@ For details, see the
 </ul>
 
 <h2>Children's privacy</h2>
-<p>The App may be used at any age, and collects no personal information from any user.</p>
+<p>
+The App may be used at any age, and the developer collects no personal information from any user.
+Ads in the free plan are non-personalized and limited to content suitable for all ages.
+</p>
 
 <h2>Changes to this policy</h2>
 <p>
