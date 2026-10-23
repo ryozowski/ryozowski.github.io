@@ -4,11 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>偽電話（Fake Call） — サポート</title>
-<meta name="description" content="偽電話（Fake Call）のサポートページ。機能・動作環境・よくある質問・お問い合わせ先。">
+<meta name="description" content="偽電話（Fake Call）のサポートページ。使い方・よくある質問・機能・動作環境・お問い合わせ先。">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/nisedenwa/site.css">
 </head>
 <body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
 
 <div class="bar">
   <a href="/">ryozowski</a>
@@ -16,35 +18,53 @@
 </div>
 
 <main>
-<div class="panel">
 
-<h1>偽電話</h1>
-<p class="subject">FAKE CALL</p>
+<header class="hero">
+  <div>
+    <div class="app-mark">
+      <img src="/nisedenwa/icon.png" width="52" height="52" alt="">
+      <span><span class="name">偽電話</span><span class="sub">FAKE CALL</span></span>
+    </div>
+    <h1>サポート</h1>
+    <p class="lead">本物そっくりの着信画面を表示して、飲み会や会議の場を自然に離れる口実をつくるアプリです。実際の電話回線は使わず、着信から通話中までをアプリの画面で再現します。</p>
+    <ul class="chips">
+      <li>通話料はかかりません</li>
+      <li>すべての機能が無料</li>
+      <li>データは端末の中だけ</li>
+    </ul>
+  </div>
+</header>
 
-<p>
-本物そっくりの着信画面を表示して、飲み会や会議の場を自然に離れる口実をつくるアプリです。
-実際の電話回線は使わず、着信から通話中までをアプリの画面で再現します。
-</p>
+<section class="panel">
+<div class="next">
+  <a href="/nisedenwa/guide/">
+    <span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#book"/></svg></span>
+    <span class="label">使い方<small>偽連絡先の作り方・時間を決めて着信させる</small></span>
+    <svg class="icon go" aria-hidden="true"><use href="/nisedenwa/icons.svg#arrow"/></svg>
+  </a>
+  <a href="/nisedenwa/faq/">
+    <span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#help"/></svg></span>
+    <span class="label">よくある質問<small>着信しない・音が鳴らないときなど</small></span>
+    <svg class="icon go" aria-hidden="true"><use href="/nisedenwa/icons.svg#arrow"/></svg>
+  </a>
+</div>
+</section>
 
+<section class="panel">
 <h2>主な機能</h2>
 <ul>
   <li>5 種類の着信画面（標準電話の iOS 風・Android 風、メッセンジャー風、ビデオ通話風、海外メッセンジャー風）</li>
-  <li>「○分後」「○月○日○時○分」での予約（最大 10 件。すべてそれぞれの時刻に着信）と、ボタンを押してすぐの着信</li>
+  <li>「○分後」「○月○日○時○分」での予約（最大 10 件。すべてそれぞれの時刻に着信）と、毎日・毎週の繰り返し</li>
+  <li>ボタンを押してすぐの着信</li>
   <li>発信者名・アイコン・電話番号・着信音・通話時間をまとめた「偽連絡先」</li>
   <li>着信中・通話中の画面に、アイコンの代わりに写真を画面いっぱいに出す背景画像</li>
+  <li>手持ちの音声ファイルを使うカスタム着信音と、応答したあとに流す通話中の音声</li>
   <li>応答後の通話中画面と、設定した時間での自動終了</li>
   <li>端末のサイレントモードに合わせた着信音・バイブレーション</li>
   <li>ホーム画面のウィジェット（iOS 17 以降）とアプリアイコンのショートカットからのワンタップ着信</li>
-  <li>日本語 / 英語</li>
+  <li>日本語 / 英語、ライト / ダーク</li>
 </ul>
-
-<h3>プレミアム版（買い切り・月額料金なし）</h3>
-<ul>
-  <li>広告なし（ホーム画面のバナーも、偽着信のあとの全画面広告も出ません）</li>
-  <li>通話中の音声（取り込んだ音声ファイルを、応答したあとに流す）</li>
-  <li>手持ちの音声ファイルを着信音に使うカスタム着信音</li>
-  <li>毎日・毎週の繰り返しのスケジュール</li>
-</ul>
+<p>すべての機能を無料で使えます。アプリ内課金はありません。ホーム画面と設定画面のバナー広告と、偽着信のあと 2 回に 1 回の全画面広告を表示します。設定画面で動画を 1 本見ると、24 時間広告が出なくなります。</p>
 
 <h2>動作環境</h2>
 <div class="table-wrap">
@@ -55,68 +75,6 @@
 </table>
 </div>
 
-<h2>よくある質問</h2>
-
-<div class="qa">
-  <p class="q">本当に電話がかかってきますか？ 通話料はかかりますか？</p>
-  <p class="a">かかってきません。着信も通話もアプリの画面上の再現で、電話回線は使いません。通話料は発生しません。</p>
-</div>
-
-<div class="qa">
-  <p class="q">アプリを閉じていても、予約した時刻に着信しますか？</p>
-  <p class="a">着信します。アプリを終了していても、予約した時刻に着信音とともに通知が届き、通知を押すと着信画面が開きます。そのため通知の許可が必要です。許可していない場合は、端末の設定アプリから本アプリの通知を許可してください。iOS の仕組み上、アプリを閉じている間に着信画面を自動で出すことはできません。アプリを開いているときは、予約した時刻に自動で着信画面になります。</p>
-</div>
-
-<div class="qa">
-  <p class="q">スケジュールはいくつ予約できますか？</p>
-  <p class="a">10 件まで予約でき、すべてそれぞれの時刻に着信します。タイマー（○分後）は保存した時点から数え、保存し直すとその時点から数え直します。</p>
-</div>
-
-<div class="qa">
-  <p class="q">鳴り終わったスケジュールはどうなりますか？</p>
-  <p class="a">1 回だけのスケジュールは、鳴り終わると一覧から自動で消えます。端末の電源が切れていたなどで鳴らずに時刻を過ぎたものも消えます。毎日・毎週の繰り返しは残り、次の時刻にまた着信します。偽連絡先を削除すると、その偽連絡先のスケジュールは繰り返しも含めて消えます。</p>
-</div>
-
-<div class="qa">
-  <p class="q">予約した時刻に着信しませんでした。</p>
-  <p class="a">通知を許可しているか、集中モード（おやすみモードなど）で通知が止められていないかを確かめてください。予約した時刻に別の偽着信の画面を出していた場合も、その回は着信せず、あとから鳴らし直すこともありません。同じ時刻に複数予約した場合、アプリを開いているときは一覧で上にある 1 件だけが着信します。</p>
-</div>
-
-<div class="qa">
-  <p class="q">サイレントモードのときも着信音が鳴りますか？</p>
-  <p class="a">初期設定の「本体のサイレントモードに従う」のときは、サイレントモードでは着信音が鳴らず、バイブレーションだけになります。サイレントモードでも鳴らしたい場合などは、アプリの設定画面の「偽着信時の挙動」で選び直してください。</p>
-</div>
-
-<div class="qa">
-  <p class="q">ホーム画面のウィジェットはどう使いますか？</p>
-  <p class="a">iOS 17 以降で使えます。ホーム画面を長押しし、左上の「編集」＞「ウィジェットを追加」（iOS 17 は「＋」）から「偽電話」を選んで置き、ウィジェットを長押しして「ウィジェットを編集」で偽連絡先を選びます。ウィジェットを押すと、アプリが開いてすぐにその偽連絡先から着信します。偽連絡先を選んでいない場合は、最後に使った偽連絡先（一度も使っていなければ一覧の先頭）が表示されます。</p>
-</div>
-
-<div class="qa">
-  <p class="q">広告はいつ表示されますか？</p>
-  <p class="a">フリー版では、ホーム画面の下端にバナー広告を、偽着信を終えてホーム画面に戻ったときに 2 回に 1 回、全画面広告を表示します。着信の前や、着信中・通話中には表示しません。全画面広告の音も出しません。プレミアム版ではどちらも表示しません。</p>
-</div>
-
-<div class="qa">
-  <p class="q">背景画像はフリー版でも使えますか？</p>
-  <p class="a">使えます。偽連絡先の編集画面で設定すると、着信中・通話中の画面にアイコンの代わりに画面いっぱいに表示します。</p>
-</div>
-
-<div class="qa">
-  <p class="q">偽連絡先や音声ファイルはいくつまで登録できますか？ 使えるファイルの形式は？</p>
-  <p class="a">偽連絡先は 10 件までです。プレミアム版のカスタム着信音は 20 件（1 件 5MB まで）、通話中の音声は 50 件（1 件 10MB まで）登録できます。使える音声ファイルの形式は m4a・mp3・wav・aac です。</p>
-</div>
-
-<div class="qa">
-  <p class="q">データはどこに保存されますか？</p>
-  <p class="a">すべて端末内に保存されます。登録した偽連絡先やスケジュールを外部のサーバーへ送信することはありません。詳しくは<a href="/nisedenwa/privacy/">プライバシーポリシー</a>をご覧ください。</p>
-</div>
-
-<div class="qa">
-  <p class="q">プレミアム版を購入したのに機能が使えません。</p>
-  <p class="a">アプリの設定画面から「購入を復元」を行ってください。購入に使った Apple ID でサインインしている必要があります。</p>
-</div>
-
 <h2>お問い合わせ</h2>
 <div class="contact">
   <p>ご質問・不具合のご報告は <a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a> までお送りください。</p>
@@ -124,15 +82,15 @@
 </div>
 
 <h2>プライバシーと利用規約</h2>
-<p>開発者は利用者の個人情報を収集しません。フリー版では、ホーム画面のバナーと偽着信のあとの全画面広告として、Google AdMob の広告（パーソナライズされない広告）を表示します。本アプリをご利用いただく前に、利用規約をお読みください。</p>
+<p>開発者は利用者の個人情報を収集しません。広告として、Google AdMob の広告（パーソナライズされない広告）を表示します。本アプリをご利用いただく前に、利用規約をお読みください。</p>
 <ul>
   <li><a href="/nisedenwa/privacy/">プライバシーポリシー（日本語）</a></li>
   <li><a href="/nisedenwa/privacy/en.html">Privacy Policy (English)</a></li>
   <li><a href="/nisedenwa/terms/">利用規約（日本語）</a></li>
   <li><a href="/nisedenwa/terms/en.html">Terms of Service (English)</a></li>
 </ul>
+</section>
 
-</div>
 </main>
 
 <footer>偽電話（Fake Call）</footer>

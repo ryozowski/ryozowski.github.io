@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Fake Call</title>
+<meta name="description" content="Fake Call FAQ. What to do when calls don't come or the ringtone doesn't play, plus schedules, audio files, widgets, ads and your data.">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/nisedenwa/site.css">
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+
+<div class="bar">
+  <a href="/nisedenwa/">Fake Call</a>
+  <span class="here">FAQ</span>
+</div>
+
+<main>
+
+<header class="hero">
+  <div>
+    <div class="app-mark">
+      <img src="/nisedenwa/icon.png" width="52" height="52" alt="">
+      <span><span class="name">Fake Call</span><span class="sub">偽電話</span></span>
+    </div>
+    <h1>FAQ</h1>
+    <p class="lead">Tap a question to see the answer. New to the app? See <a href="/nisedenwa/guide/en.html">How to use</a> too.</p>
+    <p class="lang"><a href="./">日本語</a></p>
+  </div>
+</header>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#call"/></svg>How calls work</h2>
+
+<details class="faq">
+  <summary><span class="q">Will I really get a phone call? Does it cost anything?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>No. Both the incoming call and the call itself are recreated on this app's screen. No phone line is used, so there are no call charges.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Will a scheduled call come when the app is closed?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Yes. Even when the app is closed, you get a notification with the ringtone at the scheduled time. <strong>Tap the notification to open the incoming call screen.</strong></p>
+    <p>Because of how iOS works, apps can't show the call screen by themselves while closed. When the app is open, the call screen opens automatically at the scheduled time.</p>
+    <p>Notifications won't arrive unless you allow them. Allow them in <span class="path">Settings app > Fake Call > Notifications</span>.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">How long does the incoming call screen stay?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>If you neither answer nor decline, it closes after 30 seconds. After you answer, the in-call screen ends automatically after the fake contact's "Auto End Call" time (1 minute by default, 30 seconds to 5 minutes).</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Do the buttons on the in-call screen work?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Mute, Speaker and Keypad respond when tapped. Mute stops the in-call voice, and Speaker plays the in-call voice through the speaker. Numbers you tap on the keypad show on the screen, but no tones play.</p>
+    <p>Add Contact, Video and More are for looks only. Nothing happens when you tap them.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#clock"/></svg>Schedules</h2>
+
+<details class="faq">
+  <summary><span class="q">My scheduled call didn't come</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Please check:</p>
+    <ul>
+      <li>Notifications are allowed (<span class="path">Settings app > Fake Call > Notifications</span>)</li>
+      <li>A Focus such as Do Not Disturb isn't silencing notifications</li>
+      <li>Another fake call screen wasn't showing at the scheduled time. In that case the call doesn't ring, and it isn't rung again later</li>
+      <li>You haven't scheduled several calls for the same time. While the app is open, only the one higher in the list rings</li>
+    </ul>
+    <p>When the app is closed, you get a notification instead of the call screen. Tap the notification to open the incoming call screen.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">How many calls can I schedule? How far ahead?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Up to 10, and each one rings at its own time.</p>
+    <ul>
+      <li><strong>Timer</strong>: 1 to 60 minutes later. It counts from when you save it, and starts over if you save it again</li>
+      <li><strong>Set Time</strong>: up to 365 days ahead</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Can a call repeat every day or every week?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>With Set Time, turn on "Repeat" to get the call at the same time every day or every week. Weekly repeats on the day of the week of the date you picked (you can't choose the day of the week). Timers can't repeat.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">What happens to a schedule after it rings?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>A one-time schedule is removed from the list automatically after it rings. So is one whose time passed without ringing, for example because the device was off. Repeating schedules stay and ring again next time.</p>
+    <p>Deleting a fake contact removes all of its schedules, including repeating ones.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">If I miss the notification, can I tap it later?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Yes. Tap a notification left in Notification Center to get a call from that fake contact. However, notifications for one-time schedules are removed together with the schedule when you open the app.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#volume"/></svg>Sound &amp; vibration</h2>
+
+<details class="faq">
+  <summary><span class="q">The app is open, but the ringtone doesn't play</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Please check:</p>
+    <ul>
+      <li><strong>Silent Mode</strong>: With the default "Follow silent mode", the ringtone doesn't play while your device is in Silent Mode, and only vibration is used. To always play it, choose "Always sound and vibration" in <span class="path">Settings > Fake call sound</span></li>
+      <li><strong>Fake call sound</strong>: If "Always vibration only" or "Always no sound or vibration" is selected, the ringtone doesn't play</li>
+      <li><strong>Volume</strong>: The ringtone in the app plays at the same volume as music and videos. If the volume is at 0 or low, turn it up with the volume buttons on your device</li>
+      <li><strong>Earphones</strong>: If Bluetooth earphones or a speaker are connected, the sound plays there</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">When the app is closed, the notification makes no sound</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>When the app is closed, the ringtone plays as an iOS notification sound. The app's "Fake call sound" setting doesn't apply. Your device settings do. Please check:</p>
+    <ul>
+      <li>"Sounds" is on in <span class="path">Settings app > Fake Call > Notifications</span></li>
+      <li>Your device isn't in Silent Mode. Notification sounds don't play in Silent Mode</li>
+      <li>A Focus such as Do Not Disturb isn't silencing notifications</li>
+      <li>The "Ringtone and Alerts" volume in <span class="path">Settings app > Sounds &amp; Haptics</span> isn't too low</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">I chose a custom ringtone, but the standard one plays when the app is closed</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>iOS has rules for notification sounds: only certain file formats, and up to 30 seconds long. So when the app is closed, the notification uses the Standard ringtone even if you chose a custom ringtone. If you chose one of the 4 built-in ringtones, that ringtone plays.</p>
+    <p>When you tap the notification and the call screen opens, your custom ringtone plays.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">When the app is closed, the ringtone stops partway</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>iOS notification sounds can be up to 30 seconds long, so it stops after about 30 seconds. Tap the notification to open the call screen. It rings there until you answer or decline (up to 30 seconds).</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">My device doesn't vibrate</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Make sure "Always no sound or vibration" isn't selected in <span class="path">Settings > Fake call sound</span>.</p>
+    <p>Vibration also follows your device settings. If haptics are set not to play in <span class="path">Settings app > Sounds &amp; Haptics</span>, your device may not vibrate.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">I can't hear the voice during the call</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <ul>
+      <li>The voice plays once, 1 second after you answer. When it ends, the call continues in silence</li>
+      <li>If you allowed the microphone, it plays through the earpiece. Hold the phone to your ear like a real call. To play it through the speaker, tap "Speaker" on the in-call screen</li>
+      <li>It doesn't play while "Mute" is on</li>
+      <li>Check that a voice is selected in "Voice during call" on the fake contact's edit screen</li>
+    </ul>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#person"/></svg>Fake contacts &amp; audio files</h2>
+
+<details class="faq">
+  <summary><span class="q">How many fake contacts can I add?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Up to 10.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Which audio file formats can I use? How many can I import?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>m4a, mp3, wav and aac.</p>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Custom ringtones</th><td>Up to 5MB each, up to 20 files</td></tr>
+        <tr><th>Voice during call</th><td>Up to 10MB each, up to 50 files</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>On the fake contact's edit screen, open "Ringtone" or "Voice during call", then import with "Add Custom Ringtone" or "Add Voice File".</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Can new fake contacts always get the same ringtone?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>The ringtone you choose in <span class="path">Settings > Default Ringtone</span> is used for new fake contacts. You can also choose an imported custom ringtone. Existing fake contacts keep their ringtones.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">How do I change the look of the call screen?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>On the fake contact's edit screen, choose Standard Phone, Messenger Style, Video Call Style or Intl Messenger Style in "Call Screen Template". Standard Phone matches your device.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Can I use a background image?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Yes. Set one on the fake contact's edit screen, and it fills the incoming call and in-call screens instead of the icon.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#widgets"/></svg>Widget &amp; shortcuts</h2>
+
+<details class="faq">
+  <summary><span class="q">How do I use the home screen widget?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>It works on iOS 17 or later.</p>
+    <ol>
+      <li>Touch and hold the home screen, tap "Edit" > "Add Widget" at the top left (on iOS 17, tap "+"), choose "Fake Call" and add it</li>
+      <li>Touch and hold the widget, tap "Edit Widget" and pick a fake contact</li>
+    </ol>
+    <p>Tap the widget to open the app and get a call from that fake contact right away. If you haven't picked one, it shows the fake contact you used last (or the first one in the list if you haven't used any).</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Can I start a call right from the app icon?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Yes. Touch and hold the app icon to see your recently used fake contacts (up to 4). Pick one to get a call from that fake contact right away.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#play"/></svg>Ads &amp; pricing</h2>
+
+<details class="faq">
+  <summary><span class="q">Does it cost anything?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>No. Every feature is free. There are no in-app purchases.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">When do ads appear?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>A banner ad appears at the bottom of the home and settings screens. A full-screen ad appears every second time you return to the home screen after a fake call. No ads appear before a call, while it rings or during the call. Ads are muted.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">Can I hide the ads?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>In <span class="path">Settings > Watch a video to hide ads for 24 hours</span>, watch the video to the end. No ads are shown for 24 hours from then. If you close the video before the end, ads are not hidden.</p>
+    <p>If you see "The video can't be loaded right now", please try again later.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#shield"/></svg>Data &amp; privacy</h2>
+
+<details class="faq">
+  <summary><span class="q">Where is my data stored?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>Fake contacts, schedules, images and recordings are stored only on this device. Nothing is sent to an outside server. For details, see the <a href="/nisedenwa/privacy/en.html">Privacy Policy</a>.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">What is microphone access used for?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>It lets the voice during a call play through the earpiece. Nothing is recorded. If you don't allow it, the voice plays through the speaker.</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">How do I delete all my data?</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>In <span class="path">Settings > Delete All Data</span>, you can delete fake contacts, schedules and imported files all at once. Settings such as language and appearance, and your ad-free time, are kept.</p>
+  </div>
+</details>
+</section>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#mail"/></svg>Still need help?</h2>
+<div class="contact">
+  <p>Send questions and bug reports to this address.</p>
+  <p class="addr">pontapon.support@gmail.com</p>
+  <p>The app is built and run by one person, so replies may take some time.</p>
+</div>
+</section>
+
+</main>
+
+<footer>Fake Call (偽電話)</footer>
+
+</body>
+</html>

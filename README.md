@@ -18,6 +18,15 @@
 │       └── en.html       英語
 └── nisedenwa/            偽電話（Fake Call）
     ├── index.html        サポートページ
+    ├── site.css          使い方・よくある質問・サポートのページ用（/style.css に重ねる）
+    ├── icons.svg         アイコン（Material Icons、Apache License 2.0）
+    ├── icon.png          アプリのアイコン（180px）
+    ├── guide/
+    │   ├── index.html    使い方（日本語）
+    │   └── en.html       英語
+    ├── faq/
+    │   ├── index.html    よくある質問（日本語）
+    │   └── en.html       英語
     ├── privacy/
     │   ├── index.html    プライバシーポリシー（日本語）
     │   └── en.html       英語
@@ -46,7 +55,7 @@
 **これらの URL はストアの掲載情報から参照されている。パスを変えたりファイルを消したりしない。**
 変更が必要な場合は、先にストア側の登録内容を更新すること。
 
-偽電話は、これらのページ（日英とも）を**アプリ内の WebView からも直接読み込んでいる**
+偽電話は、これらのページと使い方・よくある質問（日英とも）を**アプリ内の WebView からも直接読み込んでいる**
 （アプリ本体の `lib/core/constants/app_constants.dart`）。パスを変えるとアプリの設定画面から
 ポリシーが開けなくなり、それはストアの更新なしには直せない。アプリ内の WebView は
 `/nisedenwa/` の外へは遷移しない。
@@ -56,6 +65,20 @@
 
 **アプリ本体（nisedenwa）のリポジトリで GitHub Pages を有効にしない。** 有効にすると、
 そのプロジェクトサイトが `https://ryozowski.github.io/nisedenwa/` を上書きする。
+
+## ライト / ダークの切り替え
+
+ページは端末の設定（`prefers-color-scheme`）に従う。URL の末尾に `#theme-light` / `#theme-dark` を
+付けると、端末の設定より優先してライト / ダークになる。偽電話のアプリ内の WebView は
+JavaScript を無効にしているため、アプリの外観の設定に合わせてこの印を付けて開く。
+
+- 仕組みは CSS だけ（`style.css` の `:root:has(#theme-light:target)`）。ページに
+  `<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>` を置く
+- `:has()` の無いブラウザ（iOS 15.3 以前など）では端末の設定に従う
+- ページ内の別の場所へのリンク（`href="#..."`）を置くと、印が外れて端末の設定に戻る。
+  アプリから開くページには置かない
+- 色を変えたときは、`style.css` と `nisedenwa/site.css` の両方で、端末の設定の側と
+  `#theme-*` の側を同じ値にする
 
 ## ポリシーを更新するとき
 
