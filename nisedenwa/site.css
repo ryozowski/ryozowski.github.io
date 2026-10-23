@@ -1,0 +1,622 @@
+/*
+ * 偽電話（Fake Call）の使い方・よくある質問・サポートのページ用。
+ * /style.css の上に重ねる。色はアプリのブランドカラー（#2558B8 / #1D9E75 /
+ * #E6F1FB）とデザインポリシー Glass Instrument に合わせる。
+ */
+
+/* ---- 変数 ---- */
+
+:root {
+  --nd-brand: #2558b8;
+  --nd-accent: #1d9e75;
+  --nd-light: #e6f1fb;
+
+  /* 着信画面の応答・拒否（アプリの positive / destructive） */
+  --nd-answer: #30d158;
+  --nd-decline: #ff453a;
+
+  /* 見出しの帯と、アイコンの地 */
+  --brand: #4f86e0;
+  --brand-wash: rgba(37, 88, 184, 0.2);
+  --nd-tint: rgba(37, 88, 184, 0.24);
+  --nd-tint-text: #a9c8f2;
+  --nd-accent-wash: rgba(29, 158, 117, 0.16);
+  --nd-accent-text: #5fd3a8;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --brand: var(--nd-brand);
+    --brand-wash: rgba(37, 88, 184, 0.1);
+    --nd-tint: var(--nd-light);
+    --nd-tint-text: var(--nd-brand);
+    --nd-accent-wash: rgba(29, 158, 117, 0.12);
+    --nd-accent-text: #12735a;
+  }
+}
+
+/* /style.css の #theme-light / #theme-dark と同じ切り替え */
+:root:has(#theme-light:target) {
+  --brand: var(--nd-brand);
+  --brand-wash: rgba(37, 88, 184, 0.1);
+  --nd-tint: var(--nd-light);
+  --nd-tint-text: var(--nd-brand);
+  --nd-accent-wash: rgba(29, 158, 117, 0.12);
+  --nd-accent-text: #12735a;
+}
+
+:root:has(#theme-dark:target) {
+  --brand: #4f86e0;
+  --brand-wash: rgba(37, 88, 184, 0.2);
+  --nd-tint: rgba(37, 88, 184, 0.24);
+  --nd-tint-text: #a9c8f2;
+  --nd-accent-wash: rgba(29, 158, 117, 0.16);
+  --nd-accent-text: #5fd3a8;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* ---- 冒頭 ---- */
+
+.hero {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  margin: 8px 0 36px;
+}
+
+@media (min-width: 640px) {
+  .hero { grid-template-columns: 1fr auto; gap: 40px; }
+}
+
+.app-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.app-mark img {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.app-mark .name {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.app-mark .sub {
+  display: block;
+  color: var(--text-sub);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+
+.hero h1 { margin-bottom: 12px; }
+
+.lead {
+  margin: 0 0 18px;
+  color: var(--text-sub);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  margin: 0;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--float);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---- 着信画面の見本 ---- */
+
+.phone {
+  justify-self: center;
+  width: 196px;
+  aspect-ratio: 9 / 19;
+  padding: 7px;
+  border-radius: 38px;
+  background: #05080f;
+  box-shadow: var(--shadow), 0 0 0 1px var(--line-strong);
+}
+
+.phone-screen {
+  position: relative;
+  height: 100%;
+  border-radius: 31px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 16px 28px;
+  color: #f2f6fa;
+  background:
+    radial-gradient(120% 60% at 50% 0%, #2e5f9e 0%, transparent 70%),
+    linear-gradient(180deg, #1a2a46 0%, #0b1220 100%);
+}
+
+.phone-screen::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  width: 62px;
+  height: 18px;
+  border-radius: var(--r-pill);
+  background: #05080f;
+  transform: translateX(-50%);
+}
+
+.phone-caller {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.phone-sub {
+  color: rgba(242, 246, 250, 0.7);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.phone-avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 22px 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(242, 246, 250, 0.85);
+}
+
+.phone-avatar .icon { width: 36px; height: 36px; }
+
+.phone-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 6px;
+}
+
+.phone-btn {
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(242, 246, 250, 0.8);
+}
+
+.phone-btn i {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.phone-btn.decline i { background: var(--nd-decline); }
+.phone-btn.answer i { background: var(--nd-answer); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .phone-btn.answer i { animation: nd-ring 1.6s ease-out infinite; }
+}
+
+@keyframes nd-ring {
+  0% { box-shadow: 0 0 0 0 rgba(48, 209, 88, 0.5); }
+  70%, 100% { box-shadow: 0 0 0 14px rgba(48, 209, 88, 0); }
+}
+
+/* ---- 手順 ---- */
+
+.steps {
+  counter-reset: step;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 0 16px;
+  margin: 0;
+  padding-bottom: 28px;
+}
+
+/* 番号どうしをつなぐ線 */
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 4px;
+  left: 17px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--line-strong);
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--nd-brand);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.step h3 { margin: 4px 0 6px; }
+
+.step p {
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.step p:last-child { margin-bottom: 0; }
+
+/* ---- 画面のかけら（手順に添える小さな見本） ---- */
+
+.mock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 340px;
+  margin: 4px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-18);
+  background: var(--float);
+}
+
+.mock-avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--nd-tint);
+  color: var(--nd-tint-text);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.mock-main { flex: 1; min-width: 0; }
+
+.mock-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.mock-sub {
+  display: block;
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mock-time {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.mock-call {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--nd-answer);
+}
+
+.mock-call.end { background: var(--nd-decline); }
+
+.mock-call .icon { width: 20px; height: 20px; }
+
+.mock-rows {
+  display: block;
+  max-width: 340px;
+  padding: 4px 14px;
+}
+
+.mock-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mock-row:last-child { border-bottom: none; }
+
+.mock-row span:first-child { color: var(--text-sub); }
+
+.mock-row span:last-child { font-weight: 700; text-align: right; }
+
+.mock-seg {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--float);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mock-seg span { padding: 3px 12px; border-radius: var(--r-pill); }
+
+.mock-seg .on { background: var(--nd-brand); color: #fff; }
+
+/* ---- 機能の一覧 ---- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.feature {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-18);
+  background: var(--float);
+}
+
+.feature h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--text-sub);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: var(--r-12);
+  background: var(--nd-tint);
+  color: var(--nd-tint-text);
+}
+
+.badge .icon { width: 20px; height: 20px; }
+
+.badge.accent {
+  background: var(--nd-accent-wash);
+  color: var(--nd-accent-text);
+}
+
+/* ---- 補足 ---- */
+
+.note {
+  display: flex;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--nd-accent);
+  border-radius: 0 var(--r-14) var(--r-14) 0;
+  background: var(--nd-accent-wash);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.note .icon { color: var(--nd-accent-text); margin-top: 3px; width: 20px; height: 20px; }
+
+.note p { margin: 0; }
+
+/* ---- 次に読む ---- */
+
+.next {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.next a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-18);
+  background: var(--float);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 160ms ease-out;
+}
+
+.next a:hover { border-color: var(--brand); }
+
+.next .label { flex: 1; font-size: 15px; font-weight: 800; line-height: 1.4; }
+
+.next .label small {
+  display: block;
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.next .go { color: var(--text-sub); width: 18px; height: 18px; }
+
+/* ---- よくある質問 ---- */
+
+.faq-group { margin: 0 0 8px; }
+
+.faq {
+  margin: 0 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-16);
+  background: var(--float);
+  transition: border-color 160ms ease-out;
+}
+
+.faq[open] { border-color: var(--line-strong); }
+
+.faq:last-child { margin-bottom: 0; }
+
+.faq summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  font-weight: 800;
+  line-height: 1.6;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::before {
+  content: "Q";
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  margin-top: 1px;
+  border-radius: 8px;
+  background: var(--nd-tint);
+  color: var(--nd-tint-text);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.faq summary .q { flex: 1; }
+
+.faq summary .icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: var(--text-sub);
+  transition: transform 160ms ease-out;
+}
+
+.faq[open] summary .icon { transform: rotate(180deg); }
+
+.faq-a {
+  padding: 0 16px 16px 52px;
+  color: var(--text-sub);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.faq-a p { margin: 0 0 10px; }
+
+.faq-a p:last-child,
+.faq-a ul:last-child,
+.faq-a ol:last-child { margin-bottom: 0; }
+
+.faq-a ul,
+.faq-a ol { margin: 0 0 10px; padding-left: 1.2em; }
+
+.faq-a li { margin-bottom: 4px; }
+
+.faq-a strong { color: var(--text); }
+
+/* 設定の場所（例: 設定 ＞ 偽着信時の挙動） */
+.path {
+  display: inline;
+  padding: 1px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--float-strong);
+  color: var(--text);
+  font-weight: 700;
+  white-space: nowrap;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* 見出しの帯の中のアイコン */
+h2 .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  color: var(--brand);
+}
+
+/* ---- 小さい画面 ---- */
+
+@media (max-width: 560px) {
+  .faq-a { padding-left: 16px; }
+  .step { grid-template-columns: 32px 1fr; gap: 0 12px; }
+  .step::before { width: 32px; height: 32px; font-size: 14px; }
+  .step:not(:last-child)::after { top: 36px; left: 15px; }
+  .path { white-space: normal; }
+}
+
+/* ---- 面の並び ---- */
+
+.panel + .panel { margin-top: 16px; }
+
+.panel > h2:first-child { margin-top: 0; }
+
+.panel > p:last-child,
+.panel > .features:last-child,
+.panel > .table-wrap:last-child { margin-bottom: 0; }
+
+.hero .lang { margin: 18px 0 0; }
+
+/* アプリ内の WebView ではメールのリンクが開かないため、アドレスを選んで写せるようにする */
+.contact .addr {
+  -webkit-user-select: all;
+  user-select: all;
+}

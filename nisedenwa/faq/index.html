@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>よくある質問 — 偽電話（Fake Call）</title>
+<meta name="description" content="偽電話（Fake Call）のよくある質問。着信しないとき、音が鳴らないとき、スケジュール、音声ファイル、ウィジェット、広告、データについて。">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/nisedenwa/site.css">
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+
+<div class="bar">
+  <a href="/nisedenwa/">偽電話</a>
+  <span class="here">よくある質問</span>
+</div>
+
+<main>
+
+<header class="hero">
+  <div>
+    <div class="app-mark">
+      <img src="/nisedenwa/icon.png" width="52" height="52" alt="">
+      <span><span class="name">偽電話</span><span class="sub">FAKE CALL</span></span>
+    </div>
+    <h1>よくある質問</h1>
+    <p class="lead">質問をタップすると、答えが開きます。はじめての方は<a href="/nisedenwa/guide/">使い方</a>もご覧ください。</p>
+    <p class="lang"><a href="en.html">English</a></p>
+  </div>
+</header>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#call"/></svg>着信のしくみ</h2>
+
+<details class="faq">
+  <summary><span class="q">本当に電話がかかってきますか？ 通話料はかかりますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>かかってきません。着信も通話も、このアプリの画面で再現したものです。電話回線を使わないので、通話料もかかりません。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">アプリを閉じていても、予約した時刻に着信しますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>着信します。アプリを閉じていても、予約した時刻に着信音とともに通知が届きます。<strong>通知をタップすると着信画面が開きます。</strong></p>
+    <p>iOS の仕組み上、アプリを閉じている間に着信画面を自動で出すことはできません。アプリを開いているときは、予約した時刻に自動で着信画面になります。</p>
+    <p>通知を許可していないと届きません。<span class="path">設定アプリ ＞ 偽電話 ＞ 通知</span> で許可してください。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">着信画面は何秒で切れますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>応答も拒否もしなければ、30 秒で閉じます。応答したあとの通話中の画面は、偽連絡先の「通話の自動終了」の時間（初期値 1 分。30 秒〜5 分）がたつと自動で終わります。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">通話中の画面のボタンは使えますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>ミュート・スピーカー・キーパッドは押すと反応します。ミュートは通話中の音声を止め、スピーカーは通話中の音声をスピーカーから流します。キーパッドで押した数字は画面に出ますが、音は鳴りません。</p>
+    <p>連絡先追加・ビデオ・その他は見た目だけで、押しても何も起きません。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#clock"/></svg>スケジュール</h2>
+
+<details class="faq">
+  <summary><span class="q">予約した時刻に着信しませんでした</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>次を確かめてください。</p>
+    <ul>
+      <li>通知を許可しているか（<span class="path">設定アプリ ＞ 偽電話 ＞ 通知</span>）</li>
+      <li>集中モード（おやすみモードなど）で通知が止められていないか</li>
+      <li>予約した時刻に、別の偽着信の画面を出していなかったか。その回は着信せず、あとから鳴らし直すこともありません</li>
+      <li>同じ時刻に複数予約していないか。アプリを開いているときは、一覧で上にある 1 件だけが着信します</li>
+    </ul>
+    <p>アプリを閉じているときは、着信画面ではなく通知が届きます。通知をタップすると着信画面が開きます。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">いくつ予約できますか？ どのくらい先まで予約できますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>10 件まで予約でき、すべてそれぞれの時刻に着信します。</p>
+    <ul>
+      <li><strong>タイマー</strong>：1〜60 分後。保存した時点から数え、保存し直すとその時点から数え直します</li>
+      <li><strong>時刻指定</strong>：365 日先まで選べます</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">毎日・毎週くり返し鳴らせますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>時刻指定で「繰り返し」をオンにすると、毎日、または毎週の同じ時刻に着信します。毎週は、選んだ日付の曜日に繰り返します（曜日を選ぶことはできません）。タイマーでは繰り返せません。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">鳴り終わったスケジュールはどうなりますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>1 回だけのスケジュールは、鳴り終わると一覧から自動で消えます。電源が切れていたなどで、鳴らずに時刻を過ぎたものも消えます。繰り返しのスケジュールは残り、次の時刻にまた着信します。</p>
+    <p>偽連絡先を削除すると、その偽連絡先のスケジュールは繰り返しも含めて消えます。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">通知を見逃したら、あとから押せますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>押せます。通知センターに残った通知をタップすると、その偽連絡先から着信します。ただし、1 回だけのスケジュールの通知は、アプリを開いたときにスケジュールと一緒に消えます。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#volume"/></svg>音・バイブ</h2>
+
+<details class="faq">
+  <summary><span class="q">アプリを開いているのに、着信音が鳴りません</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>次を確かめてください。</p>
+    <ul>
+      <li><strong>本体のサイレントモード</strong>：初期設定の「本体のサイレントモードに従う」では、サイレントモードのとき着信音を鳴らさず、バイブだけにします。いつも鳴らしたいときは、<span class="path">設定 ＞ 偽着信時の挙動</span> で「常に音とバイブ」を選んでください</li>
+      <li><strong>偽着信時の挙動</strong>：「常にバイブのみ」「常に音もバイブもなし」を選んでいると、着信音は鳴りません</li>
+      <li><strong>音量</strong>：アプリで鳴る着信音の大きさは、音楽や動画と同じ音量です。音量が 0 や小さいときは、本体の音量ボタンで上げてください</li>
+      <li><strong>イヤホン</strong>：Bluetooth のイヤホンやスピーカーにつながっていると、そちらから鳴ります</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">アプリを閉じているとき、通知の音が鳴りません</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>アプリを閉じているときの着信音は、iOS の通知の音として鳴ります。アプリの「偽着信時の挙動」の設定は効かず、本体の設定に従います。次を確かめてください。</p>
+    <ul>
+      <li><span class="path">設定アプリ ＞ 偽電話 ＞ 通知</span> で「サウンド」がオンになっているか</li>
+      <li>本体がサイレントモードになっていないか。サイレントモードでは、通知の音は鳴りません</li>
+      <li>集中モード（おやすみモードなど）で通知が止められていないか</li>
+      <li><span class="path">設定アプリ ＞ サウンドと触覚</span> の「着信音と通知音」の音量が小さくないか</li>
+    </ul>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">カスタム着信音にしたのに、アプリを閉じているときは標準の着信音が鳴ります</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>iOS の通知の音には、使えるファイルの形式と長さ（30 秒まで）に決まりがあります。そのため、アプリを閉じているときの通知の音は、カスタム着信音を選んでいても標準着信音にしています。標準の 4 種類から選んでいれば、その着信音が鳴ります。</p>
+    <p>通知をタップして着信画面が開くと、選んだカスタム着信音で鳴ります。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">アプリを閉じているとき、着信音が途中で止まります</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>iOS の通知の音は 30 秒までのため、約 30 秒で止まります。通知をタップすると着信画面が開き、応答か拒否をするまで（最長 30 秒）鳴ります。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">バイブが鳴りません</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p><span class="path">設定 ＞ 偽着信時の挙動</span> で「常に音もバイブもなし」を選んでいないか確かめてください。</p>
+    <p>バイブは本体の設定にも従います。<span class="path">設定アプリ ＞ サウンドと触覚</span> で触覚を再生しない設定にしていると、バイブしないことがあります。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">通話中の音声が聞こえません</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <ul>
+      <li>通話中の音声は、応答の 1 秒後に 1 回だけ流れます。音声が終わると、そのあとは無音のまま通話が続きます</li>
+      <li>マイクを許可していると、受話口から流れます。本物の電話のように、耳に当てて聞いてください。スピーカーから流すときは、通話中の画面の「スピーカー」を押します</li>
+      <li>「ミュート」が点灯していると流れません</li>
+      <li>偽連絡先の編集画面の「通話中の音声」で、音声を選んでいるか確かめてください</li>
+    </ul>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#person"/></svg>偽連絡先・音声ファイル</h2>
+
+<details class="faq">
+  <summary><span class="q">偽連絡先はいくつまで登録できますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>10 件までです。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">使える音声ファイルの形式は？ いくつまで取り込めますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>m4a・mp3・wav・aac です。</p>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>カスタム着信音</th><td>1 件 5MB まで、20 件まで</td></tr>
+        <tr><th>通話中の音声</th><td>1 件 10MB まで、50 件まで</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>偽連絡先の編集画面の「着信音」「通話中の音声」を開き、「カスタム着信音を追加」「音声ファイルを追加」から取り込みます。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">新しい偽連絡先の着信音を、いつも同じにできますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p><span class="path">設定 ＞ デフォルト着信音</span> で選んだ着信音が、新しく作る偽連絡先の着信音になります。取り込んだカスタム着信音も選べます。すでにある偽連絡先の着信音は変わりません。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">着信画面の見た目を変えるには？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>偽連絡先の編集画面の「着信画面テンプレート」で、標準電話・メッセンジャー風・ビデオ通話風・海外メッセンジャー風から選べます。標準電話は、端末に合わせた見た目になります。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">背景画像は使えますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>使えます。偽連絡先の編集画面で設定すると、着信中・通話中の画面いっぱいに、アイコンの代わりに出ます。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#widgets"/></svg>ウィジェット・ショートカット</h2>
+
+<details class="faq">
+  <summary><span class="q">ホーム画面のウィジェットはどう使いますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>iOS 17 以降で使えます。</p>
+    <ol>
+      <li>ホーム画面を長押しし、左上の「編集」＞「ウィジェットを追加」（iOS 17 は「＋」）から「偽電話」を選んで置きます</li>
+      <li>ウィジェットを長押しして「ウィジェットを編集」で、偽連絡先を選びます</li>
+    </ol>
+    <p>ウィジェットを押すと、アプリが開いてすぐにその偽連絡先から着信します。偽連絡先を選んでいないときは、最後に使った偽連絡先（一度も使っていなければ一覧の先頭）が出ます。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">アプリのアイコンから、すぐに着信させられますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>できます。アプリのアイコンを長押しすると、最近使った偽連絡先（最大 4 件）が出ます。選ぶと、その偽連絡先からすぐに着信します。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#play"/></svg>広告・料金</h2>
+
+<details class="faq">
+  <summary><span class="q">料金はかかりますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>かかりません。すべての機能を無料で使えます。アプリ内課金はありません。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">広告はいつ出ますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>ホーム画面と設定画面の下にバナー広告を、偽着信を終えてホーム画面に戻ったとき 2 回に 1 回、全画面広告を出します。着信の前や、着信中・通話中には出しません。広告の音は消しています。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">広告を消せますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p><span class="path">設定 ＞ 動画を見て 24 時間広告を消す</span> で動画を最後まで見ると、その時点から 24 時間、すべての広告が出なくなります。途中で閉じたときは消えません。</p>
+    <p>「いまは動画を読み込めません」と出たときは、時間をおいて試してください。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel faq-group">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#shield"/></svg>データ・プライバシー</h2>
+
+<details class="faq">
+  <summary><span class="q">データはどこに保存されますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>偽連絡先・スケジュール・画像・音声は、すべてこの端末の中にだけ保存されます。外部のサーバーには送りません。詳しくは<a href="/nisedenwa/privacy/">プライバシーポリシー</a>をご覧ください。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">マイクの許可は何に使いますか？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p>通話中の音声を、受話口から流すために使います。録音はしません。許可しなくても、通話中の音声はスピーカーから流れます。</p>
+  </div>
+</details>
+
+<details class="faq">
+  <summary><span class="q">データをまとめて消すには？</span><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#chevron"/></svg></summary>
+  <div class="faq-a">
+    <p><span class="path">設定 ＞ すべてのデータを削除</span> で、偽連絡先・スケジュール・取り込んだファイルをまとめて削除できます。言語・外観などの設定と、広告なしの期限は残ります。</p>
+  </div>
+</details>
+</section>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#mail"/></svg>解決しないときは</h2>
+<div class="contact">
+  <p>ご質問・不具合のご報告は、次のアドレスまでお送りください。</p>
+  <p class="addr">pontapon.support@gmail.com</p>
+  <p>個人で開発・運営しているため、返信までお時間をいただくことがあります。</p>
+</div>
+</section>
+
+</main>
+
+<footer>偽電話（Fake Call）</footer>
+
+</body>
+</html>

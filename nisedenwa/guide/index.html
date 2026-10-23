@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使い方 — 偽電話（Fake Call）</title>
+<meta name="description" content="偽電話（Fake Call）の使い方。偽連絡先の作り方、今すぐ着信させる方法、時間を決めて着信させる方法、着信音や広告について。">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/nisedenwa/site.css">
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+
+<div class="bar">
+  <a href="/nisedenwa/">偽電話</a>
+  <span class="here">使い方</span>
+</div>
+
+<main>
+
+<header class="hero">
+  <div>
+    <div class="app-mark">
+      <img src="/nisedenwa/icon.png" width="52" height="52" alt="">
+      <span><span class="name">偽電話</span><span class="sub">FAKE CALL</span></span>
+    </div>
+    <h1>使い方</h1>
+    <p class="lead">偽連絡先を 1 件作れば、ボタンひとつで本物そっくりの着信が届きます。時刻を決めて鳴らすこともできます。</p>
+    <ul class="chips">
+      <li>通話料はかかりません</li>
+      <li>すべての機能が無料</li>
+      <li>データは端末の中だけ</li>
+    </ul>
+    <p class="lang"><a href="en.html">English</a></p>
+  </div>
+
+  <div class="phone" aria-hidden="true">
+    <div class="phone-screen">
+      <span class="phone-caller">お母さん</span>
+      <span class="phone-sub">携帯電話</span>
+      <span class="phone-avatar"><svg class="icon"><use href="/nisedenwa/icons.svg#person"/></svg></span>
+      <div class="phone-actions">
+        <span class="phone-btn decline"><i><svg class="icon"><use href="/nisedenwa/icons.svg#call-end"/></svg></i>拒否</span>
+        <span class="phone-btn answer"><i><svg class="icon"><use href="/nisedenwa/icons.svg#call"/></svg></i>応答</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#book"/></svg>はじめかた</h2>
+
+<ol class="steps">
+  <li class="step"><div>
+    <h3>偽連絡先を作る</h3>
+    <p>「偽連絡先」タブの「＋」から、発信者名・アイコン・電話番号・着信音・着信画面の見た目を決めます。保存ボタンはありません。発信者名を入れると、変更は自動で保存されます。</p>
+    <div class="mock mock-rows" aria-hidden="true">
+      <div class="mock-row"><span>発信者名</span><span>お母さん</span></div>
+      <div class="mock-row"><span>電話番号</span><span>090-1234-5678</span></div>
+      <div class="mock-row"><span>着信音</span><span>標準着信音</span></div>
+    </div>
+  </div></li>
+
+  <li class="step"><div>
+    <h3>今すぐ着信させる</h3>
+    <p>偽連絡先のカードの右にある緑の通話ボタンを押すと、すぐに着信画面が開きます。</p>
+    <div class="mock" aria-hidden="true">
+      <span class="mock-avatar">母</span>
+      <span class="mock-main"><span class="mock-title">お母さん</span><span class="mock-sub">090-1234-5678</span></span>
+      <span class="mock-call"><svg class="icon"><use href="/nisedenwa/icons.svg#call"/></svg></span>
+    </div>
+  </div></li>
+
+  <li class="step"><div>
+    <h3>時間を決めて着信させる</h3>
+    <p>「偽着信スケジュール」タブの「＋」で、「タイマー」（1〜60 分後）か「時刻指定」を選び、ドラムロールで時間を決めて「スケジュール確定」を押します。10 件まで予約でき、すべてそれぞれの時刻に着信します。</p>
+    <p>時刻指定で「繰り返し」をオンにすると、毎日、または毎週同じ曜日の同じ時刻に着信します。</p>
+    <div class="mock" aria-hidden="true">
+      <span class="mock-main">
+        <span class="mock-sub">あと</span>
+        <span class="mock-time">15:00</span>
+        <span class="mock-sub">お母さん・標準電話（iOS）</span>
+      </span>
+      <span class="mock-seg"><span class="on">タイマー</span><span>時刻指定</span></span>
+    </div>
+  </div></li>
+
+  <li class="step"><div>
+    <h3>着信に出る</h3>
+    <p>応答すると通話中の画面になり、偽連絡先の「通話の自動終了」の時間（初期値 1 分。30 秒〜5 分）がたつと自動で終わります。途中で終えるときは赤いボタンを押します。</p>
+    <div class="mock" aria-hidden="true">
+      <span class="mock-main"><span class="mock-title">お母さん</span><span class="mock-time">00:12</span></span>
+      <span class="mock-call end"><svg class="icon"><use href="/nisedenwa/icons.svg#call-end"/></svg></span>
+    </div>
+  </div></li>
+</ol>
+
+<div class="note">
+  <svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#bell"/></svg>
+  <p>アプリを閉じているときは、予約した時刻に通知が届きます。通知をタップすると着信画面が開きます。iOS の仕組み上、アプリを閉じている間に着信画面を自動で出すことはできません。アプリを開いているときは、予約した時刻に自動で着信画面になります。</p>
+</div>
+</section>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#phone"/></svg>もっと本物らしく</h2>
+
+<div class="features">
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#phone"/></svg></span>着信画面の見た目</h3>
+    <p>標準電話・メッセンジャー風・ビデオ通話風・海外メッセンジャー風から、偽連絡先ごとに選べます。標準電話は端末に合わせた見た目になります。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#image"/></svg></span>背景画像</h3>
+    <p>写真を選ぶと、着信中・通話中の画面いっぱいに、アイコンの代わりに出ます。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#music"/></svg></span>着信音</h3>
+    <p>標準の 4 種類のほか、手持ちの音声ファイルを取り込んで使えます。設定の「デフォルト着信音」が、新しい偽連絡先の着信音になります。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#mic"/></svg></span>通話中の音声</h3>
+    <p>取り込んだ音声を、応答の 1 秒後に相手の声として流せます。マイクを許可すると受話口から流れます（録音はしません）。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#widgets"/></svg></span>ホーム画面のウィジェット</h3>
+    <p>iOS 17 以降。押すと、選んでおいた偽連絡先からすぐに着信します。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#call"/></svg></span>アイコンの長押し</h3>
+    <p>アプリのアイコンを長押しすると、最近使った偽連絡先（最大 4 件）が出ます。選ぶとすぐに着信します。</p>
+  </div>
+</div>
+</section>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#volume"/></svg>鳴り方を選ぶ</h2>
+<p>着信音とバイブの鳴り方は、<span class="path">設定 ＞ 偽着信時の挙動</span> で選べます。</p>
+<div class="table-wrap">
+<table>
+  <tbody>
+    <tr><th>本体のサイレントモードに従う（初期設定）</th><td>サイレントモードのときは着信音を鳴らさず、バイブだけにします</td></tr>
+    <tr><th>常に音とバイブ</th><td>サイレントモードでも着信音を鳴らします</td></tr>
+    <tr><th>常にバイブのみ</th><td>着信音を鳴らしません</td></tr>
+    <tr><th>常に音もバイブもなし</th><td>画面だけで着信します</td></tr>
+  </tbody>
+</table>
+</div>
+<p>アプリで鳴る着信音の大きさは、音楽や動画と同じ音量です。鳴らないときは<a href="/nisedenwa/faq/">よくある質問</a>の「音・バイブ」をご覧ください。</p>
+</section>
+
+<section class="panel">
+<h2><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#play"/></svg>広告と料金</h2>
+<p>すべての機能を無料で使えます。アプリ内課金はありません。</p>
+<p>ホーム画面と設定画面の下にバナー広告を、偽着信を終えてホーム画面に戻ったとき 2 回に 1 回、全画面広告を出します。着信の前や、着信中・通話中には出しません。広告の音は消しています。</p>
+<p><span class="path">設定 ＞ 動画を見て 24 時間広告を消す</span> で動画を最後まで見ると、24 時間すべての広告が出なくなります。</p>
+</section>
+
+<section class="panel">
+<div class="next">
+  <a href="/nisedenwa/faq/">
+    <span class="badge"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#help"/></svg></span>
+    <span class="label">よくある質問<small>着信しない・音が鳴らないときなど</small></span>
+    <svg class="icon go" aria-hidden="true"><use href="/nisedenwa/icons.svg#arrow"/></svg>
+  </a>
+  <a href="/nisedenwa/">
+    <span class="badge accent"><svg class="icon" aria-hidden="true"><use href="/nisedenwa/icons.svg#mail"/></svg></span>
+    <span class="label">サポート<small>お問い合わせ・プライバシーポリシー</small></span>
+    <svg class="icon go" aria-hidden="true"><use href="/nisedenwa/icons.svg#arrow"/></svg>
+  </a>
+</div>
+</section>
+
+</main>
+
+<footer>偽電話（Fake Call）</footer>
+
+</body>
+</html>
