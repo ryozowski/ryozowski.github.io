@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>よくある質問 — マルチラップ計測（MultiLap）</title>
+<meta name="description" content="マルチラップ計測（MultiLap）のよくある質問。カードの追加、一括操作、グループ、ラップの色、目標ラップ数、テンプレート、保存と共有、データの扱いについて。">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e9eff7" media="(prefers-color-scheme: light)">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/multilap/faq/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/multilap/faq/en.html">
+<link rel="icon" href="/multilap/icon.png">
+<link rel="apple-touch-icon" href="/multilap/icon.png">
+<link rel="stylesheet" href="/multilap/site.css">
+<script src="/multilap/site.js"></script>
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/multilap/"><img src="/multilap/icon.png" width="32" height="32" alt=""><span>マルチラップ計測</span></a>
+    <nav class="nav" aria-label="ページ">
+      <a href="/multilap/guide/">使い方</a><a href="/multilap/faq/" aria-current="page">よくある質問</a><a href="/multilap/terms/">利用規約</a><a href="/multilap/privacy/">プライバシー</a>
+    </nav>
+    <div class="tools">
+      <a class="tool" href="/multilap/faq/en.html" hreflang="en" lang="en"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>English</span></a>
+      <button class="tool theme-btn" type="button" data-mode="auto"><span class="t-auto"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg></span><span class="t-light"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="t-dark"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span></button>
+    </div>
+  </div>
+</header>
+<main class="narrow">
+<section class="section" style="margin-top:28px">
+  <div class="eyebrow">FAQ</div>
+  <h1>よくある質問</h1>
+  <p class="lead">操作のこまったときや、記録の扱いについてまとめました。キーワードで絞り込むこともできます。</p>
+  <div class="faq-tools">
+    <label class="search"><span class="sr">キーワードで探す（例: グループ、CSV、目標）</span><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input type="search" placeholder="キーワードで探す（例: グループ、CSV、目標）" autocomplete="off"></label>
+  </div>
+  <nav class="cats" aria-label="よくある質問"><a href="#basics">基本操作<span>3</span></a><a href="#bulk">一括操作<span>4</span></a><a href="#laps">ラップ<span>4</span></a><a href="#screens">画面とテンプレート<span>2</span></a><a href="#export">保存と共有<span>2</span></a><a href="#tips">Tips・こまったとき<span>5</span></a><a href="#data">データとプライバシー<span>4</span></a></nav>
+</section>
+<section class="faq-sec" id="basics" style="--sec-ac:#30D158"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0V11"/><path d="M16.2 10.2a1.8 1.8 0 0 1 3.3 1V14c0 4-2.6 6.5-6.3 6.5-2.6 0-4.1-1-5.6-3.1L5 13.6a1.7 1.7 0 0 1 2.7-2.1L9 13"/></svg></span>基本操作</h2>
+<details class="qa" id="q-add-card"><summary>カードを追加するには?</summary><div class="ans"><p>カードリストの最後にある「+」をタップすると名前入力が開き、OK で 1 枚追加されます。「続けて追加」を ON にしたまま OK すると、入力欄が空のまま再表示されて続けて追加できます。カードは 1 画面あたり 50 枚までです。</p><p><a class="see" href="/multilap/guide/#card">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-buttons"><summary>Start / Stop / Lap / Reset の違いは?</summary><div class="ans"><p>Start で計測を開始します。Stop でいったん停止し、もう一度 Start を押すと停止した続きから再開します。Lap は進行中の区間をその場で確定して、すぐ次の区間の計測を始めます。Reset はラップと時間をすべて消して初期状態に戻します。</p><p><a class="see" href="/multilap/guide/#states">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-edit-card"><summary>カードの名前や色を変えるには?</summary><div class="ans"><p>カード上の名前をタップすると名前を変更できます（6 文字まで）。色は Total タイムをタップしてカード詳細を開き、右上のカラーアイコンから 16 色のプリセットを選んでください。</p><p><a class="see" href="/multilap/guide/#card">使い方で見る →</a></p></div></details>
+</section>
+<section class="faq-sec" id="bulk" style="--sec-ac:#4A90D9"><h2><span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M15.5 14.6c2.4-.3 4.4 1.2 5 4.4"/></svg></span>一括操作</h2>
+<details class="qa" id="q-bulk-start"><summary>全員を同時にスタートするには?</summary><div class="ans"><p>画面上部の一括操作バーの「一括 Start」を使います。タップした瞬間の時刻を共通の起点にするため、対象カードの計測開始時刻は完全に一致します。対象は初期状態と停止中のカードで、計測中のカードには影響しません。</p><p><a class="see" href="/multilap/guide/#bulk">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-bulk-disabled"><summary>一括ボタンが押せないのはなぜ?</summary><div class="ans"><p>一括ボタンは対象のカードが 0 件のときに非活性になります。一括 Stop と一括 Lap は計測中のカード、一括 Start は初期状態と停止中のカード、一括 Reset は停止中のカードだけが対象です。一括 Reset のみ確認ダイアログが出ます。</p><p><a class="see" href="/multilap/guide/#bulk">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-grouping"><summary>チームごとにまとめて操作できますか?</summary><div class="ans"><p>できます。カードを長押しして別のカードの上に 0.5 秒ほど重ねるとグループになります。Edit モードで複数選んで「グループ化」でもまとめられます。グループの見出しにある Start / Stop / Lap / Reset は、そのグループのカードだけに効きます。見出しの名前をタップすると、グループの名前・色・目標ラップ数を変えられます。</p><p><a class="see" href="/multilap/guide/#groups">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-ungrouping"><summary>グループを解除するには?</summary><div class="ans"><p>カードを長押しして、グループの外にあるカードの位置まで運んで（重ねずに）離してください。Edit モードで選んで「グループから外す」でも構いません。中身が 0 枚になったグループは自動で消えます。カードも計測中のタイムも失われず、計測中でもグループの出し入れはできます。</p><p><a class="see" href="/multilap/guide/#groups">使い方で見る →</a></p></div></details>
+</section>
+<section class="faq-sec" id="laps" style="--sec-ac:#F77E31"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M6 21V4h11l-1.6 3.5L17 11H6"/></svg></span>ラップ</h2>
+<details class="qa" id="q-current-lap"><summary>「現在ラップ」とは?</summary><div class="ans"><p>Start と同時に Lap1 が現在ラップとして始まります。まだ Lap で確定していない進行中の区間のことで、Stop しても確定しません（確定するのは Lap を押したときだけです）。Total・ラップ数・Avg・書き出したファイルには、この現在ラップが常に含まれます。</p><p><a class="see" href="/multilap/guide/#states">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-fastest-slowest"><summary>ラップの緑と赤は何を表していますか?</summary><div class="ans"><p>緑が最速ラップ、赤が最遅ラップです。判定の対象は Lap で確定したラップだけで、確定ラップが 2 本以上そろってから色が付きます。現在ラップは対象外です。同じタイムが複数あるときは、該当するすべてのラップに色が付きます。</p><p><a class="see" href="/multilap/guide/#detail">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-target-laps"><summary>事前に走る周回数を決めておけますか?</summary><div class="ans"><p>できます。一括操作バーの旗ボタンから目標ラップ数を登録すると、その画面の全カードに「2/5」のように 現在のラップ数と目標が表示されます。カードごとに変えたいときは、カード詳細の旗アイコンから そのカードだけの目標を設定できます。目標に達するとバッジが緑になりますが、計測は止まりません。超えたぶんも「7/5」のように表示し続け、Lap も Stop もこれまでどおり使えます。</p><p><a class="see" href="/multilap/guide/#target">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-lap-limit"><summary>ラップは何本まで記録できますか?</summary><div class="ans"><p>1 カードあたり 999 本（現在ラップを含む）です。上限に達すると Lap ボタンだけが無効になり、計測はそのまま続きます。</p></div></details>
+</section>
+<section class="faq-sec" id="screens" style="--sec-ac:#3FD8E9"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.5-8.5 4.5L3.5 8z"/><path d="M3.5 12.5l8.5 4.5 8.5-4.5M3.5 16.5l8.5 4.5 8.5-4.5"/></svg></span>画面とテンプレート</h2>
+<details class="qa" id="q-screens"><summary>標準・ミニ・リッチの違いは?</summary><div class="ans"><p>標準は 1 列の見やすいカード、ミニは 2 列で一覧性を優先、リッチは写真付きのカードです。カードは画面ごとに独立していて、それぞれ 50 枚まで持てます。標準画面で追加したカードはミニ画面には現れません。</p><p><a class="see" href="/multilap/guide/#screens">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-templates"><summary>テンプレートは何に使いますか?</summary><div class="ans"><p>よく使うカード構成（名前・色・並び順・グループ分け）をひな型として保存し、次回そのまま呼び出せます。画面種別に属さないので、標準画面で保存した構成をミニ画面から呼び出せます。呼び出すと表示中の画面のカードとラップはすべて削除されて置き換わるので、必要な計測結果は先に保存しておいてください。目標ラップ数はひな型には含まれません。</p><p><a class="see" href="/multilap/guide/#templates">使い方で見る →</a></p></div></details>
+</section>
+<section class="faq-sec" id="export" style="--sec-ac:#AE8FF6"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v7h14v-7"/></svg></span>保存と共有</h2>
+<details class="qa" id="q-save-data"><summary>計測結果を残すには?</summary><div class="ans"><p>共有アイコンから「データを保存」を選ぶと、その時点のカード名・色・ラップ・Total が端末内に保存されます。ラベルの初期値は保存日時ですが、その場で書き換えられます。保存しても計測は止まりません。保存したデータは 設定 &gt; 保存データ一覧 から見返せます。</p><p><a class="see" href="/multilap/guide/#share">使い方で見る →</a></p></div></details>
+<details class="qa" id="q-export"><summary>CSV や TXT で書き出すには?</summary><div class="ans"><p>共有アイコンから「CSVで共有」「TXTで共有」「テキストをコピー」を選びます。CSV は Excel などの表計算ソフト向け、TXT とコピーはそのまま読める形式です。いずれも出力時点の現在ラップを最終ラップとして含みます。</p><p><a class="see" href="/multilap/guide/#share">使い方で見る →</a></p></div></details>
+</section>
+<section class="faq-sec" id="tips" style="--sec-ac:#FAB55B"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/></svg></span>Tips・こまったとき</h2>
+<details class="qa" id="q-background"><summary>他のアプリに切り替えたり画面を消しても大丈夫?</summary><div class="ans"><p>問題ありません。計測は開始時刻からの実時間で計算しているので、バックグラウンドでも画面ロック中でも正確に進みます。アプリが OS に終了された場合も、次の起動時に実時刻をもとに復元します。ただし端末の日時を手動で変更すると計測値がずれます。</p></div></details>
+<details class="qa" id="q-keep-awake"><summary>計測中に画面が消えてしまいます</summary><div class="ans"><p>設定の「計測中は画面を消灯しない」を ON にしてください。いずれかのカードが計測中の間だけ画面の消灯を抑止し、全カードが止まると解除されます（計測自体は画面が消えても続きます）。</p></div></details>
+<details class="qa" id="q-wrap"><summary>表示が 00:00.00 に戻ってしまいました</summary><div class="ans"><p>表示できる上限は 99:59.59 です。100 時間を超えると表示と出力の値だけが 00:00.00 に戻り、計測自体はそのまま続いています。</p></div></details>
+<details class="qa" id="q-name-rule"><summary>カード名に記号やスペースが入れられません</summary><div class="ans"><p>カード名に使えるのは、ひらがな・カタカナ・漢字・長音「ー」・英字・数字だけです。記号やスペース、絵文字は入力した時点で取り除かれます。長さは 6 文字までです。</p></div></details>
+<details class="qa" id="q-delete-all"><summary>全部やり直したい</summary><div class="ans"><p>設定の「全データを削除」で、3 画面すべてのカード・ラップ・保存データ・写真を消せます。設定の内容は残ります。この操作は取り消せません。</p></div></details>
+</section>
+<section class="faq-sec" id="data" style="--sec-ac:#38CA8F"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.3 2.3 4.2-4.6"/></svg></span>データとプライバシー</h2>
+<details class="qa" id="q-data-location"><summary>計測データはどこに保存されますか?</summary><div class="ans"><p>すべて端末の中に保存されます。本アプリはネットワーク通信を行わず、計測結果・カード名・写真を外部のサーバーへ送ることはありません。詳しくは<a href="/multilap/privacy/">プライバシーポリシー</a>をご覧ください。</p></div></details>
+<details class="qa" id="q-device-change"><summary>機種変更したらデータは引き継がれますか?</summary><div class="ans"><p>Android では引き継がれません。自動バックアップと端末間のデータ転送の対象から外しているためです。iOS では、端末のバックアップ（iCloud バックアップなど）を利用していれば、復元やクイックスタートで新しい端末に引き継がれます。確実に残したい記録は、事前に CSV やテキストで書き出して保管してください。</p></div></details>
+<details class="qa" id="q-offline"><summary>電波の届かない場所でも使えますか?</summary><div class="ans"><p>アプリの機能はすべて通信なしで使えます。ただし、設定画面から開く「使い方」「よくある質問」「利用規約」「プライバシーポリシー」はこの Web サイトのページなので、表示には通信が必要です。グラウンドなどで見たいときは、事前に一度開いておくと安心です。</p></div></details>
+<details class="qa" id="q-account"><summary>アカウント登録は必要ですか?</summary><div class="ans"><p>必要ありません。インストールしてすぐに使えます。本アプリは利用者のアカウント情報を扱いません。</p></div></details>
+</section>
+<p class="no-hit" role="status">該当する質問が見つかりませんでした。別の言葉で探すか、下のメールでお問い合わせください。</p>
+
+<section class="section">
+  <a class="tile glass" href="/multilap/guide/" style="--tile-ac:#30D158"><span class="ico"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span><h3>操作を触って確かめる</h3><p>使い方のページでは、画面のデモを実際に操作しながら流れを確認できます。</p><span class="go">→</span></a>
+</section>
+<section class="section">
+<div class="contact glass">
+  <span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span>
+  <div><h3>お問い合わせ</h3><p>ご質問・不具合のご報告はメールでお送りください。個人で開発・運営しているため、返信までお時間をいただくことがあります。</p></div>
+  <a class="mail" href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a>
+</div>
+</section>
+</main>
+<footer>
+  <div class="links"><a href="/multilap/">サポート</a><a href="/multilap/guide/">使い方</a><a href="/multilap/faq/">よくある質問</a><a href="/multilap/terms/">利用規約</a><a href="/multilap/privacy/">プライバシーポリシー</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · マルチラップ計測（MultiLap）</div>
+</footer>
+</body>
+</html>

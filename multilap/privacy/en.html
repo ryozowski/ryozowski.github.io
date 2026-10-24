@@ -2,28 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy Policy — MultiLap</title>
-<meta name="description" content="Privacy Policy for MultiLap. The app collects no personal information or usage data.">
+<meta name="description" content="Privacy Policy for MultiLap. The app does not collect any personal information or usage data.">
 <meta name="color-scheme" content="dark light">
-<link rel="stylesheet" href="/style.css">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e9eff7" media="(prefers-color-scheme: light)">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/multilap/privacy/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/multilap/privacy/en.html">
+<link rel="icon" href="/multilap/icon.png">
+<link rel="apple-touch-icon" href="/multilap/icon.png">
+<link rel="stylesheet" href="/multilap/site.css">
+<script src="/multilap/site.js"></script>
 </head>
 <body>
-
-<div class="bar">
-  <a href="/multilap/">MultiLap</a>
-  <span class="here">PRIVACY POLICY</span>
-</div>
-
-<main>
-<div class="panel">
-
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/multilap/en.html"><img src="/multilap/icon.png" width="32" height="32" alt=""><span>MultiLap</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="/multilap/guide/en.html">How to Use</a><a href="/multilap/faq/en.html">FAQ</a><a href="/multilap/terms/en.html">Terms</a><a href="/multilap/privacy/en.html" aria-current="page">Privacy</a>
+    </nav>
+    <div class="tools">
+      <a class="tool" href="/multilap/privacy/" hreflang="ja" lang="ja"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>日本語</span></a>
+      <button class="tool theme-btn" type="button" data-mode="auto"><span class="t-auto"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg></span><span class="t-light"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="t-dark"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span></button>
+    </div>
+  </div>
+</header>
+<main class="narrow">
+<article class="doc glass" style="margin-top:20px">
+<div class="eyebrow">MultiLap</div>
 <h1>Privacy Policy</h1>
-<p class="subject">MULTILAP</p>
-<p class="meta">Last updated: September 17, 2026</p>
-<p class="lang"><a href="index.html">日本語版</a></p>
+<p class="meta">Last updated: October 24, 2026</p>
+<ul class="toc"><li><a href="#p1">Our position</a></li><li><a href="#p2">Information we do not collect</a></li><li><a href="#p3">Information stored on the device</a></li><li><a href="#p4">Camera and photo library</a></li><li><a href="#p5">Disclosure to third parties</a></li><li><a href="#p6">Deleting data</a></li><li><a href="#p7">Children's privacy</a></li><li><a href="#p8">Changes to this policy</a></li><li><a href="#p9">Contact</a></li></ul>
 
-<h2>Our position</h2>
+<h2 id="p1">Our position</h2>
 <p>
 MultiLap (the &quot;App&quot;) <strong>does not collect any personal information or usage data</strong>.
 </p>
@@ -33,12 +47,16 @@ card names, and photos, is stored on the user's device, and <strong>the App neve
 to any server or third party</strong>.
 </p>
 <p>
+The How to Use, FAQ, Terms of Use and Privacy Policy items in Settings open pages on this website in your device's
+browser. Only the browser communicates when you do so; the App itself does not.
+</p>
+<p>
 On iOS, however, if the user has device backup enabled (such as iCloud Backup), the App's
 data is included in that backup like any other app's data (see below). That is a function
 of the operating system, not a transmission by the App.
 </p>
 
-<h2>Information we do not collect</h2>
+<h2 id="p2">Information we do not collect</h2>
 <p>The App neither obtains nor transmits any of the following.</p>
 <ul>
   <li>Personally identifiable information such as name, email address, or phone number</li>
@@ -53,7 +71,7 @@ On Android, the App does not declare the <code>INTERNET</code> permission, which
 platform level that it cannot communicate over a network.
 </p>
 
-<h2>Information stored on the device</h2>
+<h2 id="p3">Information stored on the device</h2>
 <p>The following is stored only on the user's device, solely to make the App work.</p>
 <div class="table-wrap">
 <table>
@@ -81,7 +99,7 @@ On iOS, this data is included in the device backup. It is carried over when you 
 new device from an iCloud backup or use Quick Start.
 </p>
 
-<h2>Camera and photo library</h2>
+<h2 id="p4">Camera and photo library</h2>
 <p>
 The App requests access to the camera or the photo library only when the user assigns a
 photo to a card on the Rich screen. It never requests access at launch.
@@ -92,10 +110,10 @@ transmitted by the App (they are included in the device backup like any other da
 Declining the permission leaves every feature other than photos fully usable.
 </p>
 
-<h2>Disclosure to third parties</h2>
+<h2 id="p5">Disclosure to third parties</h2>
 <p>Because the App collects no data, there is nothing to disclose to third parties.</p>
 
-<h2>Deleting data</h2>
+<h2 id="p6">Deleting data</h2>
 <p>Users can delete their data in the following ways.</p>
 <ul>
   <li>Delete individual cards, saved records, or templates from within the App</li>
@@ -103,25 +121,25 @@ Declining the permission leaves every feature other than photos fully usable.
   <li>Uninstall the App, which removes all data from the device</li>
 </ul>
 
-<h2>Children's privacy</h2>
+<h2 id="p7">Children's privacy</h2>
 <p>The App may be used at any age, and collects no personal information from any user.</p>
 
-<h2>Changes to this policy</h2>
+<h2 id="p8">Changes to this policy</h2>
 <p>
 If this policy changes, this page will be updated and the &quot;last updated&quot; date revised.
 Significant changes will also be noted in the App's release notes.
 </p>
 
-<h2>Contact</h2>
+<h2 id="p9">Contact</h2>
 <p>
 For questions about this policy or the App, please contact us at
 <a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a>.
 </p>
-
-</div>
+</article>
 </main>
-
-<footer>MultiLap</footer>
-
+<footer>
+  <div class="links"><a href="/multilap/en.html">Support</a><a href="/multilap/guide/en.html">How to Use</a><a href="/multilap/faq/en.html">FAQ</a><a href="/multilap/terms/en.html">Terms of Use</a><a href="/multilap/privacy/en.html">Privacy Policy</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · MultiLap</div>
+</footer>
 </body>
 </html>
