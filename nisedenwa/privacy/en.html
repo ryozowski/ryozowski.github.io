@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Fake Call</title>
-<meta name="description" content="Privacy Policy for Fake Call. The developer collects no personal information or usage data. The free version shows non-personalized ads from Google AdMob.">
+<meta name="description" content="Privacy Policy for Fake Call. The developer collects no personal information or usage data. The App shows non-personalized ads from Google AdMob.">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="/style.css">
 </head>
@@ -21,7 +21,7 @@
 
 <h1>Privacy Policy</h1>
 <p class="subject">FAKE CALL</p>
-<p class="meta">Last updated: October 17, 2026</p>
+<p class="meta">Last updated: October 24, 2026</p>
 <p class="lang"><a href="index.html">日本語版</a></p>
 
 <h2>Our position</h2>
@@ -34,15 +34,15 @@ All data, including fake contacts, schedules, images, and audio files, is stored
 user's device, and <strong>the App never transmits it to any server or third party</strong>.
 </p>
 <p>
-However, the free version shows Google ads on the home screen and after a fake call. To serve these ads, Google obtains
+However, the App shows Google ads on the home screen, on the settings screen, and after a fake call. To serve these ads, Google obtains
 some information directly from the device (see &quot;Advertising&quot; below).
 </p>
-<p>The App connects to a network in only three situations:</p>
+<p>The App connects to a network in only two situations:</p>
 <ul>
-  <li>When purchasing Premium or restoring a purchase (communication with the App Store or Google Play; see below)</li>
-  <li>When displaying this Privacy Policy or the Terms of Service inside the App (loading this page; see below)</li>
-  <li>When showing an ad in the free version (communication with Google AdMob; see below)</li>
+  <li>When displaying this Privacy Policy, the Terms of Service, the guide, or the FAQ inside the App (loading a page of this site; see below)</li>
+  <li>When showing an ad (communication with Google AdMob; see below)</li>
 </ul>
+<p>The App has no in-app purchases.</p>
 <p>
 After you have answered a few fake calls, the App may show a dialog asking you to rate it on the store (App Store / Google Play), once.
 This dialog is shown by the operating system (Apple / Google), and that company handles sending the rating. The App never receives the rating.
@@ -84,9 +84,9 @@ on the device.
   <tbody>
     <tr><td>Fake contacts (caller name, phone number, icon image, ringtone, call screen style, call duration, background image, time last used)</td><td>To reproduce the incoming call screen</td></tr>
     <tr><td>Fake call schedules (scheduled time and repeat settings)</td><td>To ring at the scheduled time</td></tr>
-    <tr><td>Custom ringtones and custom voice files (Premium)</td><td>To play the audio the user has chosen</td></tr>
+    <tr><td>Custom ringtones and custom voice files</td><td>To play the audio the user has chosen</td></tr>
     <tr><td>Settings (language, appearance, default call screen, default ringtone, ringer behavior, onboarding completion, notification permission status)</td><td>To carry settings over to the next launch</td></tr>
-    <tr><td>Premium purchase status</td><td>To enable the features the user has purchased</td></tr>
+    <tr><td>The time until which ads are hidden, earned by watching a video ad</td><td>To hide ads until that time</td></tr>
     <tr><td>Number of fake calls finished and answered, and whether a store rating has been requested</td><td>To space out full-screen ads, to decide when to ask for a rating, and to ask only once</td></tr>
     <tr><td>Names and icons of fake contacts (up to 10 for the widget; up to 4 recently used for shortcuts)</td><td>To let the user choose a fake contact on the home screen widget, and for the app icon's shortcuts</td></tr>
   </tbody>
@@ -131,13 +131,14 @@ that people around you may be able to see them.
     <tr><td>Boot completed</td><td>Android</td><td>To register scheduled calls again after the device restarts</td></tr>
     <tr><td>Photo library</td><td>iOS</td><td>To let the user choose a caller icon or background image</td></tr>
     <tr><td>Microphone</td><td>iOS</td><td>To play the in-call audio through the earpiece, as in a real call (nothing is recorded or sent)</td></tr>
-    <tr><td>Internet access</td><td>Android</td><td>To display the Privacy Policy and Terms of Service inside the App, and to show ads in the free version (see below)</td></tr>
+    <tr><td>Internet access</td><td>Android</td><td>To display the Privacy Policy, Terms of Service, guide, and FAQ inside the App, and to show ads (see below)</td></tr>
   </tbody>
 </table>
 </div>
 <p>
 The Android version also includes permissions declared by the libraries it contains (checking the
-network state, keeping the device awake, background work, and Google Play billing). The App never uses them to send any information.
+network state, keeping the device awake, background work, and using the advertising ID). The advertising ID is used by
+the ad SDK (see &quot;Advertising&quot; below). The App never uses these permissions to send any information.
 </p>
 <p>
 The App asks for photo library access only when the user chooses to pick an image. On Android,
@@ -158,10 +159,17 @@ in-call audio plays through the speaker.
 
 <h2>Advertising</h2>
 <p>
-In the free version, the App shows ads from Google AdMob, an advertising service provided by
-Google LLC: a banner at the bottom of the home screen, and a full-screen ad when you return to the
-home screen after a fake call (every second time). Full-screen ads are muted. No ads appear on the
-incoming call screen, the in-call screen, or the settings screen. Purchasing Premium removes the ads.
+The App shows ads from Google AdMob, an advertising service provided by Google LLC, in the following places.
+</p>
+<ul>
+  <li>A banner at the bottom of the home screen and of the settings screen</li>
+  <li>A full-screen ad when you return to the home screen after a fake call (every second time)</li>
+  <li>A video ad that you choose to watch on the settings screen (a rewarded ad). If you watch it to the end, no ads are shown for 24 hours from that moment</li>
+</ul>
+<p>
+Full-screen ads and video ads are requested muted. No ads appear on the incoming call screen or the in-call screen.
+Whether you watched a video ad to the end is determined on the device, and the time until which ads are hidden is
+stored only on the device.
 </p>
 <p>
 The App requests <strong>non-personalized ads only</strong> (ads not based on the user's interests),
@@ -171,7 +179,7 @@ other companies' apps and websites (the iOS &quot;Allow Apps to Request to Track
 <p>To serve ads, prevent fraud, and measure ad performance, Google may obtain the following information from the device.</p>
 <ul>
   <li>IP address (which may be used to estimate the approximate location)</li>
-  <li>Device identifiers (identifiers scoped to the app or developer; because the App does not ask for tracking permission, the iOS advertising identifier, IDFA, is not obtained)</li>
+  <li>Device identifiers (identifiers scoped to the app or developer; because the App does not ask for tracking permission, the iOS advertising identifier, IDFA, is not obtained; on Android, the advertising ID may be obtained)</li>
   <li>Information about interactions with ads, such as the ads shown and tapped</li>
   <li>Performance information, such as app launch time, and diagnostic information, such as crashes</li>
 </ul>
@@ -186,23 +194,10 @@ images, or audio files, to the ad SDK.
   <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
 </ul>
 
-<h2>Premium purchases</h2>
+<h2>Displaying these pages in the App</h2>
 <p>
-Premium purchases and restores are handled through the App Store (Apple Inc.) or Google Play
-(Google LLC). Payment information is processed by those companies, and <strong>the developer of the
-App never receives the user's Apple ID, Google account, or payment details</strong>. The App only
-receives whether the purchase succeeded and stores that result on the device.
-</p>
-<p>For how those companies handle information, please refer to their privacy policies.</p>
-<ul>
-  <li><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
-  <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-</ul>
-
-<h2>Displaying these policies in the App</h2>
-<p>
-When you open this Privacy Policy or the Terms of Service from the App's settings, the App loads
-this page (published on GitHub Pages). As with visiting any website, GitHub may record access
+When you open this Privacy Policy, the Terms of Service, the guide, or the FAQ from the App's settings,
+the App loads a page of this site (published on GitHub Pages). As with visiting any website, GitHub may record access
 information such as your IP address. The developer of the App does not receive this information.
 For details, see the
 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.
@@ -211,21 +206,21 @@ For details, see the
 <h2>Disclosure to third parties</h2>
 <p>
 Because the developer collects no information about users, there is nothing to disclose to third parties.
-To serve ads in the free version, however, Google obtains information directly from the device (see &quot;Advertising&quot; above).
+To serve ads, however, Google obtains information directly from the device (see &quot;Advertising&quot; above).
 </p>
 
 <h2>Deleting data</h2>
 <p>Users can delete their data in the following ways.</p>
 <ul>
   <li>Delete individual fake contacts, schedules, custom ringtones, or custom voice files from their screens</li>
-  <li>Use &quot;Delete All Data&quot; in Settings to remove all fake contacts, schedules, custom ringtones, and custom voice files at once (the Premium purchase status, some settings such as language, and whether a store rating has been requested are kept)</li>
+  <li>Use &quot;Delete All Data&quot; in Settings to remove all fake contacts, schedules, custom ringtones, and custom voice files at once (the time until which ads are hidden, some settings such as language, and whether a store rating has been requested are kept)</li>
   <li>Uninstall the App, which removes all data from the device</li>
 </ul>
 
 <h2>Children's privacy</h2>
 <p>
 The App may be used at any age, and the developer collects no personal information from any user.
-Ads in the free version are non-personalized and limited to content suitable for all ages.
+Ads are non-personalized and limited to content suitable for all ages.
 </p>
 
 <h2>Changes to this policy</h2>
