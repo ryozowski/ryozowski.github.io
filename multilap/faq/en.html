@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ — MultiLap</title>
+<meta name="description" content="Frequently asked questions about MultiLap: adding cards, all-card controls, groups, lap colors, target laps, templates, saving and sharing, and how your data is handled.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e9eff7" media="(prefers-color-scheme: light)">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/multilap/faq/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/multilap/faq/en.html">
+<link rel="icon" href="/multilap/icon.png">
+<link rel="apple-touch-icon" href="/multilap/icon.png">
+<link rel="stylesheet" href="/multilap/site.css">
+<script src="/multilap/site.js"></script>
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/multilap/en.html"><img src="/multilap/icon.png" width="32" height="32" alt=""><span>MultiLap</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="/multilap/guide/en.html">How to Use</a><a href="/multilap/faq/en.html" aria-current="page">FAQ</a><a href="/multilap/terms/en.html">Terms</a><a href="/multilap/privacy/en.html">Privacy</a>
+    </nav>
+    <div class="tools">
+      <a class="tool" href="/multilap/faq/" hreflang="ja" lang="ja"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>日本語</span></a>
+      <button class="tool theme-btn" type="button" data-mode="auto"><span class="t-auto"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg></span><span class="t-light"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="t-dark"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span></button>
+    </div>
+  </div>
+</header>
+<main class="narrow">
+<section class="section" style="margin-top:28px">
+  <div class="eyebrow">Frequently asked</div>
+  <h1>FAQ</h1>
+  <p class="lead">Answers to common questions about using the app and handling your records. Type a keyword to filter.</p>
+  <div class="faq-tools">
+    <label class="search"><span class="sr">Search (e.g. group, CSV, target)</span><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input type="search" placeholder="Search (e.g. group, CSV, target)" autocomplete="off"></label>
+  </div>
+  <nav class="cats" aria-label="FAQ"><a href="#basics">Getting Started<span>3</span></a><a href="#bulk">All-Card Controls<span>4</span></a><a href="#laps">Laps<span>4</span></a><a href="#screens">Screens &amp; Templates<span>2</span></a><a href="#export">Saving &amp; Sharing<span>2</span></a><a href="#tips">Tips &amp; Troubleshooting<span>5</span></a><a href="#data">Data &amp; Privacy<span>4</span></a></nav>
+</section>
+<section class="faq-sec" id="basics" style="--sec-ac:#30D158"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0V11"/><path d="M16.2 10.2a1.8 1.8 0 0 1 3.3 1V14c0 4-2.6 6.5-6.3 6.5-2.6 0-4.1-1-5.6-3.1L5 13.6a1.7 1.7 0 0 1 2.7-2.1L9 13"/></svg></span>Getting Started</h2>
+<details class="qa" id="q-add-card"><summary>How do I add a card?</summary><div class="ans"><p>Tap the “+” below the last card to open the name dialog, then tap OK to add one card. Leave “Keep adding” on and the dialog reopens with an empty field so you can keep going. Each screen holds up to 50 cards.</p><p><a class="see" href="/multilap/guide/en.html#card">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-buttons"><summary>What is the difference between Start, Stop, Lap and Reset?</summary><div class="ans"><p>Start begins timing. Stop pauses it, and pressing Start again resumes from where it stopped. Lap closes the current interval on the spot and immediately starts the next one. Reset clears every lap and the time, returning the card to its initial state.</p><p><a class="see" href="/multilap/guide/en.html#states">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-edit-card"><summary>How do I change a card’s name or color?</summary><div class="ans"><p>Tap the name on the card to rename it (up to 6 characters). For the color, tap the total time to open the card detail screen, then use the color icon at the top right to pick one of the 16 presets.</p><p><a class="see" href="/multilap/guide/en.html#card">See it in the guide →</a></p></div></details>
+</section>
+<section class="faq-sec" id="bulk" style="--sec-ac:#4A90D9"><h2><span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M15.5 14.6c2.4-.3 4.4 1.2 5 4.4"/></svg></span>All-Card Controls</h2>
+<details class="qa" id="q-bulk-start"><summary>How do I start everyone at once?</summary><div class="ans"><p>Use “All Start” in the control bar at the top of the screen. The moment you tap becomes the shared origin, so every affected card starts at exactly the same instant. It applies to cards that are idle or paused, and leaves running cards untouched.</p><p><a class="see" href="/multilap/guide/en.html#bulk">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-bulk-disabled"><summary>Why is an all-card button greyed out?</summary><div class="ans"><p>An all-card button is disabled when no card matches it. All Stop and All Lap apply to running cards, All Start applies to idle and paused cards, and All Reset applies to paused cards. All Reset is the only one that asks for confirmation.</p><p><a class="see" href="/multilap/guide/en.html#bulk">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-grouping"><summary>Can I control cards team by team?</summary><div class="ans"><p>Yes. Press and hold a card and rest it on another card for about half a second to make a group, or select several cards in Edit mode and tap “Group”. The Start, Stop, Lap and Reset buttons on the group header apply only to the cards in that group. Tap the group name in the header to change its name, color and target laps.</p><p><a class="see" href="/multilap/guide/en.html#groups">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-ungrouping"><summary>How do I break up a group?</summary><div class="ans"><p>Press and hold the card, carry it to a card outside the group and release without resting on it. You can also select cards in Edit mode and tap “Ungroup”. A group disappears on its own once it is empty. No card and no running time is ever lost, and you can move cards in and out while timing.</p><p><a class="see" href="/multilap/guide/en.html#groups">See it in the guide →</a></p></div></details>
+</section>
+<section class="faq-sec" id="laps" style="--sec-ac:#F77E31"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M6 21V4h11l-1.6 3.5L17 11H6"/></svg></span>Laps</h2>
+<details class="qa" id="q-current-lap"><summary>What is the “current lap”?</summary><div class="ans"><p>Lap 1 starts as the current lap the moment you press Start. It is the interval still in progress, and stopping does not close it — only pressing Lap does. The current lap is always included in the total, the lap count, the average and anything you export.</p><p><a class="see" href="/multilap/guide/en.html#states">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-fastest-slowest"><summary>What do the green and red laps mean?</summary><div class="ans"><p>Green marks the fastest lap and red the slowest. Only laps closed with Lap are considered, and the colors appear once at least two laps have been closed. The current lap is never marked. If several laps share the same time, all of them are colored.</p><p><a class="see" href="/multilap/guide/en.html#detail">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-target-laps"><summary>Can I set the number of laps in advance?</summary><div class="ans"><p>Yes. Tap the flag button in the all-card bar to set a target, and every card on that screen shows the current lap against it, such as “2/5”. To use a different target for one runner, open the card detail and tap the flag icon there. Reaching the target turns the badge green but never stops timing — extra laps keep showing as “7/5”, and Lap and Stop work exactly as before.</p><p><a class="see" href="/multilap/guide/en.html#target">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-lap-limit"><summary>How many laps can one card hold?</summary><div class="ans"><p>999 per card, including the current lap. Once you reach the limit only the Lap button is disabled; timing continues as normal.</p></div></details>
+</section>
+<section class="faq-sec" id="screens" style="--sec-ac:#3FD8E9"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.5-8.5 4.5L3.5 8z"/><path d="M3.5 12.5l8.5 4.5 8.5-4.5M3.5 16.5l8.5 4.5 8.5-4.5"/></svg></span>Screens &amp; Templates</h2>
+<details class="qa" id="q-screens"><summary>How do Standard, Mini and Rich differ?</summary><div class="ans"><p>Standard shows one easy-to-read card per row, Mini packs two columns for a wider overview, and Rich adds a photo to each card. Each screen keeps its own separate set of up to 50 cards, so a card added on Standard does not appear on Mini.</p><p><a class="see" href="/multilap/guide/en.html#screens">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-templates"><summary>What are templates for?</summary><div class="ans"><p>Save a card setup you use often (names, colors, order and grouping) and recall it next time. Templates do not belong to a screen, so a setup saved on Standard can be recalled on Mini. Recalling one deletes every card and lap on the current screen and replaces them, so save any results you need first. Target laps are not part of a template.</p><p><a class="see" href="/multilap/guide/en.html#templates">See it in the guide →</a></p></div></details>
+</section>
+<section class="faq-sec" id="export" style="--sec-ac:#AE8FF6"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v7h14v-7"/></svg></span>Saving &amp; Sharing</h2>
+<details class="qa" id="q-save-data"><summary>How do I keep my results?</summary><div class="ans"><p>Choose “Save Data” from the share icon to store the current names, colors, laps and totals on your device. The label defaults to the date and time, and you can rewrite it right there. Saving does not stop timing. Saved data is listed under Settings &gt; Saved Data.</p><p><a class="see" href="/multilap/guide/en.html#share">See it in the guide →</a></p></div></details>
+<details class="qa" id="q-export"><summary>How do I export as CSV or TXT?</summary><div class="ans"><p>From the share icon, pick “Share as CSV”, “Share as TXT” or “Copy as Text”. CSV suits spreadsheets such as Excel, while TXT and the copied text are meant to be read as-is. All of them include the current lap as the final lap at the moment of export.</p><p><a class="see" href="/multilap/guide/en.html#share">See it in the guide →</a></p></div></details>
+</section>
+<section class="faq-sec" id="tips" style="--sec-ac:#FAB55B"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/></svg></span>Tips &amp; Troubleshooting</h2>
+<details class="qa" id="q-background"><summary>Is it safe to switch apps or lock the screen?</summary><div class="ans"><p>Yes. Timing is computed from real elapsed time since the start, so it stays accurate in the background and while the screen is locked. Even if the OS terminates the app, the state is restored from the real clock on the next launch. Changing the device date or time manually will skew the results, though.</p></div></details>
+<details class="qa" id="q-keep-awake"><summary>The screen keeps turning off while I am timing</summary><div class="ans"><p>Turn on “Keep screen on while timing” in Settings. The screen stays awake while any card is running and is released once every card stops. Timing continues either way, even with the screen off.</p></div></details>
+<details class="qa" id="q-wrap"><summary>The time jumped back to 00:00.00</summary><div class="ans"><p>The highest time that can be shown is 99:59.59. Past 100 hours only the displayed and exported value wraps back to 00:00.00 — the measurement itself keeps running.</p></div></details>
+<details class="qa" id="q-name-rule"><summary>I cannot type symbols or spaces in a card name</summary><div class="ans"><p>Card names accept only letters, digits and Japanese characters. Symbols, spaces and emoji are stripped as you type. The limit is 6 characters.</p></div></details>
+<details class="qa" id="q-delete-all"><summary>I want to start over completely</summary><div class="ans"><p>“Delete All Data” in Settings removes every card, lap, saved record and photo across all three screens. Your settings are kept. This cannot be undone.</p></div></details>
+</section>
+<section class="faq-sec" id="data" style="--sec-ac:#38CA8F"><h2><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.3 2.3 4.2-4.6"/></svg></span>Data &amp; Privacy</h2>
+<details class="qa" id="q-data-location"><summary>Where is my timing data stored?</summary><div class="ans"><p>Everything stays on your device. The app never communicates over a network and never sends results, card names or photos to any server. See the <a href="/multilap/privacy/en.html">Privacy Policy</a> for details.</p></div></details>
+<details class="qa" id="q-device-change"><summary>Will my data move to a new phone?</summary><div class="ans"><p>Not on Android: the app is excluded from automatic backup and device-to-device transfer. On iOS, if you use device backup such as iCloud Backup, your data comes along when you restore or use Quick Start. Export anything you need to keep as CSV or text before switching.</p></div></details>
+<details class="qa" id="q-offline"><summary>Does it work without a signal?</summary><div class="ans"><p>Every feature of the app works offline. The How to Use, FAQ, Terms of Use and Privacy Policy links in Settings open pages on this website, though, so they need a connection. Open them once beforehand if you want to read them at the track.</p></div></details>
+<details class="qa" id="q-account"><summary>Do I need an account?</summary><div class="ans"><p>No. Install it and start timing right away. The app does not handle any account information.</p></div></details>
+</section>
+<p class="no-hit" role="status">No matching question. Try another word, or email us below.</p>
+
+<section class="section">
+  <a class="tile glass" href="/multilap/guide/en.html" style="--tile-ac:#30D158"><span class="ico"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span><h3>Try it hands-on</h3><p>The How to Use page has an interactive demo of the app you can tap through.</p><span class="go">→</span></a>
+</section>
+<section class="section">
+<div class="contact glass">
+  <span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span>
+  <div><h3>Contact</h3><p>Send questions and bug reports by email. MultiLap is built and run by one person, so replies may take a little while.</p></div>
+  <a class="mail" href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a>
+</div>
+</section>
+</main>
+<footer>
+  <div class="links"><a href="/multilap/en.html">Support</a><a href="/multilap/guide/en.html">How to Use</a><a href="/multilap/faq/en.html">FAQ</a><a href="/multilap/terms/en.html">Terms of Use</a><a href="/multilap/privacy/en.html">Privacy Policy</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · MultiLap</div>
+</footer>
+</body>
+</html>

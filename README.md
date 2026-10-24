@@ -11,11 +11,15 @@
 ├── index.html            アプリ一覧
 ├── style.css             共通スタイル（ダーク / ライト両対応）
 ├── .nojekyll             Jekyll のビルドを抑止する
-├── multilap/
-│   ├── index.html        サポートページ
-│   └── privacy/
-│       ├── index.html    プライバシーポリシー（日本語）
-│       └── en.html       英語
+├── multilap/             マルチラップ計測（MultiLap）。/style.css は使わず site.css で完結
+│   ├── index.html        サポートページ（日本語）。en.html が英語
+│   ├── site.css          MultiLap のページ共通のスタイル（ダーク / ライト両対応）
+│   ├── site.js           テーマの引き継ぎ・テーマ切替・使い方のデモ・FAQ の絞り込み
+│   ├── icon.png          アプリのアイコン
+│   ├── guide/            使い方（index.html = 日本語 / en.html = 英語。以下同じ）
+│   ├── faq/              よくある質問
+│   ├── terms/            利用規約
+│   └── privacy/          プライバシーポリシー
 └── nisedenwa/            偽電話（Fake Call）
     ├── index.html        サポートページ
     ├── site.css          使い方・よくある質問・サポートのページ用（/style.css に重ねる）
@@ -43,6 +47,12 @@
 | --- | --- |
 | サポート URL（App Store 必須） | https://ryozowski.github.io/multilap/ |
 | プライバシーポリシー（両ストア必須） | https://ryozowski.github.io/multilap/privacy/ |
+| 利用規約 | https://ryozowski.github.io/multilap/terms/ |
+
+マルチラップ計測は、使い方・よくある質問・利用規約・プライバシーポリシー（日英とも）を**アプリの設定画面から
+直接開いている**（アプリ本体の `lib/core/constants/web_links.dart`。iOS は SFSafariViewController、
+Android は既定のブラウザ）。日本語は `…/guide/`、それ以外の言語は `…/guide/en.html` を開く。
+パスを変えるとアプリから開けなくなり、それはストアの更新なしには直せない。
 
 ### 偽電話（Fake Call）
 
@@ -80,15 +90,24 @@ JavaScript を無効にしているため、アプリの外観の設定に合わ
 - 色を変えたときは、`style.css` と `nisedenwa/site.css` の両方で、端末の設定の側と
   `#theme-*` の側を同じ値にする
 
+マルチラップ計測のページ（`multilap/site.js`）は、これに JavaScript を重ねている。
+
+- `#theme-light` / `#theme-dark` の指定をタブ単位（sessionStorage）で覚えて `<html data-theme>` に付けるため、
+  ページ内リンクで印が外れても、別のページへ移っても、アプリの指定が続く。ページ内リンクを置いてよい
+- 上部のボタンで訪問者が選んだテーマは localStorage に残る
+- 色の値は `multilap/site.css` の 5 箇所（ダーク 2・ライト 3）を同じにする
+
 ## ポリシーを更新するとき
 
 ### マルチラップ計測
 
-プライバシーポリシーの本文は 3 箇所にある。**必ず同時に更新する**。
+プライバシーポリシーの本文は 2 箇所にある。**必ず同時に更新する**（アプリ内表示はやめ、アプリはこのページを開く）。
 
 1. このリポジトリの `multilap/privacy/index.html` と `en.html`
 2. アプリ本体の `docs/privacy-policy.md` と `docs/privacy-policy.en.md`
-3. アプリ内表示（`lib/l10n/app_ja.arb` / `app_en.arb` の `privacy*` キー）
+
+使い方・よくある質問・利用規約の本文は**このリポジトリだけ**にある。アプリの仕様（本体の `docs/spec.md`）を
+変えたときは、使い方とよくある質問の該当箇所も日英とも直す。
 
 内容がずれるとストア審査で不整合を指摘される。
 

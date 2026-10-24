@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Use — MultiLap</title>
+<meta name="description" content="How to use MultiLap. Tap through an interactive demo of Start, Lap, all-card controls, the card detail screen and sharing, then see illustrated guides to groups, target laps and templates.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#e9eff7" media="(prefers-color-scheme: light)">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/multilap/guide/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/multilap/guide/en.html">
+<link rel="icon" href="/multilap/icon.png">
+<link rel="apple-touch-icon" href="/multilap/icon.png">
+<link rel="stylesheet" href="/multilap/site.css">
+<script src="/multilap/site.js"></script>
+</head>
+<body>
+<i id="theme-light" hidden></i><i id="theme-dark" hidden></i>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/multilap/en.html"><img src="/multilap/icon.png" width="32" height="32" alt=""><span>MultiLap</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="/multilap/guide/en.html" aria-current="page">How to Use</a><a href="/multilap/faq/en.html">FAQ</a><a href="/multilap/terms/en.html">Terms</a><a href="/multilap/privacy/en.html">Privacy</a>
+    </nav>
+    <div class="tools">
+      <a class="tool" href="/multilap/guide/" hreflang="ja" lang="ja"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>日本語</span></a>
+      <button class="tool theme-btn" type="button" data-mode="auto"><span class="t-auto"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg></span><span class="t-light"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="t-dark"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span></button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="section" style="margin:28px 0 8px">
+  <div class="eyebrow">How to use</div>
+  <h1>How to Use</h1>
+  <p class="lead">The screen below is a working demo that behaves like the app. Follow the green hints to walk through the basic flow — from timing to reviewing and sharing results — in about a minute.</p>
+</section>
+<section class="section demo" id="try" aria-labelledby="try-h">
+  <div class="device" data-demo="tour" aria-label="demo"></div>
+  <div class="steps-panel glass" data-tour>
+    <h2 id="try-h" style="font-size:20px">Learn it in 6 taps</h2>
+    <noscript><p class="nojs-note">Turn on JavaScript to play with this demo. The illustrated guide below works without it.</p></noscript>
+    <div class="progress"><span>Progress</span><span class="bar"><i></i></span><span class="count num">0 / 6</span></div>
+    <ol class="tour"><li><b>Tap Start on Alex’s card</b><span class="why">Timing begins. Lap 1 starts as the “current lap” at the same moment.</span></li><li><b>Tap Lap twice</b><span class="why">Each tap closes the interval on the spot and starts the next lap. The badge shows the lap in progress.</span></li><li><b>Tap All Start at the top</b><span class="why">Mia and Sam, who haven’t started yet, start at exactly the same instant. Alex keeps running untouched.</span></li><li><b>Tap Alex’s time</b><span class="why">The card detail opens. Among closed laps, the fastest is green and the slowest is red, with the average shown.</span></li><li><b>Go back with “&lt;”</b><span class="why">Timing never stops while you look at the detail. The clock is still running when you return.</span></li><li><b>Tap the share icon</b><span class="why">Save the data, copy it as text, or share it as CSV or TXT. The current lap is included.</span></li></ol>
+    <div class="tour-done" role="status">Nicely done — that’s the basic flow. Feel free to try Stop, Reset, All Lap and the rest.</div>
+    <div class="tour-actions"><button class="tool" type="button" data-restart>↺ Start over</button><a class="tool" href="/multilap/faq/en.html">Go to the FAQ →</a></div>
+  </div>
+</section>
+<section class="section" id="map">
+  <div class="section-head"><div class="eyebrow">Navigation</div><h2 id="map-h">What does each tap open?</h2><p>Starting from a timing screen (Standard, Mini or Rich), here is where the common taps take you.</p></div>
+  <div class="routes"><a class="route" href="#detail"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0V11"/><path d="M16.2 10.2a1.8 1.8 0 0 1 3.3 1V14c0 4-2.6 6.5-6.3 6.5-2.6 0-4.1-1-5.6-3.1L5 13.6a1.7 1.7 0 0 1 2.7-2.1L9 13"/></svg></span>Tap the time</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Card detail</b><small>Lap list, color, target laps and sharing one card. Works while timing</small></span></a><a class="route" href="#card"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0V11"/><path d="M16.2 10.2a1.8 1.8 0 0 1 3.3 1V14c0 4-2.6 6.5-6.3 6.5-2.6 0-4.1-1-5.6-3.1L5 13.6a1.7 1.7 0 0 1 2.7-2.1L9 13"/></svg></span>Tap the name</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Rename</b><small>Up to 6 characters. No symbols, spaces or emoji</small></span></a><a class="route" href="#share"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v7h14v-7"/></svg></span>Share icon</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Share sheet</b><small>Save Data / Copy as Text / CSV / TXT</small></span></a><a class="route" href="#templates"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M6 3.5h9l3 3v14H6z"/><path d="M9 8.5h6M9 12h6M9 15.5h4"/></svg></span>Template icon</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Templates</b><small>Save and load card setups</small></span></a><a class="route" href="#target"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M6 21V4h11l-1.6 3.5L17 11H6"/></svg></span>Flag button</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Target laps</b><small>Set how many laps every card on the screen will run</small></span></a><a class="route" href="#groups"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9.5" r="2.6"/><path d="M15.5 14.6c2.4-.3 4.4 1.2 5 4.4"/></svg></span>Tap a group name</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Group settings</b><small>Name, color and target laps</small></span></a><a class="route" href="#screens"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>Bottom tabs</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Standard, Mini, Rich</b><small>Each screen keeps its own set of up to 50 cards</small></span></a><a class="route" href="#settings"><span class="r-from"><span class="r-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3.9a7 7 0 0 0-2-1.2L14.2 3h-4l-.4 2.6a7 7 0 0 0-2 1.2l-2.3-.9-2 3.4 2 1.5A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.3-.9a7 7 0 0 0 2 1.2l.4 2.6h4l.4-2.6a7 7 0 0 0 2-1.2l2.3.9 2-3.4-2-1.5c.1-.4.1-.8.1-1.2z"/></svg></span>Gear icon</span><span class="r-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="r-to"><b>Settings</b><small>Language, theme, saved data, help and FAQ</small></span></a></div>
+</section>
+<section class="section" id="card">
+  <div class="section-head"><div class="eyebrow">The card</div><h2 id="card-h">Reading a card</h2><p>Each card is one person’s stopwatch. Add cards with the “+” at the bottom of the list.</p></div>
+  <div class="figure-grid">
+    <div class="fig glass">
+      <div class="stage anat"><div class="card" style="--ac:#4A90D9"><div class="nm"><span class="pin" aria-hidden="true">1</span>Alex</div><div class="tz"><span class="pin" aria-hidden="true">2</span><div class="tt">03:42.18</div><div class="lp"><span class="lb"><span class="pin" aria-hidden="true">3</span>3/5</span><span>01:12.40</span></div></div><div class="cbtns"><span class="pin" aria-hidden="true">4</span><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div>
+      <p class="hint-line"><svg viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>Swipe a card left to delete it, or press and hold to drag it into a new position.</p>
+    </div>
+    <div class="fig glass">
+      <ol class="legend"><li><b>Name</b> — tap to rename (up to 6 characters).</li><li><b>Total</b> — time since the start. <b>Tap it to open the card detail</b>; timing keeps running.</li><li><b>Current lap</b> — the badge is the lap in progress, followed by that lap’s time. With a target it reads <b>3/5</b>.</li><li><b>Buttons</b> — Start / Stop on the left, Lap (running) / Reset (paused) on the right.</li></ol>
+      <p class="more">Related questions: <a href="/multilap/faq/en.html#q-add-card">Adding a card</a> · <a href="/multilap/faq/en.html#q-edit-card">Changing name or color</a></p>
+    </div>
+  </div>
+</section>
+<section class="section" id="states">
+  <div class="section-head"><div class="eyebrow">States</div><h2 id="states-h">Three states and their buttons</h2><p>A card is always idle, running or paused, and its buttons change to match.</p></div>
+  <div class="fig glass">
+    <div class="states"><div class="state idle"><b><span class="dot"></span>Idle</b><div class="pair"><button class="cbtn start" tabindex="-1">Start</button><button class="cbtn" tabindex="-1" disabled>Lap</button></div><small>Shows 00:00.00. Only Start works</small></div><div class="state run"><b><span class="dot"></span>Running</b><div class="pair"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div><small>Stop pauses, Lap closes a lap</small></div><div class="state pause"><b><span class="dot"></span>Paused</b><div class="pair"><button class="cbtn start" tabindex="-1">Start</button><button class="cbtn" tabindex="-1">Reset</button></div><small>Start resumes, Reset clears it</small></div></div>
+    <ul class="flow"><li><b>Start</b> begins timing and Lap 1</li><li><b>Lap</b> closes the lap and starts the next</li><li><b class="r">Stop</b> pauses (does not close the lap)</li><li><b>Start</b> resumes where it stopped</li><li><b class="r">Reset</b> clears all laps and time (no prompt)</li></ul>
+    <div class="callout" style="margin-bottom:0"><p>The interval still in progress is the “current lap”. It is always included in the total, the lap count, the average and every export.</p></div>
+    <p class="more">Related questions: <a href="/multilap/faq/en.html#q-buttons">What each button does</a> · <a href="/multilap/faq/en.html#q-current-lap">The current lap</a></p>
+  </div>
+</section>
+<section class="section" id="detail">
+  <div class="section-head"><div class="eyebrow">Card detail</div><h2 id="detail-h">Review laps in the card detail</h2><p>Tap the time to open it. This screen is for looking back and adjusting the card — it has no timing buttons.</p></div>
+  <div class="figure-grid">
+    <div class="fig glass"><div class="stage detail-stage" style="--ac:#4A90D9">
+      <div class="a-hdr"><span class="hb icon"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></span><div class="ttl">Alex</div>
+      <span class="hb icon"><svg viewBox="0 0 24 24"><path d="M6 21V4h11l-1.6 3.5L17 11H6"/></svg></span><span class="hb icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="9.5" r="1" fill="currentColor"/><circle cx="14.5" cy="9" r="1" fill="currentColor"/><circle cx="15.5" cy="13.5" r="1" fill="currentColor"/></svg></span><span class="hb icon"><svg viewBox="0 0 24 24"><path d="M12 3v12M12 3l-4 4M12 3l4 4M5 12v7h14v-7"/></svg></span></div>
+      <div class="d-total">05:16.73</div><div class="d-sub">5/5 Laps・Avg 01:03.34</div>
+      <div class="d-laps"><div class="laprow"><span class="ln">Lap 1</span><span class="lt">01:11.82</span></div><div class="laprow fast"><span class="ln">Lap 2</span><span class="lt">01:09.47</span></div><div class="laprow slow"><span class="ln">Lap 3</span><span class="lt">01:14.05</span></div><div class="laprow"><span class="ln">Lap 4</span><span class="lt">01:10.33</span></div><div class="laprow cur"><span class="ln">Lap 5</span><span class="lt">00:31.06</span></div></div>
+    </div></div>
+    <div class="fig glass"><ol class="legend"><li><b>Green is fastest, red is slowest</b> — colors appear once two or more laps are closed. Ties are all colored.</li><li><b>The ● row is the current lap</b> — still in progress, and never marked fastest or slowest.</li><li><b>Top-right icons</b> — the flag sets a target for this card, the palette picks one of 16 colors, share exports this card only.</li></ol><p class="more">Related questions: <a href="/multilap/faq/en.html#q-fastest-slowest">Green and red laps</a> · <a href="/multilap/faq/en.html#q-edit-card">Changing name or color</a></p></div>
+  </div>
+</section>
+<section class="section" id="bulk">
+  <div class="section-head"><div class="eyebrow">All-card controls</div><h2 id="bulk-h">Control everyone at once</h2><p>The bar at the top acts on every card on the screen. A button is disabled when no card matches it.</p></div>
+  <div class="fig glass">
+    <div class="stage"><div class="a-bulk" style="padding:0"><span class="bb g"><span>All</span><b>Start</b></span><span class="bb r"><span>All</span><b>Stop</b></span><span class="bb"><span>All</span><b>Lap</b></span><span class="bb"><span>All</span><b>Reset</b></span><span class="bb tg"><svg viewBox="0 0 24 24"><path d="M6 21V4h11l-1.6 3.5L17 11H6"/></svg></span></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Button</th><th>Applies to</th><th>Note</th></tr></thead><tbody><tr><th>All Start</th><td>Idle and paused cards</td><td>The moment you tap becomes everyone’s shared origin, so start times match exactly</td></tr><tr><th>All Stop</th><td>Running cards</td><td></td></tr><tr><th>All Lap</th><td>Running cards</td><td>Closes everyone’s lap at the same instant</td></tr><tr><th>All Reset</th><td>Paused cards</td><td>Asks for confirmation</td></tr></tbody></table></div>
+    <p class="more">Related questions: <a href="/multilap/faq/en.html#q-bulk-start">Starting everyone at once</a> · <a href="/multilap/faq/en.html#q-bulk-disabled">Greyed-out buttons</a></p>
+  </div>
+</section>
+<section class="section" id="screens">
+  <div class="section-head"><div class="eyebrow">Three screens</div><h2 id="screens-h">Standard, Mini and Rich</h2><p>Switch with the bottom tabs. Each screen keeps its own separate set of up to 50 cards.</p></div>
+  <div class="screens"><div class="scr glass"><div class="stage"><div class="card" style="--ac:#4A90D9"><div class="nm">Alex</div><div class="tz"><div class="tt">02:21.34</div><div class="lp"><span class="lb">2</span><span>01:09.52</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div><div class="card" style="--ac:#F77E31"><div class="nm">Mia</div><div class="tz"><div class="tt">02:19.08</div><div class="lp"><span class="lb">2</span><span>01:07.66</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div><div class="card" style="--ac:#3FD8E9"><div class="nm">Sam</div><div class="tz"><div class="tt">00:00.00</div><div class="lp"><span class="lb">1</span><span>00:00.00</span></div></div><div class="cbtns"><button class="cbtn start" tabindex="-1">Start</button><button class="cbtn" tabindex="-1" disabled>Lap</button></div></div></div><h3>Standard</h3><p>One large card per row. The easiest to read.</p></div><div class="scr glass"><div class="stage"><div class="mini-grid"><div class="card mini" style="--ac:#4A90D9"><div class="nm">Alex</div><div class="row"><div class="tz"><div class="tt">02:21.34</div><div class="lp"><span class="lb">2</span><span>01:09.52</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div class="card mini" style="--ac:#F77E31"><div class="nm">Mia</div><div class="row"><div class="tz"><div class="tt">02:19.08</div><div class="lp"><span class="lb">2</span><span>01:07.66</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div class="card mini" style="--ac:#3FD8E9"><div class="nm">Sam</div><div class="row"><div class="tz"><div class="tt">02:24.71</div><div class="lp"><span class="lb">2</span><span>01:12.10</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div class="card mini" style="--ac:#F6558A"><div class="nm">Noah</div><div class="row"><div class="tz"><div class="tt">01:58.20</div><div class="lp"><span class="lb">2</span><span>00:40.31</span></div></div><div class="cbtns"><button class="cbtn start" tabindex="-1">Start</button><button class="cbtn" tabindex="-1">Reset</button></div></div></div><div class="card mini" style="--ac:#38CA8F"><div class="nm">Ken</div><div class="row"><div class="tz"><div class="tt">02:20.02</div><div class="lp"><span class="lb">2</span><span>01:08.77</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div class="card mini" style="--ac:#5F6FF3"><div class="nm">Yui</div><div class="row"><div class="tz"><div class="tt">02:22.45</div><div class="lp"><span class="lb">2</span><span>01:10.90</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div></div></div><h3>Mini</h3><p>Two columns for a wider overview of big squads.</p></div><div class="scr glass"><div class="stage"><div class="card rich" style="--ac:#4A90D9"><div class="nm">Alex</div><div class="row"><div class="photo">A</div><div class="tz"><div class="tt">02:21.34</div><div class="lp"><span class="lb">2</span><span>01:09.52</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div class="card rich" style="--ac:#F77E31"><div class="nm">Mia</div><div class="row"><div class="photo">M</div><div class="tz"><div class="tt">02:19.08</div><div class="lp"><span class="lb">2</span><span>01:07.66</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div></div><h3>Rich</h3><p>Cards with a photo, for telling runners apart at a glance.</p></div></div>
+  <p class="more">Related questions: <a href="/multilap/faq/en.html#q-screens">The three screens</a></p>
+</section>
+<section class="section" id="groups">
+  <div class="section-head"><div class="eyebrow">Groups</div><h2 id="groups-h">Control cards team by team</h2><p>Grouped cards get a header whose Start, Stop, Lap and Reset apply only to that group. You can group and ungroup even while timing.</p></div>
+  <div class="figure-grid">
+    <div class="fig glass"><div class="stage"><div class="ghd" style="--gac:#F77E31"><span class="cav">▼</span><span class="gnm">Team A</span><span class="gct">(2)</span><span class="gbtns"><span class="gb g">Start</span><span class="gb r">Stop</span><span class="gb">Lap</span><span class="gb">Reset</span></span></div><div class="gbody"><div class="card" style="--ac:#4A90D9"><div class="nm">Alex</div><div class="tz"><div class="tt">01:45.10</div><div class="lp"><span class="lb">2</span><span>00:34.02</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div><div class="card" style="--ac:#F77E31"><div class="nm">Mia</div><div class="tz"><div class="tt">01:43.88</div><div class="lp"><span class="lb">2</span><span>00:33.15</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div><div style="position:relative;margin-top:14px"><div class="card drag" style="--ac:#3FD8E9"><div class="nm">Sam</div><div class="tz"><div class="tt">00:00.00</div><div class="lp"><span class="lb">1</span><span>00:00.00</span></div></div><div class="cbtns"><button class="cbtn start" tabindex="-1">Start</button><button class="cbtn" tabindex="-1" disabled>Lap</button></div></div><span class="hand" style="left:46%;top:22px" aria-hidden="true"></span></div></div></div>
+    <div class="fig glass"><ol class="legend"><li><b>Press and hold a card</b> and rest it on another card for about half a second to make a group, or select cards in Edit and tap “Group”.</li><li><b>Header buttons</b> act on the group’s cards only, following the same rules as the all-card bar.</li><li><b>Tap the group name</b> to set its name, color and target laps. ▼ collapses it.</li><li>Carry a card outside and release it to ungroup. Empty groups disappear on their own.</li></ol><p class="more">Related questions: <a href="/multilap/faq/en.html#q-grouping">Team-by-team control</a> · <a href="/multilap/faq/en.html#q-ungrouping">Breaking up a group</a></p></div>
+  </div>
+</section>
+<section class="section" id="target">
+  <div class="section-head"><div class="eyebrow">Target laps</div><h2 id="target-h">Set target laps in advance</h2><p>Register how many laps to run with the flag button in the all-card bar, and badges show “lap / target”.</p></div>
+  <div class="fig glass">
+    <div class="stage"><div class="card" style="--ac:#4A90D9"><div class="nm">Alex</div><div class="tz"><div class="tt">05:16.73</div><div class="lp"><span class="lb hit">5/5</span><span>00:31.06</span></div></div><div class="cbtns"><button class="cbtn stop" tabindex="-1">Stop</button><button class="cbtn" tabindex="-1">Lap</button></div></div></div>
+    <div class="badges"><span><span class="lb num">2/5</span><small>Running</small></span><span class="arrow" aria-hidden="true">→</span><span><span class="lb hit num">5/5</span><small>Green on the last lap</small></span><span class="arrow" aria-hidden="true">→</span><span><span class="lb hit num">7/5</span><small>Keeps counting</small></span></div>
+    <p style="color:var(--tx2)">Reaching the target never stops timing, and Lap and Stop work as usual. Override it per card from the card detail or per group in group settings (card → group → screen, in that order).</p>
+    <p class="more">Related questions: <a href="/multilap/faq/en.html#q-target-laps">Setting laps in advance</a></p>
+  </div>
+</section>
+<section class="section" id="templates">
+  <div class="section-head"><div class="eyebrow">Templates</div><h2 id="templates-h">Save your roster as a template</h2><p>Save the names, colors, order and grouping you use often, then recall them next time — even on a different screen.</p></div>
+  <div class="figure-grid">
+    <div class="fig glass"><div class="stage"><div class="a-grp tpl-sheet"><div class="tpl-head">Templates</div><div class="tpl-save">+ Save Current Setup (3)</div><div class="tpl-row"><div><b>Team A</b><small>8 cards・2 groups</small><span class="dots"><i style=background:#4A90D9></i><i style=background:#F77E31></i><i style=background:#3FD8E9></i><i style=background:#F6558A></i><i style=background:#38CA8F></i><i style=background:#5F6FF3></i><i style=background:#FAB55B></i><i style=background:#AE8FF6></i></span></div><span class="more-btn">⋯</span></div><div class="tpl-row"><div><b>Relay squad</b><small>5 cards</small><span class="dots"><i style=background:#4A90D9></i><i style=background:#F77E31></i><i style=background:#3FD8E9></i><i style=background:#F6558A></i><i style=background:#38CA8F></i></span></div><span class="more-btn">⋯</span></div></div></div></div>
+    <div class="fig glass"><div class="callout" style="margin-top:0"><p>Recalling a template deletes every card and lap on the current screen and replaces them, so save any results first. Target laps are not part of a template.</p></div><p class="more">Related questions: <a href="/multilap/faq/en.html#q-templates">What templates are for</a></p></div>
+  </div>
+</section>
+<section class="section" id="share">
+  <div class="section-head"><div class="eyebrow">Save &amp; share</div><h2 id="share-h">Save and share results</h2><p>Keep a record on the spot from the share icon. Saving or exporting never stops timing.</p></div>
+  <div class="figure-grid">
+    <div class="fig glass"><div class="stage"><div class="a-grp"><button tabindex="-1">Save Data</button><button tabindex="-1">Copy as Text</button><button tabindex="-1">Share as CSV</button><button tabindex="-1">Share as TXT</button></div><div class="a-grp cancel"><button tabindex="-1">Cancel</button></div></div></div>
+    <div class="fig glass"><ul class="plain"><li><b>Save Data</b> — Stores the results on your device. Find them later under Settings &gt; Saved Data. The label defaults to the date and time.</li><li><b>Copy as Text</b> — Puts readable text on the clipboard, ready to paste into a chat or a note.</li><li><b>Share as CSV</b> — For spreadsheets such as Excel.</li><li><b>Share as TXT</b> — Shares a plain text file.</li></ul><p style="color:var(--tx2);font-size:15px">Sharing from a timing screen covers every card on it; sharing from the card detail covers that card only.</p><p class="more">Related questions: <a href="/multilap/faq/en.html#q-save-data">Keeping results</a> · <a href="/multilap/faq/en.html#q-export">Exporting CSV or TXT</a></p></div>
+  </div>
+</section>
+<section class="section" id="settings">
+  <div class="section-head"><div class="eyebrow">Settings</div><h2>Settings worth knowing</h2></div>
+  <div class="fig glass">
+    <div class="set-grid"><div class="set-item"><b>Keep screen on while timing</b><p>Keeps the screen awake only while a card is running (on by default).</p></div><div class="set-item"><b>Haptics and sounds</b><p>Vibration and a tick when you press buttons. Sounds are off by default.</p></div><div class="set-item"><b>Language and theme</b><p>Follow the device, or choose 日本語 / English and light / dark. This website follows the app’s choice too.</p></div><div class="set-item"><b>Delete All Data</b><p>Removes every card, lap, saved record and photo on all three screens. Settings are kept.</p></div></div>
+    <div class="callout" style="margin-bottom:0"><p>Switching apps or locking the screen is fine: timing is calculated from the real clock, so it stays accurate.</p></div>
+    <p class="more">Related questions: <a href="/multilap/faq/en.html#q-keep-awake">Screen turning off</a> · <a href="/multilap/faq/en.html#q-background">Switching apps</a></p>
+  </div>
+</section>
+<section class="section">
+  <div class="tiles">
+    <a class="tile glass" href="/multilap/faq/en.html" style="--tile-ac:#4A90D9"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2.1-2.4 3.7M12 17h.01"/></svg></span><h3>Still have questions?</h3><p>The FAQ covers operation details and how your records are handled.</p><span class="go">→</span></a>
+  </div>
+</section>
+<section class="section">
+<div class="contact glass">
+  <span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span>
+  <div><h3>Contact</h3><p>Send questions and bug reports by email. MultiLap is built and run by one person, so replies may take a little while.</p></div>
+  <a class="mail" href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a>
+</div>
+</section>
+</main>
+<footer>
+  <div class="links"><a href="/multilap/en.html">Support</a><a href="/multilap/guide/en.html">How to Use</a><a href="/multilap/faq/en.html">FAQ</a><a href="/multilap/terms/en.html">Terms of Use</a><a href="/multilap/privacy/en.html">Privacy Policy</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · MultiLap</div>
+</footer>
+</body>
+</html>
