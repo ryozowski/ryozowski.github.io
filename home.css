@@ -73,8 +73,9 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
+/* 背景のグラデーションは html に置く。body に置くと、z-index: -1 の .aurora がその下に隠れる */
 html {
-  background: var(--bg1);
+  background: var(--bg1) linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -85,7 +86,6 @@ body {
   font-size: 16px;
   line-height: 1.75;
   color: var(--tx);
-  background: linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
   overflow-x: hidden;
 }
 
@@ -192,13 +192,13 @@ p { margin: 0 0 12px; }
 }
 /* アプリの色で、カードの右上をほのかに光らせる */
 .app::before {
-  content: ""; position: absolute; inset: -40% -40% auto auto; width: 70%; aspect-ratio: 1;
+  content: ""; position: absolute; inset: -40% -40% auto auto; z-index: -1; width: 70%; aspect-ratio: 1;
   border-radius: 50%; pointer-events: none;
   background: radial-gradient(closest-side, color-mix(in srgb, var(--ac) 30%, transparent), transparent);
 }
 .app:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--ac) 55%, transparent); }
 
-.app-head { position: relative; display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+.app-head { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
 .app-icon {
   flex: none; width: 84px; height: 84px; border-radius: 19px;
   box-shadow: var(--icon-shadow);
@@ -208,14 +208,17 @@ p { margin: 0 0 12px; }
   font-size: 12px; font-weight: 800; letter-spacing: 0.14em; color: var(--tx2); text-transform: uppercase;
 }
 
-/* カード全体を押せるようにする。下のリンクはその上に重ねる */
+/*
+ * カード全体を押せるようにする。.app-link::after が .app 全体を覆い、下のリンク（.app-links）だけを
+ * その上に重ねる。覆いの基準が .app になるよう、間の要素（.app-head など）には position を付けない。
+ */
 .app-link { color: var(--tx); text-decoration: none; }
-.app-link::after { content: ""; position: absolute; inset: 0; z-index: 0; border-radius: inherit; }
+.app-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
 .app:hover .app-link { color: var(--tx); }
 
-.app .desc { position: relative; color: var(--tx2); font-size: 15px; margin: 0 0 16px; }
+.app .desc { color: var(--tx2); font-size: 15px; margin: 0 0 16px; }
 
-.chips { position: relative; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 20px; list-style: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 20px; list-style: none; }
 .chips li {
   font-size: 12.5px; font-weight: 700; padding: 4px 11px; border-radius: 999px;
   background: var(--glass); border: 1px solid var(--line); color: var(--tx);
@@ -223,7 +226,7 @@ p { margin: 0 0 12px; }
 .chips li::before { content: "✓"; color: var(--ok); margin-right: 6px; font-weight: 900; }
 
 .app-links {
-  position: relative; z-index: 1;
+  position: relative; z-index: 2;
   display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;
   padding-top: 18px; border-top: 1px solid var(--line);
 }
@@ -235,6 +238,8 @@ p { margin: 0 0 12px; }
 .app-links a:hover { background: var(--glass2); border-color: var(--line2); }
 .app-links a.primary {
   color: #fff; border-color: transparent;
+  /* color-mix() の無いブラウザでは下の行が無効になるため、単色を先に置く */
+  background: var(--ac);
   background: linear-gradient(160deg, color-mix(in srgb, var(--ac) 100%, #fff 8%), color-mix(in srgb, var(--ac) 100%, #000 18%));
 }
 .app-links a.primary:hover { filter: brightness(1.08); }

@@ -23,9 +23,17 @@
       else localStorage.removeItem(KEY);
     } catch (e) { /* 保存できない環境でも、このページの表示だけは切り替える */ }
   }
+  // ブラウザのアドレスバーの色（<meta name="theme-color">）も、選んだテーマに合わせる。
+  // 「端末の設定に合わせる」では、media 属性どおり（ダーク / ライトそれぞれの色）に戻す。
+  var BAR = { dark: "#0b1220", light: "#e9eff7" };
   function apply(v) {
     if (v) root.setAttribute("data-theme", v);
     else root.removeAttribute("data-theme");
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    for (var i = 0; i < metas.length; i++) {
+      var own = /dark/.test(metas[i].media) ? "dark" : "light";
+      metas[i].content = BAR[v || own];
+    }
   }
 
   apply(read());
