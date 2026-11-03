@@ -9,6 +9,8 @@
 /* ---- 色: ダーク（既定） ---- */
 :root {
   color-scheme: dark;
+  --show-light: none;
+  --show-dark: inline;
   --bg1: #0b1220;
   --bg2: #101b2e;
   --blob: 0.45;
@@ -33,6 +35,8 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
+    --show-light: inline;
+    --show-dark: none;
     --bg1: #e9eff7;
     --bg2: #f6f9fd;
     --blob: 0.28;
@@ -53,6 +57,8 @@
 /* ---- 色: ライト（訪問者の指定） ---- */
 :root[data-theme="light"] {
   color-scheme: light;
+  --show-light: inline;
+  --show-dark: none;
   --bg1: #e9eff7;
   --bg2: #f6f9fd;
   --blob: 0.28;
@@ -91,6 +97,13 @@ body {
 
 a { color: var(--link); text-underline-offset: 3px; }
 img { max-width: 100%; }
+
+/*
+ * テーマに合わせてアプリのアイコンを出し分ける。明るい版（data-for="light"）と暗い版
+ * （data-for="dark"）を並べて置き、テーマの色の定義にある --show-light / --show-dark で片方だけを出す。
+ */
+img[data-for="light"] { display: var(--show-light, inline); }
+img[data-for="dark"] { display: var(--show-dark, none); }
 button { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
 

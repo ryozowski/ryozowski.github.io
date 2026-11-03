@@ -4,7 +4,7 @@
  *
  * テーマの優先順位: <html data-theme>（site.js が付ける）> URL の #theme-light / #theme-dark
  * （JavaScript が無くても効く）> 端末の設定（prefers-color-scheme）。
- * 色を変えるときは、ダークの 2 箇所（:root と #theme-dark）とライトの 3 箇所
+ * 色（とアイコンの出し分け --show-light / --show-dark）を変えるときは、ダークの 2 箇所（:root と #theme-dark）とライトの 3 箇所
  * （prefers-color-scheme / data-theme / #theme-light）を同じ値にする。
  * :has() を含むセレクタは、対応していないブラウザで他のルールを巻き込んで無効にしないよう、
  * 単独のルールに分けている。
@@ -13,6 +13,8 @@
 /* ---- 色: ダーク（既定） ---- */
 :root {
   color-scheme: dark;
+  --show-light: none;
+  --show-dark: inline;
   --bg1: #0b1220;
   --bg2: #101b2e;
   --blob: 0.45;
@@ -48,6 +50,8 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
+    --show-light: inline;
+    --show-dark: none;
     --bg1: #e9eff7;
     --bg2: #f6f9fd;
     --blob: 0.28;
@@ -72,6 +76,8 @@
 /* ---- 色: ライト（アプリまたは利用者の指定） ---- */
 :root[data-theme="light"] {
   color-scheme: light;
+  --show-light: inline;
+  --show-dark: none;
   --bg1: #e9eff7;
   --bg2: #f6f9fd;
   --blob: 0.28;
@@ -95,6 +101,8 @@
 /* JavaScript が無い場合の、URL の印による指定（site.js があれば data-theme が先に効く） */
 :root:not([data-theme]):has(#theme-light:target) {
   color-scheme: light;
+  --show-light: inline;
+  --show-dark: none;
   --bg1: #e9eff7;
   --bg2: #f6f9fd;
   --blob: 0.28;
@@ -117,6 +125,8 @@
 
 :root:not([data-theme]):has(#theme-dark:target) {
   color-scheme: dark;
+  --show-light: none;
+  --show-dark: inline;
   --bg1: #0b1220;
   --bg2: #101b2e;
   --blob: 0.45;
@@ -141,8 +151,9 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
+/* 背景のグラデーションは html に置く。body に置くと、z-index: -1 の .aurora がその下に隠れる */
 html {
-  background: var(--bg1);
+  background: var(--bg1) linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: 84px;
 }
@@ -154,13 +165,19 @@ body {
   font-size: 16px;
   line-height: 1.75;
   color: var(--tx);
-  background: linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
   overflow-x: hidden;
 }
 
 a { color: var(--link); text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
 img { max-width: 100%; }
+
+/*
+ * テーマに合わせてアプリのアイコンを出し分ける。明るい版（data-for="light"）と暗い版
+ * （data-for="dark"）を並べて置き、テーマの色の定義にある --show-light / --show-dark で片方だけを出す。
+ */
+img[data-for="light"] { display: var(--show-light, inline); }
+img[data-for="dark"] { display: var(--show-dark, none); }
 button { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
 
