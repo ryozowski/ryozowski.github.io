@@ -17,7 +17,8 @@
 │   ├── index.html        サポートページ（日本語）。en.html が英語
 │   ├── site.css          MultiLap のページ共通のスタイル（ダーク / ライト両対応）
 │   ├── site.js           テーマの引き継ぎ・テーマ切替・使い方のデモ・FAQ の絞り込み
-│   ├── icon.png          アプリのアイコン
+│   ├── icon.png          アプリのアイコン（明るい版。アプリ本体の assets/icon/app_icon.png。タブ・ホーム画面のアイコンもこれ）
+│   ├── icon-dark.png     アプリのアイコン（暗い版。assets/icon/app_icon_dark.png）。ダーク表示のときだけページ内に出す
 │   ├── guide/            使い方（index.html = 日本語 / en.html = 英語。以下同じ）
 │   ├── faq/              よくある質問
 │   ├── terms/            利用規約
@@ -98,6 +99,8 @@ JavaScript を無効にしているため、アプリの外観の設定に合わ
   ページ内リンクで印が外れても、別のページへ移っても、アプリの指定が続く。ページ内リンクを置いてよい
 - 上部のボタンで訪問者が選んだテーマは localStorage に残る
 - 色の値は `multilap/site.css` の 5 箇所（ダーク 2・ライト 3）を同じにする
+- アイコンは明るい版と暗い版の `<img data-for="light">` / `<img data-for="dark">` を並べ、テーマの色の定義にある
+  `--show-light` / `--show-dark` で片方だけを出す（トップページの `home.css` も同じ）
 
 ## ポリシーを更新するとき
 
