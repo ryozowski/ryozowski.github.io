@@ -8,8 +8,10 @@
 
 ```
 .
-├── index.html            アプリ一覧
-├── style.css             共通スタイル（ダーク / ライト両対応）
+├── index.html            アプリ一覧（日本語）。en.html が英語
+├── home.css              アプリ一覧のスタイル（ダーク / ライト両対応）。/style.css は使わない
+├── home.js               アプリ一覧のテーマ切替（選んだテーマは localStorage に残す）
+├── style.css             偽電話のページの共通スタイル（ダーク / ライト両対応）
 ├── .nojekyll             Jekyll のビルドを抑止する
 ├── multilap/             マルチラップ計測（MultiLap）。/style.css は使わず site.css で完結
 │   ├── index.html        サポートページ（日本語）。en.html が英語
@@ -123,4 +125,5 @@ JavaScript を無効にしているため、アプリの外観の設定に合わ
 
 `<アプリ名>/` ディレクトリを作り、`index.html`（サポート）と `privacy/` を同じ構成で置く。
 利用規約が要るアプリは `terms/` を同じ形で足す。
-ルートの `index.html` にカードを 1 枚足す。
+ルートの `index.html` と `en.html` にカード（`<article class="app">`）を 1 枚ずつ足し、
+アイコンを `<アプリ名>/icon.png` に置く。ヒーローのアイコン列（`.icon-row`）と件数（`.count`）も更新する。

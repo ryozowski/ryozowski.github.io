@@ -1,0 +1,288 @@
+/*
+ * トップページ（/ と /en.html）専用のスタイル。/style.css には重ねず、これだけで完結する。
+ * /style.css は偽電話のアプリ内 WebView が読み込むため、トップページの見た目はここで変える。
+ *
+ * テーマの優先順位: <html data-theme>（home.js が付ける。訪問者がボタンで選んだ値）> 端末の設定。
+ * 色を変えるときは、ダーク（:root）とライトの 2 箇所（prefers-color-scheme / data-theme）を同じ値にする。
+ */
+
+/* ---- 色: ダーク（既定） ---- */
+:root {
+  color-scheme: dark;
+  --bg1: #0b1220;
+  --bg2: #101b2e;
+  --blob: 0.45;
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass2: rgba(255, 255, 255, 0.12);
+  --line: rgba(255, 255, 255, 0.14);
+  --line2: rgba(255, 255, 255, 0.24);
+  --tx: #f2f6fa;
+  --tx2: #93a2b8;
+  --link: #6aa9e6;
+  --ok: #30d158;
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  --inhi: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --icon-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+
+  --brand: #4a90d9;
+  --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---- 色: ライト（端末の設定） ---- */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg1: #e9eff7;
+    --bg2: #f6f9fd;
+    --blob: 0.28;
+    --glass: rgba(255, 255, 255, 0.62);
+    --glass2: rgba(255, 255, 255, 0.85);
+    --line: rgba(22, 35, 58, 0.1);
+    --line2: rgba(22, 35, 58, 0.2);
+    --tx: #16233a;
+    --tx2: #47535f;
+    --link: #2a649f;
+    --ok: #16833a;
+    --shadow: 0 14px 30px rgba(30, 50, 80, 0.14);
+    --inhi: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    --icon-shadow: 0 12px 26px rgba(30, 50, 80, 0.22);
+  }
+}
+
+/* ---- 色: ライト（訪問者の指定） ---- */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg1: #e9eff7;
+  --bg2: #f6f9fd;
+  --blob: 0.28;
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass2: rgba(255, 255, 255, 0.85);
+  --line: rgba(22, 35, 58, 0.1);
+  --line2: rgba(22, 35, 58, 0.2);
+  --tx: #16233a;
+  --tx2: #47535f;
+  --link: #2a649f;
+  --ok: #16833a;
+  --shadow: 0 14px 30px rgba(30, 50, 80, 0.14);
+  --inhi: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  --icon-shadow: 0 12px 26px rgba(30, 50, 80, 0.22);
+}
+
+/* ---- 基本 ---- */
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+/* 背景のグラデーションは html に置く。body に置くと、z-index: -1 の .aurora がその下に隠れる */
+html {
+  background: var(--bg1) linear-gradient(160deg, var(--bg1), var(--bg2)) fixed;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--tx);
+  overflow-x: hidden;
+}
+
+a { color: var(--link); text-underline-offset: 3px; }
+img { max-width: 100%; }
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+
+/* ---- 背景の光彩 ---- */
+
+.aurora { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.aurora i { position: absolute; border-radius: 50%; filter: blur(90px); opacity: var(--blob); }
+.aurora i:nth-child(1) { width: 520px; height: 520px; background: #2e5f9e; top: -160px; left: -160px; animation: drift1 28s ease-in-out infinite alternate; }
+.aurora i:nth-child(2) { width: 460px; height: 460px; background: #2fa8c4; top: 28vh; right: -200px; animation: drift2 34s ease-in-out infinite alternate; }
+.aurora i:nth-child(3) { width: 420px; height: 420px; background: #1c3a6b; bottom: -180px; left: 20vw; animation: drift3 40s ease-in-out infinite alternate; }
+.aurora i:nth-child(4) { width: 280px; height: 280px; background: #30d158; top: 60vh; left: -120px; opacity: calc(var(--blob) * 0.35); animation: drift2 46s ease-in-out infinite alternate-reverse; }
+@keyframes drift1 { to { transform: translate(80px, 60px) scale(1.15); } }
+@keyframes drift2 { to { transform: translate(-70px, -80px) scale(1.1); } }
+@keyframes drift3 { to { transform: translate(60px, -50px); } }
+
+/* ---- ガラス ---- */
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow), var(--inhi);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%);
+}
+
+/* ---- 上部のバー ---- */
+
+.topbar { position: sticky; top: 0; z-index: 50; padding: 10px 16px; }
+.topbar-in {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 8px 8px 16px; border-radius: 20px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--tx); text-decoration: none; font-weight: 800; font-size: 15px; letter-spacing: 0.02em;
+}
+.brand .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--ok), var(--brand));
+  box-shadow: 0 0 12px rgba(74, 144, 217, 0.7);
+}
+.tools { display: flex; gap: 6px; margin-left: auto; }
+.tool {
+  height: 36px; min-width: 36px; padding: 0 10px; border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--glass); border: 1px solid var(--line); box-shadow: var(--inhi);
+  color: var(--tx); font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.tool:hover { background: var(--glass2); }
+.tool svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.theme-btn .t-auto, .theme-btn .t-light, .theme-btn .t-dark { display: none; }
+.theme-btn[data-mode="auto"] .t-auto, .theme-btn[data-mode="light"] .t-light, .theme-btn[data-mode="dark"] .t-dark { display: block; }
+/* JavaScript が無いとテーマを切り替えられないため、ボタンを出さない（端末の設定に従う） */
+.theme-btn { display: none; }
+.js .theme-btn { display: inline-flex; }
+
+/* ---- レイアウト ---- */
+
+main { max-width: 960px; margin: 0 auto; padding: 12px 16px 24px; }
+
+h1, h2, h3 { line-height: 1.35; letter-spacing: 0.01em; }
+h1 { font-size: clamp(32px, 6vw, 52px); margin: 0 0 14px; font-weight: 900; }
+h2 { font-size: clamp(20px, 3vw, 24px); margin: 0; font-weight: 850; }
+h3 { font-size: 20px; margin: 0; font-weight: 850; }
+p { margin: 0 0 12px; }
+
+.grad {
+  background: linear-gradient(100deg, var(--ok) 0%, #3fd8e9 45%, var(--brand) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ---- ヒーロー ---- */
+
+.hero { padding: 48px 0 12px; }
+.lead { font-size: clamp(16px, 2vw, 18px); color: var(--tx2); max-width: 34em; margin: 0; }
+
+/* アプリのアイコンを並べた飾り */
+.icon-row { display: flex; gap: 12px; margin-top: 28px; }
+.icon-row img {
+  width: 52px; height: 52px; border-radius: 12px;
+  box-shadow: var(--icon-shadow);
+}
+
+/* ---- セクション ---- */
+
+.section { margin: 56px 0; }
+.section-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+.section-head .count { color: var(--tx2); font-size: 14px; font-weight: 700; }
+
+/* ---- アプリのカード ---- */
+
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 18px; }
+
+.app {
+  position: relative; display: flex; flex-direction: column;
+  padding: 26px; border-radius: 28px; overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+/* アプリの色で、カードの右上をほのかに光らせる */
+.app::before {
+  content: ""; position: absolute; inset: -40% -40% auto auto; z-index: -1; width: 70%; aspect-ratio: 1;
+  border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--ac) 30%, transparent), transparent);
+}
+.app:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--ac) 55%, transparent); }
+
+.app-head { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+.app-icon {
+  flex: none; width: 84px; height: 84px; border-radius: 19px;
+  box-shadow: var(--icon-shadow);
+}
+.app-head .sub {
+  display: block; margin-top: 2px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.14em; color: var(--tx2); text-transform: uppercase;
+}
+
+/*
+ * カード全体を押せるようにする。.app-link::after が .app 全体を覆い、下のリンク（.app-links）だけを
+ * その上に重ねる。覆いの基準が .app になるよう、間の要素（.app-head など）には position を付けない。
+ */
+.app-link { color: var(--tx); text-decoration: none; }
+.app-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.app:hover .app-link { color: var(--tx); }
+
+.app .desc { color: var(--tx2); font-size: 15px; margin: 0 0 16px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 20px; list-style: none; }
+.chips li {
+  font-size: 12.5px; font-weight: 700; padding: 4px 11px; border-radius: 999px;
+  background: var(--glass); border: 1px solid var(--line); color: var(--tx);
+}
+.chips li::before { content: "✓"; color: var(--ok); margin-right: 6px; font-weight: 900; }
+
+.app-links {
+  position: relative; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;
+  padding-top: 18px; border-top: 1px solid var(--line);
+}
+.app-links a {
+  display: inline-flex; align-items: center; height: 34px; padding: 0 12px; border-radius: 11px;
+  font-size: 13px; font-weight: 700; color: var(--tx); text-decoration: none;
+  background: var(--glass); border: 1px solid var(--line);
+}
+.app-links a:hover { background: var(--glass2); border-color: var(--line2); }
+.app-links a.primary {
+  color: #fff; border-color: transparent;
+  /* color-mix() の無いブラウザでは下の行が無効になるため、単色を先に置く */
+  background: var(--ac);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--ac) 100%, #fff 8%), color-mix(in srgb, var(--ac) 100%, #000 18%));
+}
+.app-links a.primary:hover { filter: brightness(1.08); }
+
+/* ---- お問い合わせ ---- */
+
+.contact {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  padding: 22px 26px; border-radius: 24px;
+}
+.contact .ico {
+  flex: none; width: 46px; height: 46px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--brand); background: rgba(74, 144, 217, 0.16); border: 1px solid rgba(74, 144, 217, 0.45);
+}
+.contact .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.contact .body { flex: 1 1 260px; }
+.contact h2 { font-size: 18px; margin-bottom: 2px; }
+.contact p { margin: 0; color: var(--tx2); font-size: 14px; }
+.contact .mail {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 700;
+  word-break: break-all;
+}
+
+/* ---- 脚部 ---- */
+
+footer { max-width: 960px; margin: 0 auto; padding: 8px 16px 44px; color: var(--tx2); font-size: 13px; }
+footer .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 8px; }
+footer a { color: var(--tx2); text-decoration: none; font-weight: 700; }
+footer a:hover { color: var(--tx); }
+
+/* ---- 小さい画面 ---- */
+
+@media (max-width: 560px) {
+  .topbar { padding: 8px 10px; }
+  .hero { padding-top: 28px; }
+  .app { padding: 22px 20px; }
+  .app-icon { width: 72px; height: 72px; border-radius: 16px; }
+  h3 { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora i { animation: none; }
+  .app { transition: none; }
+  .app:hover { transform: none; }
+}
