@@ -23,6 +23,15 @@
 │   ├── faq/              よくある質問
 │   ├── terms/            利用規約
 │   └── privacy/          プライバシーポリシー
+├── janken-star/          じゃんけんスター（Janken Star）。/style.css は使わず site.css で完結。ダークだけ
+│   ├── index.html        サポートページ（日本語）。en.html が英語
+│   ├── site.css          じゃんけんスターのページ共通のスタイル（アプリのデザインポリシー「夜光ガラス」の色）
+│   ├── site.js           規約の目次でいま読んでいる節を光らせる・よくある質問の絞り込み（保存も通信もしない）
+│   ├── icon.png          アプリのアイコン（180px）
+│   ├── privacy/          プライバシーポリシー（index.html = 日本語 / en.html = 英語。以下同じ）
+│   ├── terms/            利用規約
+│   ├── account-deletion/ アカウント削除のリクエスト
+│   └── tokushoho/        特定商取引法に基づく表記（星空プレミアムの販売）
 └── nisedenwa/            偽電話（Fake Call）
     ├── index.html        サポートページ
     ├── site.css          使い方・よくある質問・サポートのページ用（/style.css に重ねる）
@@ -64,6 +73,21 @@ Android は既定のブラウザ）。日本語は `…/guide/`、それ以外�
 | サポート URL（App Store 必須） | https://ryozowski.github.io/nisedenwa/ |
 | プライバシーポリシー（両ストア必須） | https://ryozowski.github.io/nisedenwa/privacy/ |
 | 利用規約 | https://ryozowski.github.io/nisedenwa/terms/ |
+
+### じゃんけんスター（Janken Star）
+
+| 用途 | URL |
+| --- | --- |
+| サポート URL（App Store 必須） | https://ryozowski.github.io/janken-star/ |
+| プライバシーポリシー（両ストア必須。英語ローカライズは en.html） | https://ryozowski.github.io/janken-star/privacy/ |
+| 利用規約 | https://ryozowski.github.io/janken-star/terms/ |
+| アカウント削除（Google Play のデータセーフティ） | https://ryozowski.github.io/janken-star/account-deletion/ |
+| 特定商取引法に基づく表記 | https://ryozowski.github.io/janken-star/tokushoho/ |
+
+じゃんけんスターは、利用規約・プライバシーポリシー・お問い合わせ（サポート）・特定商取引法に基づく表記（日英とも）を
+**アプリのアプリ内ブラウザから直接開いている**（アプリ本体の `lib/core/constants/app_links.dart`）。アプリが日本語なら `…/`、
+それ以外の言語なら `…/en.html` を開く。
+パスを変えるとアプリから開けなくなり、それはストアの更新なしには直せない。
 
 **これらの URL はストアの掲載情報から参照されている。パスを変えたりファイルを消したりしない。**
 変更が必要な場合は、先にストア側の登録内容を更新すること。
@@ -115,6 +139,12 @@ JavaScript を無効にしているため、アプリの外観の設定に合わ
 変えたときは、使い方とよくある質問の該当箇所も日英とも直す。
 
 内容がずれるとストア審査で不整合を指摘される。
+
+### じゃんけんスター
+
+プライバシーポリシー・利用規約・アカウント削除・特定商取引法に基づく表記の正本は、アプリ本体の `docs/legal/`（日英）にある。
+**正本を直してから、このリポジトリの HTML を作り直す**（直接ここだけを直さない）。サポートページ（`janken-star/index.html`・`en.html`）は
+正本を持たず、アプリ本体の `docs/spec.md` の事実から作る。
 
 ### 偽電話
 

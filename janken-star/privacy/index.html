@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>プライバシーポリシー — じゃんけんスター（Janken Star）</title>
+<meta name="description" content="じゃんけんスター（Janken Star）のプライバシーポリシー。取得する情報と目的、通信の秘密の保護、外部送信（電気通信事業法に基づく公表）、保存期間、削除の方法。">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1220">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/janken-star/privacy/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/janken-star/privacy/en.html">
+<link rel="icon" href="/janken-star/icon.png">
+<link rel="apple-touch-icon" href="/janken-star/icon.png">
+<link rel="stylesheet" href="/janken-star/site.css">
+<script src="/janken-star/site.js" defer></script>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/janken-star/"><img src="/janken-star/icon.png" width="32" height="32" alt=""><span>じゃんけんスター</span></a>
+    <nav class="nav" aria-label="ページ"><a href="/janken-star/">サポート</a><a href="/janken-star/terms/">利用規約</a><a href="/janken-star/privacy/" aria-current="page">プライバシー</a><a href="/janken-star/account-deletion/">アカウント削除</a><a href="/janken-star/tokushoho/">特定商取引法</a></nav>
+    <a class="tool" href="en.html" hreflang="en" lang="en"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>English</span></a>
+  </div>
+</header>
+<main class="narrow">
+<article class="doc frost">
+<div class="eyebrow">Janken Star</div>
+<h1>プライバシーポリシー</h1>
+<p class="meta">最終更新日: 2026 年 11 月 14 日</p>
+<ul class="toc" aria-label="目次"><li><a href="#s1">基本方針</a></li><li><a href="#s2">取得する情報</a></li><li><a href="#s3">利用目的</a></li><li><a href="#s4">通信の秘密の保護</a></li><li><a href="#s5">端末内に保存する情報</a></li><li><a href="#s6">端末の権限の利用</a></li><li><a href="#s7">外部送信（電気通信事業法に基づく公表）</a></li><li><a href="#s8">第三者への提供</a></li><li><a href="#s9">保存期間</a></li><li><a href="#s10">安全管理措置</a></li><li><a href="#s11">データの削除</a></li><li><a href="#s12">開示・訂正・利用停止等の請求</a></li><li><a href="#s13">子どものプライバシー</a></li><li><a href="#s14">本ポリシーの変更</a></li><li><a href="#s15">運営者・お問い合わせ</a></li></ul>
+
+<h2 id="s1">基本方針</h2>
+
+<p>じゃんけんスター（以下「本アプリ」）は、全国の利用者どうしが 1 対 1 でじゃんけんをするオンラインのゲームです。運営者（ryozowski。個人で運営しています）は、本ポリシーに定める範囲で利用者の情報を取得し、定めた目的にのみ利用します。</p>
+
+<ul>
+  <li>対戦の判定・成績・順位・柄の付与は、運営者のサーバー（Google の Firebase）だけが行います。そのため、本アプリは対戦や設定の情報をサーバーに送ります</li>
+  <li>利用者どうしのやりとり（対戦の手・ひとこと）は、電気通信事業法の「通信の秘密」として扱います（「通信の秘密の保護」）</li>
+  <li>本アプリには広告（Google AdMob）、利用状況の計測とクラッシュの収集（Firebase Analytics・Crashlytics）が組み込まれています。送る情報と送り先は「外部送信（電気通信事業法に基づく公表）」にまとめています</li>
+  <li>本ポリシーは iOS 版について書いています。Android 版は準備中で、提供するときに本ポリシーを改めます</li>
+</ul>
+
+<h2 id="s2">取得する情報</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>情報</th><th>取得のしかた</th><th>置き場所</th></tr></thead><tbody>
+<tr><td data-label="情報">アカウントの ID（自動で作る識別子）</td><td data-label="取得のしかた">初回設定のとき自動で作る</td><td data-label="置き場所">Firebase Authentication・Cloud Firestore</td></tr>
+<tr><td data-label="情報">ニックネーム</td><td data-label="取得のしかた">利用者の入力</td><td data-label="置き場所">Cloud Firestore。対戦の相手の画面・ランキング・星図（歴代の一番星）にも写して表示します</td></tr>
+<tr><td data-label="情報">規約に同意した版と日時</td><td data-label="取得のしかた">初回設定のとき</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">見た目と設定（アイコンの柄・手の素材・夜空の背景・掛け声ボイス・選んだひとこと・相手のひとことを表示するか・言語・通知の設定）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">対戦の記録（出した手・勝敗・決まり方・日時・相手）、今日の3番、成績・等星・順位・柄・表彰、星の便り</td><td data-label="取得のしかた">対戦したとき、サーバーが記録する</td><td data-label="置き場所">Cloud Firestore・Firebase Realtime Database</td></tr>
+<tr><td data-label="情報">ひとこと（定型の言葉の番号だけ。自由に入力する言葉はありません）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore・Firebase Realtime Database</td></tr>
+<tr><td data-label="情報">ブロックした相手・通報（通報した相手・試合・その時点の相手のニックネーム）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">Apple または Google でログインしたときの、そのアカウントの識別子</td><td data-label="取得のしかた">ログインしたとき</td><td data-label="置き場所">Firebase Authentication</td></tr>
+<tr><td data-label="情報">Google でログインしたときの Google のメールアドレス・表示名・プロフィール写真の URL</td><td data-label="取得のしかた">ログインしたとき、Google から届く</td><td data-label="置き場所">Firebase Authentication だけに残り、本アプリの機能では使いません</td></tr>
+<tr><td data-label="情報">端末の確認の情報（App Attest・DeviceCheck のトークン）</td><td data-label="取得のしかた">自動</td><td data-label="置き場所">App Attest は Firebase App Check が確かめ、DeviceCheck は運営者のサーバーが Apple に問い合わせるために使います。トークンそのものは保存しません</td></tr>
+<tr><td data-label="情報">端末 1 台 1 アカウントの判定の結果（ランキングの対象か・端末を移した時刻）</td><td data-label="取得のしかた">初めて星くらべをしたときなど</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">通知を送る端末の登録（Firebase Installations の ID・端末の種類・端末の言語）</td><td data-label="取得のしかた">通知を許可した端末だけ</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">星空プレミアムの購入の情報（App Store の署名つきの取引・購入とアカウントを結び付ける識別子）</td><td data-label="取得のしかた">購入・復元したとき</td><td data-label="置き場所">Cloud Firestore</td></tr>
+<tr><td data-label="情報">IP アドレス</td><td data-label="取得のしかた">通信のたびに自動で</td><td data-label="置き場所">サーバーのログ・回数の制限の記録</td></tr>
+<tr><td data-label="情報">お問い合わせ・アカウント削除のリクエスト・ニックネームの通報のメール（メールアドレス・本文）</td><td data-label="取得のしかた">利用者がメールを送ったとき</td><td data-label="置き場所">運営者のメール（Gmail。Google）</td></tr>
+<tr><td data-label="情報">利用状況・クラッシュの情報・広告のための情報</td><td data-label="取得のしかた">自動</td><td data-label="置き場所">「外部送信（電気通信事業法に基づく公表）」</td></tr>
+</tbody></table></div>
+
+<p>本アプリは、氏名・住所・電話番号・位置情報（GPS）・連絡先・写真の中身・カメラ・マイクを取得しません。</p>
+
+<h2 id="s3">利用目的</h2>
+
+<p>取得した情報は、次の目的に利用します。</p>
+
+<ul>
+  <li>対戦の組み合わせ・進行・判定、ひとことのやりとり、成績・等星・ランキング・表彰・柄・星の便りの提供</li>
+  <li>ニックネームの重複の確認、なりすましの防止、通報への対応、ブロック</li>
+  <li>端末 1 台 1 アカウントの判定、月の上位者の審査など、不正な利用と不正な表彰の防止</li>
+  <li>星空プレミアムの購入の確認と、特典の提供</li>
+  <li>通知の配信（許可した場合だけ）</li>
+  <li>障害の対応、お問い合わせへの対応、運営の停止や更新のお願いのお知らせ</li>
+  <li>受け付ける時間（手を選ぶ 10 秒の締め切りの猶予）の調整など、サービスを円滑に提供するための改善</li>
+  <li>利用状況の把握と品質の改善（アカウントと結び付けない計測）</li>
+  <li>広告の配信（星空プレミアムに加入していない場合）</li>
+</ul>
+
+<h2 id="s4">通信の秘密の保護</h2>
+
+<p>利用者どうしの対戦の手・ひとこと、だれとだれがいつ対戦したか、通報・ブロック、待機列への参加など、利用者どうしの通信にあたる情報（以下「通信の秘密」）は、電気通信事業法に基づき、次のとおり取り扱います。</p>
+
+<ul>
+  <li>記録するのは、対戦とひとことの提供・成績とランキング・上位者の審査と不正の防止・通報への対応・障害と問い合わせへの対応・受け付ける時間の調整など、サービスの提供に必要な範囲に限ります</li>
+  <li>判定・部屋の写し・ランキング・審査の目印の計算・通知などは、サーバーのプログラムが自動で処理し、人は見ません</li>
+  <li>人が見るのは運営者だけで、次の目的のときに、目的に必要な範囲に限ります<ul><li>月の上位者の審査（自動の目印が付いた表彰の候補について、対戦相手の偏りなど）</li><li>通報への対応（通報されたニックネームと通報の数）</li><li>不正な利用の調査（異常な回数の操作など）と障害の対応（試合の状態）</li><li>本人からのお問い合わせへの対応（その試合の状態。相手の情報は必要な範囲だけ）</li><li>アカウントの削除とデータの復元の作業（アカウントの ID の一覧。中身は見ません）</li><li>法令に基づく求め（令状など）への対応</li></ul></li>
+  <li>好奇心・特定の人の手のくせの分析・宣伝のためには見ません。ひとことの中身や手は、上の目的に必要な場合を除いて見ません</li>
+  <li>法令に基づく場合と、人の生命・身体を守るために緊急に必要な場合を除き、第三者に渡しません。Firebase（Google）は、保存と処理を任せている設備として使います</li>
+  <li>保存する期間は「保存期間」のとおりで、期間を過ぎたものは順に削除します</li>
+  <li>運営者が見たときは、目的と見た情報の種類の記録を残します</li>
+</ul>
+
+<p>全体の手の割合や、相手の手のくせは、だれにも見せません。いちばん多く出した手は、本人の星の便りだけに表示します。</p>
+
+<h2 id="s5">端末内に保存する情報</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>保存するもの</th><th>用途</th></tr></thead><tbody>
+<tr><td data-label="保存するもの">効果音と掛け声・振動のオンとオフ、言語の設定の写し</td><td data-label="用途">端末ごとの設定</td></tr>
+<tr><td data-label="保存するもの">ランク戦の全画面広告を最後に出した日</td><td data-label="用途">1 日 1 回までにするため</td></tr>
+<tr><td data-label="保存するもの">ストアのレビューをお願いしたかの印</td><td data-label="用途">お願いを 1 回だけにするため。アカウントを削除しても消えません</td></tr>
+<tr><td data-label="保存するもの">ログインの状態</td><td data-label="用途">iOS のキーチェーンに保存します。アプリを削除しても残り、入れ直すと同じアカウントで開けます</td></tr>
+<tr><td data-label="保存するもの">Firebase・Google Mobile Ads の SDK が保存する情報（キャッシュ・識別子・まだ送っていない計測の記録・広告の頻度の記録など）</td><td data-label="用途">各 SDK の動作のため</td></tr>
+</tbody></table></div>
+
+<p>シェアの画像は端末の中で作り、「画像を保存」を押したときだけ写真に保存します。端末の設定（効果音など）とログインの状態は、iCloud のバックアップやクイックスタートで新しい端末に移ることがあります。</p>
+
+<h2 id="s6">端末の権限の利用</h2>
+
+<p>本アプリが OS の許可を求めるのは次の 3 つだけで、どれも拒否しても、その機能以外はすべて使えます。</p>
+
+<ul>
+  <li><strong>通知</strong>: 今日の3番が戻ったとき・月の締めの前日・発表と星の便り・天文イベントの夜をお知らせします。許可を求めるのは、初回設定のあとの練習を終えてホームに移ったときと、まだお尋ねしていない方が通知の設定を開いたときです</li>
+  <li><strong>トラッキング（App Tracking Transparency）</strong>: 広告の ID（IDFA）を広告に使う許可です。お尋ねするのは、星空プレミアムに加入していない方が星くらべのリザルトからホームに戻ったときです。許可しなくても広告は表示されますが、IDFA は送られません</li>
+  <li><strong>写真への追加</strong>: シェアの「画像を保存」を押したときです。追加だけで、写真の読み取りは求めません</li>
+</ul>
+
+<h2 id="s7">外部送信（電気通信事業法に基づく公表）</h2>
+
+<p>本アプリは、次の事業者に利用者の情報を送ります。送る情報・送り先・目的は次のとおりです。</p>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>送り先（事業者）</th><th>サービス</th><th>送る情報</th><th>目的</th></tr></thead><tbody>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Firebase（Authentication・Cloud Firestore・Realtime Database・Cloud Functions・App Check・Remote Config・Cloud Messaging・Installations）</td><td data-label="送る情報">「取得する情報」の表の情報（計測・広告・メールの分を除く）、IP アドレス、端末とアプリの情報、各 SDK の動作の診断の情報</td><td data-label="目的">本アプリのサーバーとして、アカウント・対戦・成績・設定・通知・設定値の配信を提供するため（運営者が保存と処理を任せています）</td></tr>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Firebase Analytics</td><td data-label="送る情報">画面とイベント（練習を終えた・星の便りを開いた など）・ユーザーのプロパティ（通算の等星・ランキングの対象か・星空プレミアムに加入しているか）・アプリのインスタンスの ID・セッション・端末の種類と OS とアプリの版・IP アドレスから推定する国と地域</td><td data-label="目的">利用状況の把握と改善（運営者）。アカウントの ID・ニックネーム・手・相手は送らず、広告の ID は集めず、Google シグナルと広告への利用は切っています</td></tr>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Firebase Crashlytics</td><td data-label="送る情報">クラッシュとアプリが受け止めた失敗の記録（失敗の種類・場所・スタック。アプリが受け止められなかった失敗は、その失敗の文も）・端末の状態・Crashlytics のインストールの ID</td><td data-label="目的">不具合の発見と修正（運営者）。アカウントと結び付けません</td></tr>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Firebase Cloud Messaging</td><td data-label="送る情報">通知の配信の情報・通知が届いた・開かれたの記録</td><td data-label="目的">通知の配信と、配信の状況の把握（運営者・Google）</td></tr>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Google Mobile Ads（AdMob）</td><td data-label="送る情報">広告の ID（IDFA。トラッキングを許可した場合だけ）・IP アドレスから推定するおおよその位置・広告の表示と操作・端末とアプリの情報・性能とクラッシュの診断</td><td data-label="目的">広告の配信・効果の計測・不正な広告の防止（運営者・Google）。トラッキングを許可した場合、Google は第三者の広告にも使います。星空プレミアムに加入している間は広告を読み込みません（加入したその起動の中では広告の SDK が動いたまま残ることがあり、自動更新が運営者のサーバーに届くまでのあいだは未加入として扱われることがあります）</td></tr>
+<tr><td data-label="送り先（事業者）">Apple Inc.</td><td data-label="サービス">StoreKit（App Store の購入）</td><td data-label="送る情報">購入の情報・購入とアカウントを結び付ける識別子</td><td data-label="目的">星空プレミアムの購入と復元（運営者・Apple）</td></tr>
+<tr><td data-label="送り先（事業者）">Apple Inc.</td><td data-label="サービス">App Attest・DeviceCheck</td><td data-label="送る情報">端末が作るトークン</td><td data-label="目的">正規のアプリからの通信かの確認と、端末 1 台 1 アカウントの判定（運営者）。端末の識別子は運営者にも返りません</td></tr>
+<tr><td data-label="送り先（事業者）">Apple Inc.</td><td data-label="サービス">Sign in with Apple</td><td data-label="送る情報">ログインの情報。Apple でつないだアカウントを削除するときの取り消しの情報</td><td data-label="目的">Apple でのログイン（運営者・Apple）</td></tr>
+<tr><td data-label="送り先（事業者）">Google LLC</td><td data-label="サービス">Google のログイン</td><td data-label="送る情報">ログインの情報</td><td data-label="目的">Google でのログイン（運営者・Google）</td></tr>
+</tbody></table></div>
+
+<p>送り先の事業者による情報の取り扱いは、次のページをご覧ください。</p>
+
+<ul>
+  <li>Google のプライバシーポリシー: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  <li>Firebase のプライバシーとセキュリティ: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+  <li>Google によるパートナーのサイトやアプリのデータの使用: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
+  <li>Apple のプライバシーポリシー: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<p>広告の ID の利用は、iPhone の「設定」→「プライバシーとセキュリティ」→「トラッキング」でいつでも止められます。星空プレミアムに加入している間は、アプリを起動したときに広告の SDK を動かしません。利用規約・プライバシーポリシーなどのページは、本アプリの中のブラウザで GitHub Pages から表示します（本アプリから情報は送りません）。</p>
+
+<h2 id="s8">第三者への提供</h2>
+
+<p>取得した情報は、法令に基づく場合、人の生命・身体・財産を守るために必要で本人の同意を得ることが難しい場合、および「外部送信（電気通信事業法に基づく公表）」に記載した送信を除き、本人の同意なく第三者へ提供しません。ニックネーム・アイコン・等星・成績は、本アプリの機能として対戦の相手やランキング・星図で他の利用者に表示されます。</p>
+
+<h3>外国にある事業者</h3>
+
+<p>運営者は、本アプリのサーバーとして、アメリカ合衆国の Google LLC が提供する Firebase を利用しています。データの主な保存場所は日本（Cloud Firestore。東京）とシンガポール（Realtime Database）です。運営者は、Google が定める Firebase の利用規約とデータ処理の条件（個人データの保護の措置を含む）のもとで利用しています。広告・計測の SDK は、Google LLC（アメリカ合衆国）に情報を送ります。各国の個人情報の保護に関する制度は、個人情報保護委員会のページ（<a href="https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/">https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/</a> の「外国における個人情報の保護に関する制度等の調査」）をご覧ください。</p>
+
+<h2 id="s9">保存期間</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>データ</th><th>保存期間</th></tr></thead><tbody>
+<tr><td data-label="データ">アカウント・設定・成績・柄・表彰・星の便り・ブロックした相手・通報した相手の一覧・待機の状態・端末 1 台 1 アカウントの判定の結果・星空プレミアムの購入の記録</td><td data-label="保存期間">アカウントを削除するまで</td></tr>
+<tr><td data-label="データ">試合の記録（2 人のアカウントの ID・その時点のニックネームなどの写し・各回の手・ひとことの数）</td><td data-label="保存期間">対戦が成立してから 120 日</td></tr>
+<tr><td data-label="データ">日ごとの記録（今日の3番・その日に対戦した相手）</td><td data-label="保存期間">60 日</td></tr>
+<tr><td data-label="データ">対戦中の画面のための写し（2 人のニックネーム・手・ひとことの中身）</td><td data-label="保存期間">2 人が画面を閉じてからおよそ 1 時間、遅くとも決着からおよそ 25 時間</td></tr>
+<tr><td data-label="データ">決着の前後の成績</td><td data-label="保存期間">7 日</td></tr>
+<tr><td data-label="データ">変更・削除で空いたニックネームの予約</td><td data-label="保存期間">30 日（なりすましを防ぐため）</td></tr>
+<tr><td data-label="データ">通報</td><td data-label="保存期間">対応を終えてから 1 年（受けてから最長 2 年）</td></tr>
+<tr><td data-label="データ">ランキングの一覧（ニックネームの写し）</td><td data-label="保存期間">その月の発表まで（10 分ごと、勝率は 5 分ごとに作り直します）</td></tr>
+<tr><td data-label="データ">星図の歴代の一番星（ニックネーム・柄・等星の写し）</td><td data-label="保存期間">残します（アカウントを削除するとニックネームを空にします）</td></tr>
+<tr><td data-label="データ">上位者の審査の記録</td><td data-label="保存期間">締めた月から 1 年（以後も対象外にした記録は、アカウントを削除するまで）</td></tr>
+<tr><td data-label="データ">通知を送る端末の登録</td><td data-label="保存期間">最後に更新してから 60 日</td></tr>
+<tr><td data-label="データ">回数の制限の記録（アカウントの ID・IP アドレスなどから作った値と回数）</td><td data-label="保存期間">最長およそ 25 時間</td></tr>
+<tr><td data-label="データ">アカウントの削除の記録（ID と削除の段階）</td><td data-label="保存期間">削除を終えてから 30 日</td></tr>
+<tr><td data-label="データ">サーバーのログ（アカウントの ID・IP アドレス・試合の ID を含むことがあります）</td><td data-label="保存期間">30 日</td></tr>
+<tr><td data-label="データ">個人を特定する項目を含まない集計のログ</td><td data-label="保存期間">400 日</td></tr>
+<tr><td data-label="データ">計測（Firebase Analytics）</td><td data-label="保存期間">14 か月</td></tr>
+<tr><td data-label="データ">クラッシュの記録（Firebase Crashlytics）</td><td data-label="保存期間">90 日</td></tr>
+<tr><td data-label="データ">サーバーのバックアップ</td><td data-label="保存期間">最大 14 日</td></tr>
+<tr><td data-label="データ">お問い合わせ・削除のリクエスト・通報のメール</td><td data-label="保存期間">対応を終えてから 1 年</td></tr>
+</tbody></table></div>
+
+<p>期限を過ぎたデータは順に削除するため、実際に消えるまでしばらくかかることがあります。最後に使ってから約 13 か月使われていない匿名のアカウント（Apple・Google とつないでいないもの。星空プレミアムに加入中のものを除く）と、ニックネームを決めないまま 30 日たったアカウントは、削除することがあります。Apple とつないでニックネームを決めていないアカウントは、アプリから削除するまで Apple のアカウントの識別子だけが残ります。運営の作業で認証の情報だけが消えたアカウントのデータは、ふつう 8 日以内に削除します。</p>
+
+<h2 id="s10">安全管理措置</h2>
+
+<p>運営者は、取得した情報の漏えい・滅失・毀損を防ぐため、次の措置を行います。</p>
+
+<ul>
+  <li>通信の暗号化（HTTPS）と、App Check による正規のアプリ以外からの利用の制限</li>
+  <li>データベースのルールで、利用者が自分の情報だけを読み書きできるようにし、試合の記録・通報・審査の記録はサーバーだけが扱う</li>
+  <li>本番のデータを扱えるのを運営者だけに限り、運営の端末の画面のロックとディスクの暗号化を行う</li>
+  <li>サーバーのログに、ニックネーム・手・購入の ID・通知の本文を書かない</li>
+  <li>個人の情報を、運営者の端末の外のサービス（チャット・共有のフォルダなど）に置かない</li>
+</ul>
+
+<p>漏えいなどが起きた場合は、法令に従って、総務省・個人情報保護委員会への報告と、本人への通知を行います。</p>
+
+<h2 id="s11">データの削除</h2>
+
+<ul>
+  <li>アカウントは、アプリの「わたしの星」の「アカウントを削除」からいつでも削除できます。アプリを使えない場合は、<a href="/janken-star/account-deletion/">アカウント削除のリクエスト</a>をご覧ください。削除されるものと残るものも、そのページに書いています</li>
+  <li>アプリから削除するときは、削除の前に、Apple でつないだアカウントは Apple の連携を取り消し、その iPhone の端末 1 台 1 アカウントの紐づけを外します</li>
+  <li>アプリを削除しただけでは、アカウントは削除されません</li>
+  <li>端末の中の設定は、アプリを削除すると消えます</li>
+</ul>
+
+<h2 id="s12">開示・訂正・利用停止等の請求</h2>
+
+<p>利用者は、運営者が保有する自身の情報について、利用目的の通知、開示、訂正・追加・削除、利用の停止・消去、第三者への提供の停止を請求できます。請求は下記のお問い合わせ先までご連絡ください。本アプリのアカウントにはメールアドレスなどの連絡先が登録されていないため、ご本人であることを確認できる方法（Google でつないだアカウントの場合は、そのメールアドレス宛てに確認のメールを送り、その返信で確認するなど）で確認したうえで、法令に従い対応します。ご本人と確認できない場合は、請求に応じられないことがあります。</p>
+
+<h2 id="s13">子どものプライバシー</h2>
+
+<p>本アプリは 13 歳以上の方を対象としています。13 歳未満の方の情報を意図して取得することはありません。13 歳未満の方の情報が取得されたことに保護者の方が気付いた場合は、下記のお問い合わせ先までご連絡ください。確認のうえ削除します。</p>
+
+<h2 id="s14">本ポリシーの変更</h2>
+
+<p>本ポリシーを変更する場合は、本ページの内容を更新し、最終更新日を改めます。重要な変更がある場合は、アプリのお知らせでもお知らせします。</p>
+
+<h2 id="s15">運営者・お問い合わせ</h2>
+
+<p>運営者: ryozowski（個人）</p>
+
+<p>運営者の氏名・住所は、ご請求があれば遅滞なくお知らせします。本ポリシーおよび本アプリに関するお問い合わせは、以下までご連絡ください。</p>
+
+<p><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></p>
+
+</article>
+</main>
+<footer>
+  <div class="links"><a href="/janken-star/">サポート</a><a href="/janken-star/terms/">利用規約</a><a href="/janken-star/privacy/">プライバシーポリシー</a><a href="/janken-star/account-deletion/">アカウント削除</a><a href="/janken-star/tokushoho/">特定商取引法に基づく表記</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · じゃんけんスター（Janken Star）</div>
+</footer>
+</body>
+</html>
