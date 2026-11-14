@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Privacy Policy — Janken Star</title>
+<meta name="description" content="Janken Star Privacy Policy: information collected and why, protecting the secrecy of communications, external transmission, retention periods, and how to delete your data.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1220">
+<link rel="alternate" hreflang="ja" href="https://ryozowski.github.io/janken-star/privacy/">
+<link rel="alternate" hreflang="en" href="https://ryozowski.github.io/janken-star/privacy/en.html">
+<link rel="icon" href="/janken-star/icon.png">
+<link rel="apple-touch-icon" href="/janken-star/icon.png">
+<link rel="stylesheet" href="/janken-star/site.css">
+<script src="/janken-star/site.js" defer></script>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+<header class="topbar">
+  <div class="topbar-in glass">
+    <a class="brand" href="/janken-star/en.html"><img src="/janken-star/icon.png" width="32" height="32" alt=""><span>Janken Star</span></a>
+    <nav class="nav" aria-label="Pages"><a href="/janken-star/en.html">Support</a><a href="/janken-star/terms/en.html">Terms</a><a href="/janken-star/privacy/en.html" aria-current="page">Privacy</a><a href="/janken-star/account-deletion/en.html">Account Deletion</a><a href="/janken-star/tokushoho/en.html">Legal Notice</a></nav>
+    <a class="tool" href="index.html" hreflang="ja" lang="ja"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></svg><span>日本語</span></a>
+  </div>
+</header>
+<main class="narrow">
+<article class="doc frost">
+<div class="eyebrow">Janken Star</div>
+<h1>Privacy Policy</h1>
+<p class="meta">Last updated: November 14, 2026</p>
+<ul class="toc" aria-label="Contents"><li><a href="#s1">Overview</a></li><li><a href="#s2">Information We Collect</a></li><li><a href="#s3">How We Use Information</a></li><li><a href="#s4">Protecting the Secrecy of Communications</a></li><li><a href="#s5">Information Stored on Your Device</a></li><li><a href="#s6">Device Permissions</a></li><li><a href="#s7">External Transmission (Disclosure under the Telecommunications Business Act)</a></li><li><a href="#s8">Disclosure to Third Parties</a></li><li><a href="#s9">Retention Periods</a></li><li><a href="#s10">Security Measures</a></li><li><a href="#s11">Deleting Your Data</a></li><li><a href="#s12">Requests for Disclosure, Correction, or Suspension of Use</a></li><li><a href="#s13">Children's Privacy</a></li><li><a href="#s14">Changes to This Policy</a></li><li><a href="#s15">Operator and Contact</a></li></ul>
+
+<h2 id="s1">Overview</h2>
+
+<p>Janken Star (the "App") is an online game in which players across Japan play one-on-one rock-paper-scissors. The operator (ryozowski, an individual) collects information about users only within the scope of this Policy and uses it only for the purposes stated here.</p>
+
+<ul>
+  <li>Outcomes, records, ranks, and icon designs are decided only by the operator's servers (Google Firebase). The App therefore sends match and settings information to the servers</li>
+  <li>Exchanges between users (the hands played and the phrases sent) are treated as "secrecy of communications" under the Telecommunications Business Act (see "Protecting the Secrecy of Communications")</li>
+  <li>The App includes advertising (Google AdMob) and usage measurement and crash reporting (Firebase Analytics and Crashlytics). What is sent and to whom is listed under "External Transmission (Disclosure under the Telecommunications Business Act)"</li>
+  <li>This Policy covers the iOS version. The Android version is in preparation, and this Policy will be revised before it is offered</li>
+</ul>
+
+<h2 id="s2">Information We Collect</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>Information</th><th>How it is collected</th><th>Where it is kept</th></tr></thead><tbody>
+<tr><td data-label="Information">Account ID (an identifier created automatically)</td><td data-label="How it is collected">Created automatically during first-time setup</td><td data-label="Where it is kept">Firebase Authentication and Cloud Firestore</td></tr>
+<tr><td data-label="Information">Nickname</td><td data-label="How it is collected">Entered by you</td><td data-label="Where it is kept">Cloud Firestore. Copies are also shown to your opponent, in the rankings, and in the Star Chart (past First Stars)</td></tr>
+<tr><td data-label="Information">Version and date of the terms you agreed to</td><td data-label="How it is collected">During first-time setup</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">Appearance and settings (icon design, Hand Finish, Night Sky background, call voice, selected Quick Phrases, whether to show your opponent's phrases, language, notification settings)</td><td data-label="How it is collected">Your actions</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">Match records (hands played, result, how it was decided, date and time, opponent), Today's 3 Duels, records, magnitude, rank, icon designs, awards, and Star Letters</td><td data-label="How it is collected">Recorded by the server when you play</td><td data-label="Where it is kept">Cloud Firestore and Firebase Realtime Database</td></tr>
+<tr><td data-label="Information">Quick Phrases (only the number of a preset phrase; there is no free text)</td><td data-label="How it is collected">Your actions</td><td data-label="Where it is kept">Cloud Firestore and Firebase Realtime Database</td></tr>
+<tr><td data-label="Information">Blocked players and reports (reported player, match, and that player's nickname at the time)</td><td data-label="How it is collected">Your actions</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">The identifier of your Apple or Google account, if you sign in with it</td><td data-label="How it is collected">When you sign in</td><td data-label="Where it is kept">Firebase Authentication</td></tr>
+<tr><td data-label="Information">Your Google email address, display name, and profile photo URL, if you sign in with Google</td><td data-label="How it is collected">Sent by Google when you sign in</td><td data-label="Where it is kept">Kept only in Firebase Authentication and not used by the App's features</td></tr>
+<tr><td data-label="Information">Device check information (App Attest and DeviceCheck tokens)</td><td data-label="How it is collected">Automatically</td><td data-label="Where it is kept">App Attest tokens are checked by Firebase App Check, and DeviceCheck tokens are used by the operator's servers to query Apple. The tokens themselves are not stored</td></tr>
+<tr><td data-label="Information">Result of the one-account-per-device check (whether you are eligible for the rankings, when you moved devices)</td><td data-label="How it is collected">When you first play a Star Duel, and similar times</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">Registration of devices for notifications (Firebase Installations ID, device type, device language)</td><td data-label="How it is collected">Only on devices where notifications are allowed</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">Starry Sky Premium purchase information (the signed App Store transaction and an identifier linking the purchase to your account)</td><td data-label="How it is collected">When you purchase or restore</td><td data-label="Where it is kept">Cloud Firestore</td></tr>
+<tr><td data-label="Information">IP address</td><td data-label="How it is collected">Automatically with each connection</td><td data-label="Where it is kept">Server logs and rate-limit records</td></tr>
+<tr><td data-label="Information">Emails for inquiries, account deletion requests, and nickname reports (email address and message)</td><td data-label="How it is collected">When you send an email</td><td data-label="Where it is kept">The operator's mailbox (Gmail, Google)</td></tr>
+<tr><td data-label="Information">Usage, crash, and advertising information</td><td data-label="How it is collected">Automatically</td><td data-label="Where it is kept">See "External Transmission (Disclosure under the Telecommunications Business Act)"</td></tr>
+</tbody></table></div>
+
+<p>The App does not collect your real name, address, phone number, location (GPS), contacts, the contents of your photos, or camera or microphone input.</p>
+
+<h2 id="s3">How We Use Information</h2>
+
+<p>We use the information we collect to:</p>
+
+<ul>
+  <li>Match players, run and judge duels, exchange phrases, and provide records, magnitudes, rankings, awards, icon designs, and Star Letters</li>
+  <li>Check for duplicate nicknames, prevent impersonation, handle reports, and support blocking</li>
+  <li>Prevent fraudulent use and unfair awards, including the one-account-per-device check and the monthly review of top players</li>
+  <li>Verify Starry Sky Premium purchases and provide its benefits</li>
+  <li>Deliver notifications (only if you allow them)</li>
+  <li>Respond to outages and inquiries, and announce service suspensions and update requests</li>
+  <li>Improve the service so it runs smoothly, such as adjusting the grace period added to the 10-second deadline for choosing a hand</li>
+  <li>Understand usage and improve quality (measurement not linked to your account)</li>
+  <li>Show ads (if you are not subscribed to Starry Sky Premium)</li>
+</ul>
+
+<h2 id="s4">Protecting the Secrecy of Communications</h2>
+
+<p>Information that forms communications between users — the hands played and phrases sent, who played whom and when, reports and blocks, and joining the matchmaking queue (the "secrecy of communications") — is handled as follows under the Telecommunications Business Act.</p>
+
+<ul>
+  <li>We record it only as far as needed to provide the service: providing duels and phrases, records and rankings, reviewing top players and preventing fraud, handling reports, responding to outages and inquiries, and adjusting the time allowed for choosing a hand</li>
+  <li>Judging duels, copying match rooms, building rankings, computing review flags, and sending notifications are done automatically by server programs, and no person looks at them</li>
+  <li>Only the operator looks at this information, and only for the following purposes and only as far as each purpose requires<ul><li>The monthly review of top players (for award candidates flagged automatically, such as a bias in their opponents)</li><li>Handling reports (the reported nickname and the number of reports)</li><li>Investigating fraudulent use (such as abnormal numbers of operations) and responding to outages (the state of a match)</li><li>Responding to an inquiry from you (the state of that match, with the opponent's information only as far as needed)</li><li>Deleting accounts and restoring data (a list of account IDs, without looking at the contents)</li><li>Responding to requests based on law (such as warrants)</li></ul></li>
+  <li>We never look at it out of curiosity, to analyze a particular person's hand habits, or for promotion. We do not look at the phrases or hands except as needed for the purposes above</li>
+  <li>We do not give it to third parties, except as required by law or when urgently needed to protect a person's life or body. Firebase (Google) is used as the facility to which we entrust storage and processing</li>
+  <li>Retention periods are listed under "Retention Periods", and data past its period is deleted in turn</li>
+  <li>When the operator looks at this information, a record of the purpose and the kinds of information viewed is kept</li>
+</ul>
+
+<p>The overall share of hands and your opponents' hand habits are never shown to anyone. Your most-played hand is shown only in your own Star Letter.</p>
+
+<h2 id="s5">Information Stored on Your Device</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>What is stored</th><th>Purpose</th></tr></thead><tbody>
+<tr><td data-label="What is stored">Sound effects and calls on/off, haptics on/off, and a copy of your language setting</td><td data-label="Purpose">Per-device settings</td></tr>
+<tr><td data-label="What is stored">The last day a full-screen ad was shown after a ranked duel</td><td data-label="Purpose">To limit it to once a day</td></tr>
+<tr><td data-label="What is stored">A flag recording whether we asked for a store review</td><td data-label="Purpose">To ask only once. It is not cleared when you delete your account</td></tr>
+<tr><td data-label="What is stored">Sign-in state</td><td data-label="Purpose">Stored in the iOS Keychain. It remains after you delete the App, and reinstalling opens the same account</td></tr>
+<tr><td data-label="What is stored">Information stored by the Firebase and Google Mobile Ads SDKs (cache, identifiers, unsent measurement records, ad frequency records, and so on)</td><td data-label="Purpose">For each SDK to work</td></tr>
+</tbody></table></div>
+
+<p>Share images are created on your device and saved to Photos only when you tap "Save Image". Device settings (such as sound effects) and the sign-in state may move to a new device through iCloud backup or Quick Start.</p>
+
+<h2 id="s6">Device Permissions</h2>
+
+<p>The App asks for OS permission only for the following three. If you decline any of them, everything except that feature still works.</p>
+
+<ul>
+  <li><strong>Notifications</strong>: To tell you when Today's 3 Duels are back, the day before the month closes, about the announcement and Star Letters, and about astronomical event nights. We ask when you move to Home after the practice duel that follows first-time setup, and when you open the notification settings if we have not asked yet</li>
+  <li><strong>Tracking (App Tracking Transparency)</strong>: Permission to use the advertising identifier (IDFA) for ads. We ask when a player not subscribed to Starry Sky Premium returns to Home from a Star Duel result. Ads are still shown if you decline, but the IDFA is not sent</li>
+  <li><strong>Adding to Photos</strong>: When you tap "Save Image" in Share. We ask only to add images, never to read your photos</li>
+</ul>
+
+<h2 id="s7">External Transmission (Disclosure under the Telecommunications Business Act)</h2>
+
+<p>The App sends information about users to the following companies. The information sent, the recipients, and the purposes are as follows.</p>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>Recipient (company)</th><th>Service</th><th>Information sent</th><th>Purpose</th></tr></thead><tbody>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Firebase (Authentication, Cloud Firestore, Realtime Database, Cloud Functions, App Check, Remote Config, Cloud Messaging, Installations)</td><td data-label="Information sent">The information in "Information We Collect" (except the measurement, advertising, and email parts), IP address, device and app information, and diagnostics on how each SDK is working</td><td data-label="Purpose">To provide accounts, duels, records, settings, notifications, and configuration delivery as the App's servers (the operator entrusts storage and processing to Google)</td></tr>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Firebase Analytics</td><td data-label="Information sent">Screens and events (such as finishing the practice duel or opening a Star Letter), user properties (career magnitude, whether you are eligible for the rankings, whether you subscribe to Starry Sky Premium), app instance ID, sessions, device type, OS and app version, and country and region estimated from the IP address</td><td data-label="Purpose">To understand and improve usage (operator). Your account ID, nickname, hands, and opponents are not sent; the advertising identifier is not collected; Google signals and use for advertising are turned off</td></tr>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Firebase Crashlytics</td><td data-label="Information sent">Crash and handled-error records (error type, location, stack; for errors the App could not handle, also the error message), device state, and the Crashlytics installation ID</td><td data-label="Purpose">To find and fix bugs (operator). Not linked to your account</td></tr>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Firebase Cloud Messaging</td><td data-label="Information sent">Notification delivery information and records of notifications received and opened</td><td data-label="Purpose">To deliver notifications and understand delivery (operator and Google)</td></tr>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Google Mobile Ads (AdMob)</td><td data-label="Information sent">Advertising identifier (IDFA, only if you allow tracking), approximate location estimated from the IP address, ad views and interactions, device and app information, and performance and crash diagnostics</td><td data-label="Purpose">To serve ads, measure their effect, and prevent ad fraud (operator and Google). If you allow tracking, Google also uses it for third-party advertising. While you subscribe to Starry Sky Premium, ads are not loaded (in the session in which you subscribe, the advertising SDK may keep running, and until an automatic renewal reaches the operator's servers you may be treated as not subscribed)</td></tr>
+<tr><td data-label="Recipient (company)">Apple Inc.</td><td data-label="Service">StoreKit (App Store purchases)</td><td data-label="Information sent">Purchase information and an identifier linking the purchase to your account</td><td data-label="Purpose">To purchase and restore Starry Sky Premium (operator and Apple)</td></tr>
+<tr><td data-label="Recipient (company)">Apple Inc.</td><td data-label="Service">App Attest and DeviceCheck</td><td data-label="Information sent">Tokens created by your device</td><td data-label="Purpose">To confirm that requests come from the genuine App and to check one account per device (operator). Device identifiers are not returned to the operator</td></tr>
+<tr><td data-label="Recipient (company)">Apple Inc.</td><td data-label="Service">Sign in with Apple</td><td data-label="Information sent">Sign-in information, and revocation information when an account connected to Apple is deleted</td><td data-label="Purpose">To sign in with Apple (operator and Apple)</td></tr>
+<tr><td data-label="Recipient (company)">Google LLC</td><td data-label="Service">Google sign-in</td><td data-label="Information sent">Sign-in information</td><td data-label="Purpose">To sign in with Google (operator and Google)</td></tr>
+</tbody></table></div>
+
+<p>For how these companies handle information, see:</p>
+
+<ul>
+  <li>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  <li>Firebase privacy and security: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+  <li>How Google uses information from sites or apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
+  <li>Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+
+<p>You can stop the use of the advertising identifier at any time in iPhone Settings → Privacy &amp; Security → Tracking. While you subscribe to Starry Sky Premium, the App does not start the advertising SDK when it launches. Pages such as the Terms of Use and this Policy are displayed from GitHub Pages in the App's in-app browser (the App sends no information to them).</p>
+
+<h2 id="s8">Disclosure to Third Parties</h2>
+
+<p>We do not provide the information we collect to third parties without your consent, except as required by law, when necessary to protect a person's life, body, or property and it is difficult to obtain your consent, and for the transmissions listed under "External Transmission (Disclosure under the Telecommunications Business Act)". Your nickname, icon, magnitude, and records are shown to other users as part of the App's features: to your opponent, in the rankings, and in the Star Chart.</p>
+
+<h3>Companies Outside Japan</h3>
+
+<p>The operator uses Firebase, provided by Google LLC in the United States, as the App's servers. Data is stored mainly in Japan (Cloud Firestore, Tokyo) and Singapore (Realtime Database). The operator uses Firebase under Google's Firebase terms and data processing terms (including measures to protect personal data). The advertising and measurement SDKs send information to Google LLC (United States). For each country's personal information protection system, see the Personal Information Protection Commission's page (<a href="https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/">https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/</a>, "Survey of foreign personal information protection systems", in Japanese).</p>
+
+<h2 id="s9">Retention Periods</h2>
+
+<div class="table-wrap"><table class="stack">
+<thead><tr><th>Data</th><th>Retention</th></tr></thead><tbody>
+<tr><td data-label="Data">Account, settings, records, icon designs, awards, Star Letters, blocked players, list of players you reported, matchmaking state, result of the one-account-per-device check, and Starry Sky Premium purchase records</td><td data-label="Retention">Until you delete your account</td></tr>
+<tr><td data-label="Data">Match records (both players' account IDs, copies such as their nicknames at the time, hands for each round, and the number of phrases)</td><td data-label="Retention">120 days from when the match is made</td></tr>
+<tr><td data-label="Data">Daily records (Today's 3 Duels and the opponents you played that day)</td><td data-label="Retention">60 days</td></tr>
+<tr><td data-label="Data">Copies for the duel screen (both players' nicknames, hands, and phrase contents)</td><td data-label="Retention">About 1 hour after both players close the screen, and at the latest about 25 hours after the duel is decided</td></tr>
+<tr><td data-label="Data">Records before and after a result</td><td data-label="Retention">7 days</td></tr>
+<tr><td data-label="Data">Reservation of a nickname freed by a change or deletion</td><td data-label="Retention">30 days (to prevent impersonation)</td></tr>
+<tr><td data-label="Data">Reports</td><td data-label="Retention">1 year after handling (at most 2 years after receipt)</td></tr>
+<tr><td data-label="Data">Ranking lists (copies of nicknames)</td><td data-label="Retention">Until that month's announcement (rebuilt every 10 minutes, or every 5 minutes for win rates)</td></tr>
+<tr><td data-label="Data">Past First Stars in the Star Chart (copies of nickname, icon design, and magnitude)</td><td data-label="Retention">Kept (the nickname is cleared when the account is deleted)</td></tr>
+<tr><td data-label="Data">Top-player review records</td><td data-label="Retention">1 year after the month closes (records of permanent exclusion are kept until the account is deleted)</td></tr>
+<tr><td data-label="Data">Device registrations for notifications</td><td data-label="Retention">60 days after the last update</td></tr>
+<tr><td data-label="Data">Rate-limit records (values made from account IDs, IP addresses, and so on, and counts)</td><td data-label="Retention">At most about 25 hours</td></tr>
+<tr><td data-label="Data">Account deletion records (ID and deletion stage)</td><td data-label="Retention">30 days after deletion finishes</td></tr>
+<tr><td data-label="Data">Server logs (may include account IDs, IP addresses, and match IDs)</td><td data-label="Retention">30 days</td></tr>
+<tr><td data-label="Data">Aggregate logs that contain no items identifying individuals</td><td data-label="Retention">400 days</td></tr>
+<tr><td data-label="Data">Measurement (Firebase Analytics)</td><td data-label="Retention">14 months</td></tr>
+<tr><td data-label="Data">Crash records (Firebase Crashlytics)</td><td data-label="Retention">90 days</td></tr>
+<tr><td data-label="Data">Server backups</td><td data-label="Retention">Up to 14 days</td></tr>
+<tr><td data-label="Data">Emails for inquiries, deletion requests, and reports</td><td data-label="Retention">1 year after handling</td></tr>
+</tbody></table></div>
+
+<p>Data past its period is deleted in turn, so it may take some time before it is actually gone. Anonymous accounts (not connected to Apple or Google) that have not been used for about 13 months since last use (except those subscribed to Starry Sky Premium) and accounts that have gone 30 days without choosing a nickname may be deleted. For accounts connected to Apple without a nickname, only the Apple account identifier remains until the account is deleted from the App. Data of accounts whose sign-in information alone was removed by operator work is usually deleted within 8 days.</p>
+
+<h2 id="s10">Security Measures</h2>
+
+<p>To prevent leakage, loss, or damage of the information we collect, the operator takes the following measures.</p>
+
+<ul>
+  <li>Encrypting communications (HTTPS) and limiting use from anything other than the genuine App with App Check</li>
+  <li>Using database rules so that users can read and write only their own information, and so that match records, reports, and review records are handled only by the servers</li>
+  <li>Limiting access to production data to the operator, and locking the screens and encrypting the disks of the operator's devices</li>
+  <li>Not writing nicknames, hands, purchase IDs, or notification text to server logs</li>
+  <li>Not placing personal information in services outside the operator's devices (such as chat or shared folders)</li>
+</ul>
+
+<p>If a leak or similar incident occurs, we will report it to the Ministry of Internal Affairs and Communications and the Personal Information Protection Commission and notify the affected users, as required by law.</p>
+
+<h2 id="s11">Deleting Your Data</h2>
+
+<ul>
+  <li>You can delete your account at any time from "Delete Account" in "My Star" in the App. If you cannot use the App, see the <a href="/janken-star/account-deletion/en.html">Account Deletion Request</a> page, which also lists what is deleted and what remains</li>
+  <li>When you delete from the App, before deletion we revoke the Apple connection for accounts connected to Apple, and release that iPhone's one-account-per-device binding</li>
+  <li>Deleting the App alone does not delete your account</li>
+  <li>Settings on your device are removed when you delete the App</li>
+</ul>
+
+<h2 id="s12">Requests for Disclosure, Correction, or Suspension of Use</h2>
+
+<p>You may request notification of the purposes of use, disclosure, correction, addition or deletion, suspension of use or erasure, and suspension of provision to third parties of your information held by the operator. Please contact us at the address below. Because App accounts have no registered contact information such as an email address, we will confirm that you are the account holder by a method that allows us to do so (for example, by sending a confirmation email to the address of the Google account connected to your account and receiving your reply) and then respond as required by law. If we cannot confirm that you are the account holder, we may be unable to fulfill the request.</p>
+
+<h2 id="s13">Children's Privacy</h2>
+
+<p>The App is intended for people aged 13 and older. We do not knowingly collect information from children under 13. If a parent or guardian becomes aware that information of a child under 13 has been collected, please contact us at the address below. We will confirm and delete it.</p>
+
+<h2 id="s14">Changes to This Policy</h2>
+
+<p>If we change this Policy, we will update this page and the "Last updated" date. For significant changes, we will also post a notice in the App.</p>
+
+<h2 id="s15">Operator and Contact</h2>
+
+<p>Operator: ryozowski (an individual)</p>
+
+<p>The operator's name and address will be provided without delay upon request. For inquiries about this Policy or the App, please contact:</p>
+
+<p><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></p>
+
+</article>
+</main>
+<footer>
+  <div class="links"><a href="/janken-star/en.html">Support</a><a href="/janken-star/terms/en.html">Terms of Use</a><a href="/janken-star/privacy/en.html">Privacy Policy</a><a href="/janken-star/account-deletion/en.html">Account Deletion</a><a href="/janken-star/tokushoho/en.html">Legal Notice</a><a href="mailto:pontapon.support@gmail.com">pontapon.support@gmail.com</a></div>
+  <div>© 2026 ryozowski · Janken Star</div>
+</footer>
+</body>
+</html>
