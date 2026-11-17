@@ -52,7 +52,7 @@
 <tr><td data-label="情報">見た目と設定（アイコンの柄・手の素材・夜空の背景・掛け声ボイス（現在は選べません。標準の値か、以前の版で選んだ値）・選んだひとこと・相手のひとことを表示するか・言語・通知の設定）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore</td></tr>
 <tr><td data-label="情報">対戦の記録（出した手・勝敗・決まり方・日時・相手）、今日の3番、成績・等星・順位・柄・表彰、星の便り</td><td data-label="取得のしかた">対戦したとき、サーバーが記録する</td><td data-label="置き場所">Cloud Firestore・Firebase Realtime Database</td></tr>
 <tr><td data-label="情報">ひとこと（定型の言葉の番号だけ。自由に入力する言葉はありません）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore・Firebase Realtime Database</td></tr>
-<tr><td data-label="情報">アプリを開いている印（アカウントの ID と、書いた時刻だけ）</td><td data-label="取得のしかた">ログインして本アプリを画面に出しているあいだ自動で（10 分ごとに書き直し、裏に回したとき・通信が切れたときに消します）</td><td data-label="置き場所">Firebase Realtime Database。本人も含めてだれも読めません。運営者のサーバーが 1 分ごとに数え、いまアプリを開いている人の数（4 人以下は「少人数」、1,000 人以上は「1,000人以上」とまとめた数）だけを、ログインした利用者に表示します</td></tr>
+<tr><td data-label="情報">アプリを開いている印（アカウントの ID と、書いた時刻だけ）</td><td data-label="取得のしかた">ログインして本アプリを画面に出しているあいだ自動で（10 分ごとに書き直し、裏に回したとき・通信が切れたときに消します）</td><td data-label="置き場所">Firebase Realtime Database。利用者は（本人も）読めません。運営者のサーバーが 1 分ごとに数え、いまアプリを開いている人の数（4 人以下は「少人数」、1,000 人以上は「1,000人以上」とまとめた数）だけを、ログインした利用者に表示します</td></tr>
 <tr><td data-label="情報">ブロックした相手・通報（通報した相手・試合・その時点の相手のニックネーム）</td><td data-label="取得のしかた">利用者の操作</td><td data-label="置き場所">Cloud Firestore</td></tr>
 <tr><td data-label="情報">Apple または Google でログインしたときの、そのアカウントの識別子</td><td data-label="取得のしかた">ログインしたとき</td><td data-label="置き場所">Firebase Authentication</td></tr>
 <tr><td data-label="情報">Google でログインしたときの Google のメールアドレス・表示名・プロフィール写真の URL</td><td data-label="取得のしかた">ログインしたとき、Google から届く</td><td data-label="置き場所">Firebase Authentication だけに残り、本アプリの機能では使いません</td></tr>
@@ -167,7 +167,7 @@
 <tr><td data-label="データ">試合の記録（2 人のアカウントの ID・その時点のニックネームなどの写し・各回の手・ひとことの数）</td><td data-label="保存期間">対戦が成立してから 120 日</td></tr>
 <tr><td data-label="データ">日ごとの記録（今日の3番・その日に対戦した相手）</td><td data-label="保存期間">60 日</td></tr>
 <tr><td data-label="データ">対戦中の画面のための写し（2 人のニックネーム・手・ひとことの中身）</td><td data-label="保存期間">2 人が画面を閉じてからおよそ 1 時間、遅くとも決着からおよそ 25 時間</td></tr>
-<tr><td data-label="データ">アプリを開いている印</td><td data-label="保存期間">裏に回したとき・通信が切れたときに消します。消せなかった印も、最後に書いてから 15 分で消します（アカウントを削除したときも消します）</td></tr>
+<tr><td data-label="データ">アプリを開いている印</td><td data-label="保存期間">裏に回したとき・通信が切れたときに消します。消せなかった印も、最後に書いてからおよそ 15 分で消します（アカウントを削除したときも消します）</td></tr>
 <tr><td data-label="データ">決着の前後の成績</td><td data-label="保存期間">7 日</td></tr>
 <tr><td data-label="データ">変更・削除で空いたニックネームの予約</td><td data-label="保存期間">30 日（なりすましを防ぐため）</td></tr>
 <tr><td data-label="データ">通報</td><td data-label="保存期間">対応を終えてから 1 年（受けてから最長 2 年）</td></tr>
